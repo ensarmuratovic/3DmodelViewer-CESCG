@@ -1,26 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\smartmonkey.png",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\3DmodelViewer-CESCG\\app\\src\\main\\res\\mipmap-xxhdpi\\smartmonkey.png"
-    },
-    {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\JMEproject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\smartmonkey.png",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\JMEproject\\app\\src\\main\\res\\mipmap-xxhdpi\\smartmonkey.png"
-    },
-    {
         "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\smartmonkey.png",
         "source": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\src\\main\\res\\mipmap-xxhdpi\\smartmonkey.png"
     },
     {
         "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\3DmodelViewer-CESCG\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\JMEproject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\JMEproject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]
