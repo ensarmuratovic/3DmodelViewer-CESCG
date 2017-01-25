@@ -2,7 +2,7 @@
 manifest
 ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
-		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -35,7 +35,7 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\User\Documents\GitH
 		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:8:9-43
 	android:theme
 		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:11:9-40
-activity#org.jmonkeyengine.simple_jme_android.MainActivity
+activity#org.cescg.modelviewer.MainActivity
 ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:screenOrientation
 		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:14:13-50

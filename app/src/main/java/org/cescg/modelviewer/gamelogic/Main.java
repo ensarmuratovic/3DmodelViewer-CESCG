@@ -1,4 +1,4 @@
-package org.jmonkeyengine.simple_jme_android.gamelogic;
+package org.cescg.modelviewer.gamelogic;
 
 import com.jme3.app.SimpleApplication;
 import com.jme3.asset.plugins.HttpZipLocator;

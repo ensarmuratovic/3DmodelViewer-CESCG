@@ -1,4 +1,4 @@
-package org.jmonkeyengine.simple_jme_android;
+package org.cescg.modelviewer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

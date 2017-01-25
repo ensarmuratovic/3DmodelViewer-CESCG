@@ -3503,8 +3503,8 @@
                     "startLine": 214,
                     "startColumn": 4,
                     "startOffset": 28568,
-                    "endColumn": 55,
-                    "endOffset": 28619
+                    "endColumn": 52,
+                    "endOffset": 28616
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\src\\main\\res\\values\\strings.xml",
@@ -3512,8 +3512,8 @@
                         "startLine": 1,
                         "startColumn": 4,
                         "startOffset": 17,
-                        "endColumn": 55,
-                        "endOffset": 68
+                        "endColumn": 52,
+                        "endOffset": 65
                     }
                 }
             },
@@ -3521,9 +3521,9 @@
                 "to": {
                     "startLine": 215,
                     "startColumn": 4,
-                    "startOffset": 28624,
+                    "startOffset": 28621,
                     "endColumn": 70,
-                    "endOffset": 28690
+                    "endOffset": 28687
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3540,9 +3540,9 @@
                 "to": {
                     "startLine": 216,
                     "startColumn": 4,
-                    "startOffset": 28695,
+                    "startOffset": 28692,
                     "endColumn": 77,
-                    "endOffset": 28768
+                    "endOffset": 28765
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3559,9 +3559,9 @@
                 "to": {
                     "startLine": 217,
                     "startColumn": 4,
-                    "startOffset": 28773,
+                    "startOffset": 28770,
                     "endColumn": 89,
-                    "endOffset": 28858
+                    "endOffset": 28855
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3578,9 +3578,9 @@
                 "to": {
                     "startLine": 218,
                     "startColumn": 4,
-                    "startOffset": 28863,
+                    "startOffset": 28860,
                     "endColumn": 87,
-                    "endOffset": 28946
+                    "endOffset": 28943
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3597,9 +3597,9 @@
                 "to": {
                     "startLine": 219,
                     "startColumn": 4,
-                    "startOffset": 28951,
+                    "startOffset": 28948,
                     "endColumn": 95,
-                    "endOffset": 29042
+                    "endOffset": 29039
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3616,10 +3616,10 @@
                 "to": {
                     "startLine": 220,
                     "startColumn": 4,
-                    "startOffset": 29047,
+                    "startOffset": 29044,
                     "endLine": 225,
                     "endColumn": 12,
-                    "endOffset": 29361
+                    "endOffset": 29358
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\src\\main\\res\\values\\styles.xml",
@@ -3637,10 +3637,10 @@
                 "to": {
                     "startLine": 226,
                     "startColumn": 4,
-                    "startOffset": 29366,
+                    "startOffset": 29363,
                     "endLine": 232,
                     "endColumn": 12,
-                    "endOffset": 29862
+                    "endOffset": 29859
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3658,9 +3658,9 @@
                 "to": {
                     "startLine": 233,
                     "startColumn": 4,
-                    "startOffset": 29867,
+                    "startOffset": 29864,
                     "endColumn": 88,
-                    "endOffset": 29951
+                    "endOffset": 29948
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3677,10 +3677,10 @@
                 "to": {
                     "startLine": 234,
                     "startColumn": 4,
-                    "startOffset": 29956,
+                    "startOffset": 29953,
                     "endLine": 237,
                     "endColumn": 12,
-                    "endOffset": 30198
+                    "endOffset": 30195
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3698,10 +3698,10 @@
                 "to": {
                     "startLine": 238,
                     "startColumn": 4,
-                    "startOffset": 30203,
+                    "startOffset": 30200,
                     "endLine": 241,
                     "endColumn": 12,
-                    "endOffset": 30479
+                    "endOffset": 30476
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3719,10 +3719,10 @@
                 "to": {
                     "startLine": 242,
                     "startColumn": 4,
-                    "startOffset": 30484,
+                    "startOffset": 30481,
                     "endLine": 246,
                     "endColumn": 12,
-                    "endOffset": 30764
+                    "endOffset": 30761
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3740,10 +3740,10 @@
                 "to": {
                     "startLine": 247,
                     "startColumn": 4,
-                    "startOffset": 30769,
+                    "startOffset": 30766,
                     "endLine": 252,
                     "endColumn": 12,
-                    "endOffset": 31157
+                    "endOffset": 31154
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3761,10 +3761,10 @@
                 "to": {
                     "startLine": 253,
                     "startColumn": 4,
-                    "startOffset": 31162,
+                    "startOffset": 31159,
                     "endLine": 259,
                     "endColumn": 12,
-                    "endOffset": 31634
+                    "endOffset": 31631
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3782,10 +3782,10 @@
                 "to": {
                     "startLine": 260,
                     "startColumn": 4,
-                    "startOffset": 31639,
+                    "startOffset": 31636,
                     "endLine": 263,
                     "endColumn": 12,
-                    "endOffset": 31856
+                    "endOffset": 31853
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3803,10 +3803,10 @@
                 "to": {
                     "startLine": 264,
                     "startColumn": 4,
-                    "startOffset": 31861,
+                    "startOffset": 31858,
                     "endLine": 267,
                     "endColumn": 12,
-                    "endOffset": 32078
+                    "endOffset": 32075
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3824,10 +3824,10 @@
                 "to": {
                     "startLine": 268,
                     "startColumn": 4,
-                    "startOffset": 32083,
+                    "startOffset": 32080,
                     "endLine": 272,
                     "endColumn": 12,
-                    "endOffset": 32346
+                    "endOffset": 32343
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3845,10 +3845,10 @@
                 "to": {
                     "startLine": 273,
                     "startColumn": 4,
-                    "startOffset": 32351,
+                    "startOffset": 32348,
                     "endLine": 276,
                     "endColumn": 12,
-                    "endOffset": 32573
+                    "endOffset": 32570
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3866,10 +3866,10 @@
                 "to": {
                     "startLine": 277,
                     "startColumn": 4,
-                    "startOffset": 32578,
+                    "startOffset": 32575,
                     "endLine": 280,
                     "endColumn": 12,
-                    "endOffset": 32803
+                    "endOffset": 32800
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3887,10 +3887,10 @@
                 "to": {
                     "startLine": 281,
                     "startColumn": 4,
-                    "startOffset": 32808,
+                    "startOffset": 32805,
                     "endLine": 284,
                     "endColumn": 12,
-                    "endOffset": 33033
+                    "endOffset": 33030
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3908,10 +3908,10 @@
                 "to": {
                     "startLine": 285,
                     "startColumn": 4,
-                    "startOffset": 33038,
+                    "startOffset": 33035,
                     "endLine": 288,
                     "endColumn": 12,
-                    "endOffset": 33263
+                    "endOffset": 33260
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3929,10 +3929,10 @@
                 "to": {
                     "startLine": 289,
                     "startColumn": 4,
-                    "startOffset": 33268,
+                    "startOffset": 33265,
                     "endLine": 292,
                     "endColumn": 12,
-                    "endOffset": 33493
+                    "endOffset": 33490
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3950,10 +3950,10 @@
                 "to": {
                     "startLine": 293,
                     "startColumn": 4,
-                    "startOffset": 33498,
+                    "startOffset": 33495,
                     "endLine": 296,
                     "endColumn": 12,
-                    "endOffset": 33720
+                    "endOffset": 33717
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3971,10 +3971,10 @@
                 "to": {
                     "startLine": 297,
                     "startColumn": 4,
-                    "startOffset": 33725,
+                    "startOffset": 33722,
                     "endLine": 300,
                     "endColumn": 12,
-                    "endOffset": 33959
+                    "endOffset": 33956
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -3992,10 +3992,10 @@
                 "to": {
                     "startLine": 301,
                     "startColumn": 4,
-                    "startOffset": 33964,
+                    "startOffset": 33961,
                     "endLine": 304,
                     "endColumn": 12,
-                    "endOffset": 34185
+                    "endOffset": 34182
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4013,10 +4013,10 @@
                 "to": {
                     "startLine": 305,
                     "startColumn": 4,
-                    "startOffset": 34190,
+                    "startOffset": 34187,
                     "endLine": 308,
                     "endColumn": 12,
-                    "endOffset": 34430
+                    "endOffset": 34427
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4034,10 +4034,10 @@
                 "to": {
                     "startLine": 309,
                     "startColumn": 4,
-                    "startOffset": 34435,
+                    "startOffset": 34432,
                     "endLine": 310,
                     "endColumn": 12,
-                    "endOffset": 34560
+                    "endOffset": 34557
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4055,10 +4055,10 @@
                 "to": {
                     "startLine": 311,
                     "startColumn": 4,
-                    "startOffset": 34565,
+                    "startOffset": 34562,
                     "endLine": 312,
                     "endColumn": 12,
-                    "endOffset": 34690
+                    "endOffset": 34687
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4076,10 +4076,10 @@
                 "to": {
                     "startLine": 313,
                     "startColumn": 4,
-                    "startOffset": 34695,
+                    "startOffset": 34692,
                     "endLine": 316,
                     "endColumn": 12,
-                    "endOffset": 34920
+                    "endOffset": 34917
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4097,10 +4097,10 @@
                 "to": {
                     "startLine": 317,
                     "startColumn": 4,
-                    "startOffset": 34925,
+                    "startOffset": 34922,
                     "endLine": 320,
                     "endColumn": 12,
-                    "endOffset": 35168
+                    "endOffset": 35165
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4118,10 +4118,10 @@
                 "to": {
                     "startLine": 321,
                     "startColumn": 4,
-                    "startOffset": 35173,
+                    "startOffset": 35170,
                     "endLine": 324,
                     "endColumn": 12,
-                    "endOffset": 35387
+                    "endOffset": 35384
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4139,10 +4139,10 @@
                 "to": {
                     "startLine": 325,
                     "startColumn": 4,
-                    "startOffset": 35392,
+                    "startOffset": 35389,
                     "endLine": 329,
                     "endColumn": 12,
-                    "endOffset": 35670
+                    "endOffset": 35667
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4160,10 +4160,10 @@
                 "to": {
                     "startLine": 330,
                     "startColumn": 4,
-                    "startOffset": 35675,
+                    "startOffset": 35672,
                     "endLine": 333,
                     "endColumn": 12,
-                    "endOffset": 35878
+                    "endOffset": 35875
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4181,10 +4181,10 @@
                 "to": {
                     "startLine": 334,
                     "startColumn": 4,
-                    "startOffset": 35883,
+                    "startOffset": 35880,
                     "endLine": 336,
                     "endColumn": 12,
-                    "endOffset": 36009
+                    "endOffset": 36006
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4202,10 +4202,10 @@
                 "to": {
                     "startLine": 337,
                     "startColumn": 4,
-                    "startOffset": 36014,
+                    "startOffset": 36011,
                     "endLine": 340,
                     "endColumn": 12,
-                    "endOffset": 36236
+                    "endOffset": 36233
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4223,10 +4223,10 @@
                 "to": {
                     "startLine": 341,
                     "startColumn": 4,
-                    "startOffset": 36241,
+                    "startOffset": 36238,
                     "endLine": 344,
                     "endColumn": 12,
-                    "endOffset": 36482
+                    "endOffset": 36479
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4244,10 +4244,10 @@
                 "to": {
                     "startLine": 345,
                     "startColumn": 4,
-                    "startOffset": 36487,
+                    "startOffset": 36484,
                     "endLine": 348,
                     "endColumn": 12,
-                    "endOffset": 36707
+                    "endOffset": 36704
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4265,10 +4265,10 @@
                 "to": {
                     "startLine": 349,
                     "startColumn": 4,
-                    "startOffset": 36712,
+                    "startOffset": 36709,
                     "endLine": 352,
                     "endColumn": 12,
-                    "endOffset": 36954
+                    "endOffset": 36951
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4286,10 +4286,10 @@
                 "to": {
                     "startLine": 353,
                     "startColumn": 4,
-                    "startOffset": 36959,
+                    "startOffset": 36956,
                     "endLine": 356,
                     "endColumn": 12,
-                    "endOffset": 37175
+                    "endOffset": 37172
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4307,10 +4307,10 @@
                 "to": {
                     "startLine": 357,
                     "startColumn": 4,
-                    "startOffset": 37180,
+                    "startOffset": 37177,
                     "endLine": 360,
                     "endColumn": 12,
-                    "endOffset": 37420
+                    "endOffset": 37417
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4328,10 +4328,10 @@
                 "to": {
                     "startLine": 361,
                     "startColumn": 4,
-                    "startOffset": 37425,
+                    "startOffset": 37422,
                     "endLine": 364,
                     "endColumn": 12,
-                    "endOffset": 37694
+                    "endOffset": 37691
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4349,10 +4349,10 @@
                 "to": {
                     "startLine": 365,
                     "startColumn": 4,
-                    "startOffset": 37699,
+                    "startOffset": 37696,
                     "endLine": 368,
                     "endColumn": 12,
-                    "endOffset": 37995
+                    "endOffset": 37992
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4370,10 +4370,10 @@
                 "to": {
                     "startLine": 369,
                     "startColumn": 4,
-                    "startOffset": 38000,
+                    "startOffset": 37997,
                     "endLine": 372,
                     "endColumn": 12,
-                    "endOffset": 38319
+                    "endOffset": 38316
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4391,10 +4391,10 @@
                 "to": {
                     "startLine": 373,
                     "startColumn": 4,
-                    "startOffset": 38324,
+                    "startOffset": 38321,
                     "endLine": 376,
                     "endColumn": 12,
-                    "endOffset": 38610
+                    "endOffset": 38607
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4412,10 +4412,10 @@
                 "to": {
                     "startLine": 377,
                     "startColumn": 4,
-                    "startOffset": 38615,
+                    "startOffset": 38612,
                     "endLine": 380,
                     "endColumn": 12,
-                    "endOffset": 38924
+                    "endOffset": 38921
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4433,9 +4433,9 @@
                 "to": {
                     "startLine": 381,
                     "startColumn": 4,
-                    "startOffset": 38929,
+                    "startOffset": 38926,
                     "endColumn": 136,
-                    "endOffset": 39061
+                    "endOffset": 39058
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4452,9 +4452,9 @@
                 "to": {
                     "startLine": 382,
                     "startColumn": 4,
-                    "startOffset": 39066,
+                    "startOffset": 39063,
                     "endColumn": 130,
-                    "endOffset": 39192
+                    "endOffset": 39189
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4471,9 +4471,9 @@
                 "to": {
                     "startLine": 383,
                     "startColumn": 4,
-                    "startOffset": 39197,
+                    "startOffset": 39194,
                     "endColumn": 104,
-                    "endOffset": 39297
+                    "endOffset": 39294
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4490,10 +4490,10 @@
                 "to": {
                     "startLine": 384,
                     "startColumn": 4,
-                    "startOffset": 39302,
+                    "startOffset": 39299,
                     "endLine": 386,
                     "endColumn": 12,
-                    "endOffset": 39501
+                    "endOffset": 39498
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4511,10 +4511,10 @@
                 "to": {
                     "startLine": 387,
                     "startColumn": 4,
-                    "startOffset": 39506,
+                    "startOffset": 39503,
                     "endLine": 389,
                     "endColumn": 12,
-                    "endOffset": 39709
+                    "endOffset": 39706
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4532,10 +4532,10 @@
                 "to": {
                     "startLine": 390,
                     "startColumn": 4,
-                    "startOffset": 39714,
+                    "startOffset": 39711,
                     "endLine": 391,
                     "endColumn": 12,
-                    "endOffset": 39833
+                    "endOffset": 39830
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4553,10 +4553,10 @@
                 "to": {
                     "startLine": 392,
                     "startColumn": 4,
-                    "startOffset": 39838,
+                    "startOffset": 39835,
                     "endLine": 393,
                     "endColumn": 12,
-                    "endOffset": 39957
+                    "endOffset": 39954
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4574,9 +4574,9 @@
                 "to": {
                     "startLine": 394,
                     "startColumn": 4,
-                    "startOffset": 39962,
+                    "startOffset": 39959,
                     "endColumn": 104,
-                    "endOffset": 40062
+                    "endOffset": 40059
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4593,9 +4593,9 @@
                 "to": {
                     "startLine": 395,
                     "startColumn": 4,
-                    "startOffset": 40067,
+                    "startOffset": 40064,
                     "endColumn": 116,
-                    "endOffset": 40179
+                    "endOffset": 40176
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4612,10 +4612,10 @@
                 "to": {
                     "startLine": 396,
                     "startColumn": 4,
-                    "startOffset": 40184,
+                    "startOffset": 40181,
                     "endLine": 398,
                     "endColumn": 12,
-                    "endOffset": 40393
+                    "endOffset": 40390
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4633,10 +4633,10 @@
                 "to": {
                     "startLine": 399,
                     "startColumn": 4,
-                    "startOffset": 40398,
+                    "startOffset": 40395,
                     "endLine": 400,
                     "endColumn": 12,
-                    "endOffset": 40539
+                    "endOffset": 40536
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4654,10 +4654,10 @@
                 "to": {
                     "startLine": 401,
                     "startColumn": 4,
-                    "startOffset": 40544,
+                    "startOffset": 40541,
                     "endLine": 402,
                     "endColumn": 12,
-                    "endOffset": 40679
+                    "endOffset": 40676
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4675,10 +4675,10 @@
                 "to": {
                     "startLine": 403,
                     "startColumn": 4,
-                    "startOffset": 40684,
+                    "startOffset": 40681,
                     "endLine": 404,
                     "endColumn": 12,
-                    "endOffset": 40765
+                    "endOffset": 40762
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4696,10 +4696,10 @@
                 "to": {
                     "startLine": 405,
                     "startColumn": 4,
-                    "startOffset": 40770,
+                    "startOffset": 40767,
                     "endLine": 409,
                     "endColumn": 12,
-                    "endOffset": 41113
+                    "endOffset": 41110
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4717,9 +4717,9 @@
                 "to": {
                     "startLine": 410,
                     "startColumn": 4,
-                    "startOffset": 41118,
+                    "startOffset": 41115,
                     "endColumn": 87,
-                    "endOffset": 41201
+                    "endOffset": 41198
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4736,10 +4736,10 @@
                 "to": {
                     "startLine": 411,
                     "startColumn": 4,
-                    "startOffset": 41206,
+                    "startOffset": 41203,
                     "endLine": 414,
                     "endColumn": 12,
-                    "endOffset": 41431
+                    "endOffset": 41428
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4757,10 +4757,10 @@
                 "to": {
                     "startLine": 415,
                     "startColumn": 4,
-                    "startOffset": 41436,
+                    "startOffset": 41433,
                     "endLine": 420,
                     "endColumn": 12,
-                    "endOffset": 41849
+                    "endOffset": 41846
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4778,10 +4778,10 @@
                 "to": {
                     "startLine": 421,
                     "startColumn": 4,
-                    "startOffset": 41854,
+                    "startOffset": 41851,
                     "endLine": 424,
                     "endColumn": 12,
-                    "endOffset": 42082
+                    "endOffset": 42079
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4799,9 +4799,9 @@
                 "to": {
                     "startLine": 425,
                     "startColumn": 4,
-                    "startOffset": 42087,
+                    "startOffset": 42084,
                     "endColumn": 81,
-                    "endOffset": 42164
+                    "endOffset": 42161
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4818,10 +4818,10 @@
                 "to": {
                     "startLine": 426,
                     "startColumn": 4,
-                    "startOffset": 42169,
+                    "startOffset": 42166,
                     "endLine": 427,
                     "endColumn": 12,
-                    "endOffset": 42262
+                    "endOffset": 42259
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4839,10 +4839,10 @@
                 "to": {
                     "startLine": 428,
                     "startColumn": 4,
-                    "startOffset": 42267,
+                    "startOffset": 42264,
                     "endLine": 438,
                     "endColumn": 12,
-                    "endOffset": 42879
+                    "endOffset": 42876
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4860,9 +4860,9 @@
                 "to": {
                     "startLine": 439,
                     "startColumn": 4,
-                    "startOffset": 42884,
+                    "startOffset": 42881,
                     "endColumn": 99,
-                    "endOffset": 42979
+                    "endOffset": 42976
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4879,10 +4879,10 @@
                 "to": {
                     "startLine": 440,
                     "startColumn": 4,
-                    "startOffset": 42984,
+                    "startOffset": 42981,
                     "endLine": 443,
                     "endColumn": 12,
-                    "endOffset": 43215
+                    "endOffset": 43212
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4900,10 +4900,10 @@
                 "to": {
                     "startLine": 444,
                     "startColumn": 4,
-                    "startOffset": 43220,
+                    "startOffset": 43217,
                     "endLine": 449,
                     "endColumn": 12,
-                    "endOffset": 43639
+                    "endOffset": 43636
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4921,10 +4921,10 @@
                 "to": {
                     "startLine": 450,
                     "startColumn": 4,
-                    "startOffset": 43644,
+                    "startOffset": 43641,
                     "endLine": 453,
                     "endColumn": 12,
-                    "endOffset": 43878
+                    "endOffset": 43875
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4942,9 +4942,9 @@
                 "to": {
                     "startLine": 454,
                     "startColumn": 4,
-                    "startOffset": 43883,
+                    "startOffset": 43880,
                     "endColumn": 93,
-                    "endOffset": 43972
+                    "endOffset": 43969
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4961,9 +4961,9 @@
                 "to": {
                     "startLine": 455,
                     "startColumn": 4,
-                    "startOffset": 43977,
+                    "startOffset": 43974,
                     "endColumn": 88,
-                    "endOffset": 44061
+                    "endOffset": 44058
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -4980,10 +4980,10 @@
                 "to": {
                     "startLine": 456,
                     "startColumn": 4,
-                    "startOffset": 44066,
+                    "startOffset": 44063,
                     "endLine": 459,
                     "endColumn": 12,
-                    "endOffset": 44298
+                    "endOffset": 44295
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5001,10 +5001,10 @@
                 "to": {
                     "startLine": 460,
                     "startColumn": 4,
-                    "startOffset": 44303,
+                    "startOffset": 44300,
                     "endLine": 485,
                     "endColumn": 12,
-                    "endOffset": 46249
+                    "endOffset": 46246
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5022,10 +5022,10 @@
                 "to": {
                     "startLine": 486,
                     "startColumn": 4,
-                    "startOffset": 46254,
+                    "startOffset": 46251,
                     "endLine": 489,
                     "endColumn": 12,
-                    "endOffset": 46491
+                    "endOffset": 46488
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5043,10 +5043,10 @@
                 "to": {
                     "startLine": 490,
                     "startColumn": 4,
-                    "startOffset": 46496,
+                    "startOffset": 46493,
                     "endLine": 516,
                     "endColumn": 12,
-                    "endOffset": 48573
+                    "endOffset": 48570
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5064,10 +5064,10 @@
                 "to": {
                     "startLine": 517,
                     "startColumn": 4,
-                    "startOffset": 48578,
+                    "startOffset": 48575,
                     "endLine": 669,
                     "endColumn": 12,
-                    "endOffset": 58255
+                    "endOffset": 58252
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5085,10 +5085,10 @@
                 "to": {
                     "startLine": 670,
                     "startColumn": 4,
-                    "startOffset": 58260,
+                    "startOffset": 58257,
                     "endLine": 691,
                     "endColumn": 12,
-                    "endOffset": 59522
+                    "endOffset": 59519
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5106,10 +5106,10 @@
                 "to": {
                     "startLine": 692,
                     "startColumn": 4,
-                    "startOffset": 59527,
+                    "startOffset": 59524,
                     "endLine": 844,
                     "endColumn": 12,
-                    "endOffset": 69314
+                    "endOffset": 69311
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5127,10 +5127,10 @@
                 "to": {
                     "startLine": 845,
                     "startColumn": 4,
-                    "startOffset": 69319,
+                    "startOffset": 69316,
                     "endLine": 866,
                     "endColumn": 12,
-                    "endOffset": 70595
+                    "endOffset": 70592
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5148,10 +5148,10 @@
                 "to": {
                     "startLine": 867,
                     "startColumn": 4,
-                    "startOffset": 70600,
+                    "startOffset": 70597,
                     "endLine": 873,
                     "endColumn": 12,
-                    "endOffset": 71131
+                    "endOffset": 71128
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5169,10 +5169,10 @@
                 "to": {
                     "startLine": 874,
                     "startColumn": 4,
-                    "startOffset": 71136,
+                    "startOffset": 71133,
                     "endLine": 878,
                     "endColumn": 12,
-                    "endOffset": 71461
+                    "endOffset": 71458
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5190,10 +5190,10 @@
                 "to": {
                     "startLine": 879,
                     "startColumn": 4,
-                    "startOffset": 71466,
+                    "startOffset": 71463,
                     "endLine": 899,
                     "endColumn": 12,
-                    "endOffset": 72584
+                    "endOffset": 72581
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5211,10 +5211,10 @@
                 "to": {
                     "startLine": 900,
                     "startColumn": 4,
-                    "startOffset": 72589,
+                    "startOffset": 72586,
                     "endLine": 904,
                     "endColumn": 12,
-                    "endOffset": 72840
+                    "endOffset": 72837
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5232,10 +5232,10 @@
                 "to": {
                     "startLine": 905,
                     "startColumn": 4,
-                    "startOffset": 72845,
+                    "startOffset": 72842,
                     "endLine": 909,
                     "endColumn": 12,
-                    "endOffset": 73076
+                    "endOffset": 73073
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5253,10 +5253,10 @@
                 "to": {
                     "startLine": 910,
                     "startColumn": 4,
-                    "startOffset": 73081,
+                    "startOffset": 73078,
                     "endLine": 919,
                     "endColumn": 12,
-                    "endOffset": 73623
+                    "endOffset": 73620
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5274,10 +5274,10 @@
                 "to": {
                     "startLine": 920,
                     "startColumn": 4,
-                    "startOffset": 73628,
+                    "startOffset": 73625,
                     "endLine": 928,
                     "endColumn": 12,
-                    "endOffset": 74117
+                    "endOffset": 74114
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5295,10 +5295,10 @@
                 "to": {
                     "startLine": 929,
                     "startColumn": 4,
-                    "startOffset": 74122,
+                    "startOffset": 74119,
                     "endLine": 937,
                     "endColumn": 12,
-                    "endOffset": 74722
+                    "endOffset": 74719
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5316,10 +5316,10 @@
                 "to": {
                     "startLine": 938,
                     "startColumn": 4,
-                    "startOffset": 74727,
+                    "startOffset": 74724,
                     "endLine": 940,
                     "endColumn": 12,
-                    "endOffset": 74870
+                    "endOffset": 74867
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5337,10 +5337,10 @@
                 "to": {
                     "startLine": 941,
                     "startColumn": 4,
-                    "startOffset": 74875,
+                    "startOffset": 74872,
                     "endLine": 947,
                     "endColumn": 12,
-                    "endOffset": 75458
+                    "endOffset": 75455
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5358,10 +5358,10 @@
                 "to": {
                     "startLine": 948,
                     "startColumn": 4,
-                    "startOffset": 75463,
+                    "startOffset": 75460,
                     "endLine": 955,
                     "endColumn": 12,
-                    "endOffset": 76022
+                    "endOffset": 76019
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5379,10 +5379,10 @@
                 "to": {
                     "startLine": 956,
                     "startColumn": 4,
-                    "startOffset": 76027,
+                    "startOffset": 76024,
                     "endLine": 962,
                     "endColumn": 12,
-                    "endOffset": 76397
+                    "endOffset": 76394
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5400,9 +5400,9 @@
                 "to": {
                     "startLine": 963,
                     "startColumn": 4,
-                    "startOffset": 76402,
+                    "startOffset": 76399,
                     "endColumn": 117,
-                    "endOffset": 76515
+                    "endOffset": 76512
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5419,10 +5419,10 @@
                 "to": {
                     "startLine": 964,
                     "startColumn": 4,
-                    "startOffset": 76520,
+                    "startOffset": 76517,
                     "endLine": 972,
                     "endColumn": 12,
-                    "endOffset": 77053
+                    "endOffset": 77050
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5440,10 +5440,10 @@
                 "to": {
                     "startLine": 973,
                     "startColumn": 4,
-                    "startOffset": 77058,
+                    "startOffset": 77055,
                     "endLine": 975,
                     "endColumn": 12,
-                    "endOffset": 77210
+                    "endOffset": 77207
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5461,10 +5461,10 @@
                 "to": {
                     "startLine": 976,
                     "startColumn": 4,
-                    "startOffset": 77215,
+                    "startOffset": 77212,
                     "endLine": 978,
                     "endColumn": 12,
-                    "endOffset": 77354
+                    "endOffset": 77351
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5482,10 +5482,10 @@
                 "to": {
                     "startLine": 979,
                     "startColumn": 4,
-                    "startOffset": 77359,
+                    "startOffset": 77356,
                     "endLine": 983,
                     "endColumn": 12,
-                    "endOffset": 77674
+                    "endOffset": 77671
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5503,10 +5503,10 @@
                 "to": {
                     "startLine": 984,
                     "startColumn": 4,
-                    "startOffset": 77679,
+                    "startOffset": 77676,
                     "endLine": 987,
                     "endColumn": 12,
-                    "endOffset": 77930
+                    "endOffset": 77927
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5524,10 +5524,10 @@
                 "to": {
                     "startLine": 988,
                     "startColumn": 4,
-                    "startOffset": 77935,
+                    "startOffset": 77932,
                     "endLine": 991,
                     "endColumn": 12,
-                    "endOffset": 78100
+                    "endOffset": 78097
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5545,10 +5545,10 @@
                 "to": {
                     "startLine": 992,
                     "startColumn": 4,
-                    "startOffset": 78105,
+                    "startOffset": 78102,
                     "endLine": 994,
                     "endColumn": 12,
-                    "endOffset": 78241
+                    "endOffset": 78238
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5566,9 +5566,9 @@
                 "to": {
                     "startLine": 995,
                     "startColumn": 4,
-                    "startOffset": 78246,
+                    "startOffset": 78243,
                     "endColumn": 63,
-                    "endOffset": 78305
+                    "endOffset": 78302
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5585,10 +5585,10 @@
                 "to": {
                     "startLine": 996,
                     "startColumn": 4,
-                    "startOffset": 78310,
+                    "startOffset": 78307,
                     "endLine": 999,
                     "endColumn": 12,
-                    "endOffset": 78587
+                    "endOffset": 78584
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5606,10 +5606,10 @@
                 "to": {
                     "startLine": 1000,
                     "startColumn": 4,
-                    "startOffset": 78592,
+                    "startOffset": 78589,
                     "endLine": 1003,
                     "endColumn": 12,
-                    "endOffset": 78873
+                    "endOffset": 78870
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5627,10 +5627,10 @@
                 "to": {
                     "startLine": 1004,
                     "startColumn": 4,
-                    "startOffset": 78878,
+                    "startOffset": 78875,
                     "endLine": 1013,
                     "endColumn": 12,
-                    "endOffset": 79549
+                    "endOffset": 79546
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5648,10 +5648,10 @@
                 "to": {
                     "startLine": 1014,
                     "startColumn": 4,
-                    "startOffset": 79554,
+                    "startOffset": 79551,
                     "endLine": 1018,
                     "endColumn": 12,
-                    "endOffset": 79813
+                    "endOffset": 79810
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5669,10 +5669,10 @@
                 "to": {
                     "startLine": 1019,
                     "startColumn": 4,
-                    "startOffset": 79818,
+                    "startOffset": 79815,
                     "endLine": 1025,
                     "endColumn": 12,
-                    "endOffset": 80151
+                    "endOffset": 80148
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5690,10 +5690,10 @@
                 "to": {
                     "startLine": 1026,
                     "startColumn": 4,
-                    "startOffset": 80156,
+                    "startOffset": 80153,
                     "endLine": 1031,
                     "endColumn": 12,
-                    "endOffset": 80504
+                    "endOffset": 80501
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5711,9 +5711,9 @@
                 "to": {
                     "startLine": 1032,
                     "startColumn": 4,
-                    "startOffset": 80509,
+                    "startOffset": 80506,
                     "endColumn": 93,
-                    "endOffset": 80598
+                    "endOffset": 80595
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5730,10 +5730,10 @@
                 "to": {
                     "startLine": 1033,
                     "startColumn": 4,
-                    "startOffset": 80603,
+                    "startOffset": 80600,
                     "endLine": 1035,
                     "endColumn": 12,
-                    "endOffset": 80784
+                    "endOffset": 80781
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5751,10 +5751,10 @@
                 "to": {
                     "startLine": 1036,
                     "startColumn": 4,
-                    "startOffset": 80789,
+                    "startOffset": 80786,
                     "endLine": 1039,
                     "endColumn": 12,
-                    "endOffset": 81090
+                    "endOffset": 81087
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5772,10 +5772,10 @@
                 "to": {
                     "startLine": 1040,
                     "startColumn": 4,
-                    "startOffset": 81095,
+                    "startOffset": 81092,
                     "endLine": 1044,
                     "endColumn": 12,
-                    "endOffset": 81352
+                    "endOffset": 81349
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5793,10 +5793,10 @@
                 "to": {
                     "startLine": 1045,
                     "startColumn": 4,
-                    "startOffset": 81357,
+                    "startOffset": 81354,
                     "endLine": 1046,
                     "endColumn": 12,
-                    "endOffset": 81477
+                    "endOffset": 81474
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5814,10 +5814,10 @@
                 "to": {
                     "startLine": 1047,
                     "startColumn": 4,
-                    "startOffset": 81482,
+                    "startOffset": 81479,
                     "endLine": 1048,
                     "endColumn": 12,
-                    "endOffset": 81604
+                    "endOffset": 81601
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5835,10 +5835,10 @@
                 "to": {
                     "startLine": 1049,
                     "startColumn": 4,
-                    "startOffset": 81609,
+                    "startOffset": 81606,
                     "endLine": 1051,
                     "endColumn": 12,
-                    "endOffset": 81843
+                    "endOffset": 81840
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5856,10 +5856,10 @@
                 "to": {
                     "startLine": 1052,
                     "startColumn": 4,
-                    "startOffset": 81848,
+                    "startOffset": 81845,
                     "endLine": 1054,
                     "endColumn": 12,
-                    "endOffset": 82054
+                    "endOffset": 82051
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5877,10 +5877,10 @@
                 "to": {
                     "startLine": 1055,
                     "startColumn": 4,
-                    "startOffset": 82059,
+                    "startOffset": 82056,
                     "endLine": 1056,
                     "endColumn": 12,
-                    "endOffset": 82173
+                    "endOffset": 82170
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5898,10 +5898,10 @@
                 "to": {
                     "startLine": 1057,
                     "startColumn": 4,
-                    "startOffset": 82178,
+                    "startOffset": 82175,
                     "endLine": 1060,
                     "endColumn": 12,
-                    "endOffset": 82366
+                    "endOffset": 82363
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5919,10 +5919,10 @@
                 "to": {
                     "startLine": 1061,
                     "startColumn": 4,
-                    "startOffset": 82371,
+                    "startOffset": 82368,
                     "endLine": 1067,
                     "endColumn": 12,
-                    "endOffset": 82821
+                    "endOffset": 82818
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5940,10 +5940,10 @@
                 "to": {
                     "startLine": 1068,
                     "startColumn": 4,
-                    "startOffset": 82826,
+                    "startOffset": 82823,
                     "endLine": 1070,
                     "endColumn": 12,
-                    "endOffset": 83002
+                    "endOffset": 82999
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5961,10 +5961,10 @@
                 "to": {
                     "startLine": 1071,
                     "startColumn": 4,
-                    "startOffset": 83007,
+                    "startOffset": 83004,
                     "endLine": 1073,
                     "endColumn": 12,
-                    "endOffset": 83124
+                    "endOffset": 83121
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -5982,10 +5982,10 @@
                 "to": {
                     "startLine": 1074,
                     "startColumn": 4,
-                    "startOffset": 83129,
+                    "startOffset": 83126,
                     "endLine": 1077,
                     "endColumn": 12,
-                    "endOffset": 83383
+                    "endOffset": 83380
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6003,10 +6003,10 @@
                 "to": {
                     "startLine": 1078,
                     "startColumn": 4,
-                    "startOffset": 83388,
+                    "startOffset": 83385,
                     "endLine": 1079,
                     "endColumn": 12,
-                    "endOffset": 83496
+                    "endOffset": 83493
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6024,10 +6024,10 @@
                 "to": {
                     "startLine": 1080,
                     "startColumn": 4,
-                    "startOffset": 83501,
+                    "startOffset": 83498,
                     "endLine": 1083,
                     "endColumn": 12,
-                    "endOffset": 83683
+                    "endOffset": 83680
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6045,10 +6045,10 @@
                 "to": {
                     "startLine": 1084,
                     "startColumn": 4,
-                    "startOffset": 83688,
+                    "startOffset": 83685,
                     "endLine": 1085,
                     "endColumn": 12,
-                    "endOffset": 83785
+                    "endOffset": 83782
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6066,10 +6066,10 @@
                 "to": {
                     "startLine": 1086,
                     "startColumn": 4,
-                    "startOffset": 83790,
+                    "startOffset": 83787,
                     "endLine": 1091,
                     "endColumn": 12,
-                    "endOffset": 84229
+                    "endOffset": 84226
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6087,10 +6087,10 @@
                 "to": {
                     "startLine": 1092,
                     "startColumn": 4,
-                    "startOffset": 84234,
+                    "startOffset": 84231,
                     "endLine": 1093,
                     "endColumn": 12,
-                    "endOffset": 84353
+                    "endOffset": 84350
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6108,10 +6108,10 @@
                 "to": {
                     "startLine": 1094,
                     "startColumn": 4,
-                    "startOffset": 84358,
+                    "startOffset": 84355,
                     "endLine": 1097,
                     "endColumn": 12,
-                    "endOffset": 84638
+                    "endOffset": 84635
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6129,10 +6129,10 @@
                 "to": {
                     "startLine": 1098,
                     "startColumn": 4,
-                    "startOffset": 84643,
+                    "startOffset": 84640,
                     "endLine": 1109,
                     "endColumn": 12,
-                    "endOffset": 85525
+                    "endOffset": 85522
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6150,10 +6150,10 @@
                 "to": {
                     "startLine": 1110,
                     "startColumn": 4,
-                    "startOffset": 85530,
+                    "startOffset": 85527,
                     "endLine": 1115,
                     "endColumn": 12,
-                    "endOffset": 85819
+                    "endOffset": 85816
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6171,10 +6171,10 @@
                 "to": {
                     "startLine": 1116,
                     "startColumn": 4,
-                    "startOffset": 85824,
+                    "startOffset": 85821,
                     "endLine": 1124,
                     "endColumn": 12,
-                    "endOffset": 86389
+                    "endOffset": 86386
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6192,10 +6192,10 @@
                 "to": {
                     "startLine": 1125,
                     "startColumn": 4,
-                    "startOffset": 86394,
+                    "startOffset": 86391,
                     "endLine": 1135,
                     "endColumn": 12,
-                    "endOffset": 87121
+                    "endOffset": 87118
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6213,10 +6213,10 @@
                 "to": {
                     "startLine": 1136,
                     "startColumn": 4,
-                    "startOffset": 87126,
+                    "startOffset": 87123,
                     "endLine": 1138,
                     "endColumn": 12,
-                    "endOffset": 87293
+                    "endOffset": 87290
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6234,10 +6234,10 @@
                 "to": {
                     "startLine": 1139,
                     "startColumn": 4,
-                    "startOffset": 87298,
+                    "startOffset": 87295,
                     "endLine": 1143,
                     "endColumn": 12,
-                    "endOffset": 87629
+                    "endOffset": 87626
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6255,10 +6255,10 @@
                 "to": {
                     "startLine": 1144,
                     "startColumn": 4,
-                    "startOffset": 87634,
+                    "startOffset": 87631,
                     "endLine": 1155,
                     "endColumn": 12,
-                    "endOffset": 88496
+                    "endOffset": 88493
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6276,10 +6276,10 @@
                 "to": {
                     "startLine": 1156,
                     "startColumn": 4,
-                    "startOffset": 88501,
+                    "startOffset": 88498,
                     "endLine": 1160,
                     "endColumn": 12,
-                    "endOffset": 88774
+                    "endOffset": 88771
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6297,10 +6297,10 @@
                 "to": {
                     "startLine": 1161,
                     "startColumn": 4,
-                    "startOffset": 88779,
+                    "startOffset": 88776,
                     "endLine": 1198,
                     "endColumn": 12,
-                    "endOffset": 91636
+                    "endOffset": 91633
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6318,10 +6318,10 @@
                 "to": {
                     "startLine": 1199,
                     "startColumn": 4,
-                    "startOffset": 91641,
+                    "startOffset": 91638,
                     "endLine": 1237,
                     "endColumn": 12,
-                    "endOffset": 94638
+                    "endOffset": 94635
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6339,9 +6339,9 @@
                 "to": {
                     "startLine": 1238,
                     "startColumn": 4,
-                    "startOffset": 94643,
+                    "startOffset": 94640,
                     "endColumn": 61,
-                    "endOffset": 94700
+                    "endOffset": 94697
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6358,10 +6358,10 @@
                 "to": {
                     "startLine": 1239,
                     "startColumn": 4,
-                    "startOffset": 94705,
+                    "startOffset": 94702,
                     "endLine": 1248,
                     "endColumn": 12,
-                    "endOffset": 95330
+                    "endOffset": 95327
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6379,10 +6379,10 @@
                 "to": {
                     "startLine": 1249,
                     "startColumn": 4,
-                    "startOffset": 95335,
+                    "startOffset": 95332,
                     "endLine": 1257,
                     "endColumn": 12,
-                    "endOffset": 95944
+                    "endOffset": 95941
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6400,9 +6400,9 @@
                 "to": {
                     "startLine": 1258,
                     "startColumn": 4,
-                    "startOffset": 95949,
+                    "startOffset": 95946,
                     "endColumn": 85,
-                    "endOffset": 96030
+                    "endOffset": 96027
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6419,10 +6419,10 @@
                 "to": {
                     "startLine": 1259,
                     "startColumn": 4,
-                    "startOffset": 96035,
+                    "startOffset": 96032,
                     "endLine": 1260,
                     "endColumn": 12,
-                    "endOffset": 96143
+                    "endOffset": 96140
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6440,10 +6440,10 @@
                 "to": {
                     "startLine": 1261,
                     "startColumn": 4,
-                    "startOffset": 96148,
+                    "startOffset": 96145,
                     "endLine": 1264,
                     "endColumn": 12,
-                    "endOffset": 96372
+                    "endOffset": 96369
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6461,10 +6461,10 @@
                 "to": {
                     "startLine": 1265,
                     "startColumn": 4,
-                    "startOffset": 96377,
+                    "startOffset": 96374,
                     "endLine": 1267,
                     "endColumn": 12,
-                    "endOffset": 96532
+                    "endOffset": 96529
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6482,10 +6482,10 @@
                 "to": {
                     "startLine": 1268,
                     "startColumn": 4,
-                    "startOffset": 96537,
+                    "startOffset": 96534,
                     "endLine": 1270,
                     "endColumn": 12,
-                    "endOffset": 96684
+                    "endOffset": 96681
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6503,10 +6503,10 @@
                 "to": {
                     "startLine": 1271,
                     "startColumn": 4,
-                    "startOffset": 96689,
+                    "startOffset": 96686,
                     "endLine": 1273,
                     "endColumn": 12,
-                    "endOffset": 96855
+                    "endOffset": 96852
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6524,10 +6524,10 @@
                 "to": {
                     "startLine": 1274,
                     "startColumn": 4,
-                    "startOffset": 96860,
+                    "startOffset": 96857,
                     "endLine": 1276,
                     "endColumn": 12,
-                    "endOffset": 97022
+                    "endOffset": 97019
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6545,10 +6545,10 @@
                 "to": {
                     "startLine": 1277,
                     "startColumn": 4,
-                    "startOffset": 97027,
+                    "startOffset": 97024,
                     "endLine": 1280,
                     "endColumn": 12,
-                    "endOffset": 97265
+                    "endOffset": 97262
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6566,10 +6566,10 @@
                 "to": {
                     "startLine": 1281,
                     "startColumn": 4,
-                    "startOffset": 97270,
+                    "startOffset": 97267,
                     "endLine": 1283,
                     "endColumn": 12,
-                    "endOffset": 97435
+                    "endOffset": 97432
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6587,10 +6587,10 @@
                 "to": {
                     "startLine": 1284,
                     "startColumn": 4,
-                    "startOffset": 97440,
+                    "startOffset": 97437,
                     "endLine": 1286,
                     "endColumn": 12,
-                    "endOffset": 97608
+                    "endOffset": 97605
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6608,10 +6608,10 @@
                 "to": {
                     "startLine": 1287,
                     "startColumn": 4,
-                    "startOffset": 97613,
+                    "startOffset": 97610,
                     "endLine": 1289,
                     "endColumn": 12,
-                    "endOffset": 97779
+                    "endOffset": 97776
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6629,10 +6629,10 @@
                 "to": {
                     "startLine": 1290,
                     "startColumn": 4,
-                    "startOffset": 97784,
+                    "startOffset": 97781,
                     "endLine": 1293,
                     "endColumn": 12,
-                    "endOffset": 98053
+                    "endOffset": 98050
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6650,10 +6650,10 @@
                 "to": {
                     "startLine": 1294,
                     "startColumn": 4,
-                    "startOffset": 98058,
+                    "startOffset": 98055,
                     "endLine": 1296,
                     "endColumn": 12,
-                    "endOffset": 98252
+                    "endOffset": 98249
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6671,10 +6671,10 @@
                 "to": {
                     "startLine": 1297,
                     "startColumn": 4,
-                    "startOffset": 98257,
+                    "startOffset": 98254,
                     "endLine": 1300,
                     "endColumn": 12,
-                    "endOffset": 98457
+                    "endOffset": 98454
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6692,10 +6692,10 @@
                 "to": {
                     "startLine": 1301,
                     "startColumn": 4,
-                    "startOffset": 98462,
+                    "startOffset": 98459,
                     "endLine": 1304,
                     "endColumn": 12,
-                    "endOffset": 98787
+                    "endOffset": 98784
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6713,9 +6713,9 @@
                 "to": {
                     "startLine": 1305,
                     "startColumn": 4,
-                    "startOffset": 98792,
+                    "startOffset": 98789,
                     "endColumn": 83,
-                    "endOffset": 98871
+                    "endOffset": 98868
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6732,9 +6732,9 @@
                 "to": {
                     "startLine": 1306,
                     "startColumn": 4,
-                    "startOffset": 98876,
+                    "startOffset": 98873,
                     "endColumn": 95,
-                    "endOffset": 98967
+                    "endOffset": 98964
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6751,9 +6751,9 @@
                 "to": {
                     "startLine": 1307,
                     "startColumn": 4,
-                    "startOffset": 98972,
+                    "startOffset": 98969,
                     "endColumn": 95,
-                    "endOffset": 99063
+                    "endOffset": 99060
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6770,9 +6770,9 @@
                 "to": {
                     "startLine": 1308,
                     "startColumn": 4,
-                    "startOffset": 99068,
+                    "startOffset": 99065,
                     "endColumn": 97,
-                    "endOffset": 99161
+                    "endOffset": 99158
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6789,9 +6789,9 @@
                 "to": {
                     "startLine": 1309,
                     "startColumn": 4,
-                    "startOffset": 99166,
+                    "startOffset": 99163,
                     "endColumn": 99,
-                    "endOffset": 99261
+                    "endOffset": 99258
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6808,9 +6808,9 @@
                 "to": {
                     "startLine": 1310,
                     "startColumn": 4,
-                    "startOffset": 99266,
+                    "startOffset": 99263,
                     "endColumn": 101,
-                    "endOffset": 99363
+                    "endOffset": 99360
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6827,9 +6827,9 @@
                 "to": {
                     "startLine": 1311,
                     "startColumn": 4,
-                    "startOffset": 99368,
+                    "startOffset": 99365,
                     "endColumn": 101,
-                    "endOffset": 99465
+                    "endOffset": 99462
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6846,9 +6846,9 @@
                 "to": {
                     "startLine": 1312,
                     "startColumn": 4,
-                    "startOffset": 99470,
+                    "startOffset": 99467,
                     "endColumn": 101,
-                    "endOffset": 99567
+                    "endOffset": 99564
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6865,9 +6865,9 @@
                 "to": {
                     "startLine": 1313,
                     "startColumn": 4,
-                    "startOffset": 99572,
+                    "startOffset": 99569,
                     "endColumn": 101,
-                    "endOffset": 99669
+                    "endOffset": 99666
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6884,9 +6884,9 @@
                 "to": {
                     "startLine": 1314,
                     "startColumn": 4,
-                    "startOffset": 99674,
+                    "startOffset": 99671,
                     "endColumn": 101,
-                    "endOffset": 99771
+                    "endOffset": 99768
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6903,9 +6903,9 @@
                 "to": {
                     "startLine": 1315,
                     "startColumn": 4,
-                    "startOffset": 99776,
+                    "startOffset": 99773,
                     "endColumn": 99,
-                    "endOffset": 99871
+                    "endOffset": 99868
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6922,9 +6922,9 @@
                 "to": {
                     "startLine": 1316,
                     "startColumn": 4,
-                    "startOffset": 99876,
+                    "startOffset": 99873,
                     "endColumn": 95,
-                    "endOffset": 99967
+                    "endOffset": 99964
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6941,9 +6941,9 @@
                 "to": {
                     "startLine": 1317,
                     "startColumn": 4,
-                    "startOffset": 99972,
+                    "startOffset": 99969,
                     "endColumn": 111,
-                    "endOffset": 100079
+                    "endOffset": 100076
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6960,9 +6960,9 @@
                 "to": {
                     "startLine": 1318,
                     "startColumn": 4,
-                    "startOffset": 100084,
+                    "startOffset": 100081,
                     "endColumn": 128,
-                    "endOffset": 100208
+                    "endOffset": 100205
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6979,9 +6979,9 @@
                 "to": {
                     "startLine": 1319,
                     "startColumn": 4,
-                    "startOffset": 100213,
+                    "startOffset": 100210,
                     "endColumn": 122,
-                    "endOffset": 100331
+                    "endOffset": 100328
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -6998,10 +6998,10 @@
                 "to": {
                     "startLine": 1320,
                     "startColumn": 4,
-                    "startOffset": 100336,
+                    "startOffset": 100333,
                     "endLine": 1321,
                     "endColumn": 12,
-                    "endOffset": 100485
+                    "endOffset": 100482
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7019,10 +7019,10 @@
                 "to": {
                     "startLine": 1322,
                     "startColumn": 4,
-                    "startOffset": 100490,
+                    "startOffset": 100487,
                     "endLine": 1323,
                     "endColumn": 12,
-                    "endOffset": 100639
+                    "endOffset": 100636
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7040,9 +7040,9 @@
                 "to": {
                     "startLine": 1324,
                     "startColumn": 4,
-                    "startOffset": 100644,
+                    "startOffset": 100641,
                     "endColumn": 97,
-                    "endOffset": 100737
+                    "endOffset": 100734
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7059,9 +7059,9 @@
                 "to": {
                     "startLine": 1325,
                     "startColumn": 4,
-                    "startOffset": 100742,
+                    "startOffset": 100739,
                     "endColumn": 113,
-                    "endOffset": 100851
+                    "endOffset": 100848
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7078,9 +7078,9 @@
                 "to": {
                     "startLine": 1326,
                     "startColumn": 4,
-                    "startOffset": 100856,
+                    "startOffset": 100853,
                     "endColumn": 93,
-                    "endOffset": 100945
+                    "endOffset": 100942
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7097,10 +7097,10 @@
                 "to": {
                     "startLine": 1327,
                     "startColumn": 4,
-                    "startOffset": 100950,
+                    "startOffset": 100947,
                     "endLine": 1328,
                     "endColumn": 12,
-                    "endOffset": 101085
+                    "endOffset": 101082
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7118,10 +7118,10 @@
                 "to": {
                     "startLine": 1329,
                     "startColumn": 4,
-                    "startOffset": 101090,
+                    "startOffset": 101087,
                     "endLine": 1330,
                     "endColumn": 12,
-                    "endOffset": 101219
+                    "endOffset": 101216
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7139,9 +7139,9 @@
                 "to": {
                     "startLine": 1331,
                     "startColumn": 4,
-                    "startOffset": 101224,
+                    "startOffset": 101221,
                     "endColumn": 95,
-                    "endOffset": 101315
+                    "endOffset": 101312
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7158,9 +7158,9 @@
                 "to": {
                     "startLine": 1332,
                     "startColumn": 4,
-                    "startOffset": 101320,
+                    "startOffset": 101317,
                     "endColumn": 111,
-                    "endOffset": 101427
+                    "endOffset": 101424
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7177,9 +7177,9 @@
                 "to": {
                     "startLine": 1333,
                     "startColumn": 4,
-                    "startOffset": 101432,
+                    "startOffset": 101429,
                     "endColumn": 99,
-                    "endOffset": 101527
+                    "endOffset": 101524
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7196,9 +7196,9 @@
                 "to": {
                     "startLine": 1334,
                     "startColumn": 4,
-                    "startOffset": 101532,
+                    "startOffset": 101529,
                     "endColumn": 115,
-                    "endOffset": 101643
+                    "endOffset": 101640
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7215,9 +7215,9 @@
                 "to": {
                     "startLine": 1335,
                     "startColumn": 4,
-                    "startOffset": 101648,
+                    "startOffset": 101645,
                     "endColumn": 95,
-                    "endOffset": 101739
+                    "endOffset": 101736
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7234,9 +7234,9 @@
                 "to": {
                     "startLine": 1336,
                     "startColumn": 4,
-                    "startOffset": 101744,
+                    "startOffset": 101741,
                     "endColumn": 111,
-                    "endOffset": 101851
+                    "endOffset": 101848
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7253,10 +7253,10 @@
                 "to": {
                     "startLine": 1337,
                     "startColumn": 4,
-                    "startOffset": 101856,
+                    "startOffset": 101853,
                     "endLine": 1338,
                     "endColumn": 12,
-                    "endOffset": 101991
+                    "endOffset": 101988
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7274,9 +7274,9 @@
                 "to": {
                     "startLine": 1339,
                     "startColumn": 4,
-                    "startOffset": 101996,
+                    "startOffset": 101993,
                     "endColumn": 135,
-                    "endOffset": 102127
+                    "endOffset": 102124
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7293,10 +7293,10 @@
                 "to": {
                     "startLine": 1340,
                     "startColumn": 4,
-                    "startOffset": 102132,
+                    "startOffset": 102129,
                     "endLine": 1341,
                     "endColumn": 12,
-                    "endOffset": 102291
+                    "endOffset": 102288
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7314,9 +7314,9 @@
                 "to": {
                     "startLine": 1342,
                     "startColumn": 4,
-                    "startOffset": 102296,
+                    "startOffset": 102293,
                     "endColumn": 129,
-                    "endOffset": 102421
+                    "endOffset": 102418
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7333,10 +7333,10 @@
                 "to": {
                     "startLine": 1343,
                     "startColumn": 4,
-                    "startOffset": 102426,
+                    "startOffset": 102423,
                     "endLine": 1344,
                     "endColumn": 12,
-                    "endOffset": 102579
+                    "endOffset": 102576
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7354,10 +7354,10 @@
                 "to": {
                     "startLine": 1345,
                     "startColumn": 4,
-                    "startOffset": 102584,
+                    "startOffset": 102581,
                     "endLine": 1346,
                     "endColumn": 12,
-                    "endOffset": 102729
+                    "endOffset": 102726
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7375,9 +7375,9 @@
                 "to": {
                     "startLine": 1347,
                     "startColumn": 4,
-                    "startOffset": 102734,
+                    "startOffset": 102731,
                     "endColumn": 140,
-                    "endOffset": 102870
+                    "endOffset": 102867
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7394,10 +7394,10 @@
                 "to": {
                     "startLine": 1348,
                     "startColumn": 4,
-                    "startOffset": 102875,
+                    "startOffset": 102872,
                     "endLine": 1349,
                     "endColumn": 12,
-                    "endOffset": 103014
+                    "endOffset": 103011
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7415,9 +7415,9 @@
                 "to": {
                     "startLine": 1350,
                     "startColumn": 4,
-                    "startOffset": 103019,
+                    "startOffset": 103016,
                     "endColumn": 134,
-                    "endOffset": 103149
+                    "endOffset": 103146
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7434,9 +7434,9 @@
                 "to": {
                     "startLine": 1351,
                     "startColumn": 4,
-                    "startOffset": 103154,
+                    "startOffset": 103151,
                     "endColumn": 111,
-                    "endOffset": 103261
+                    "endOffset": 103258
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7453,9 +7453,9 @@
                 "to": {
                     "startLine": 1352,
                     "startColumn": 4,
-                    "startOffset": 103266,
+                    "startOffset": 103263,
                     "endColumn": 127,
-                    "endOffset": 103389
+                    "endOffset": 103386
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7472,10 +7472,10 @@
                 "to": {
                     "startLine": 1353,
                     "startColumn": 4,
-                    "startOffset": 103394,
+                    "startOffset": 103391,
                     "endLine": 1354,
                     "endColumn": 12,
-                    "endOffset": 103525
+                    "endOffset": 103522
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7493,10 +7493,10 @@
                 "to": {
                     "startLine": 1355,
                     "startColumn": 4,
-                    "startOffset": 103530,
+                    "startOffset": 103527,
                     "endLine": 1356,
                     "endColumn": 12,
-                    "endOffset": 103667
+                    "endOffset": 103664
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7514,10 +7514,10 @@
                 "to": {
                     "startLine": 1357,
                     "startColumn": 4,
-                    "startOffset": 103672,
+                    "startOffset": 103669,
                     "endLine": 1358,
                     "endColumn": 12,
-                    "endOffset": 103809
+                    "endOffset": 103806
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7535,9 +7535,9 @@
                 "to": {
                     "startLine": 1359,
                     "startColumn": 4,
-                    "startOffset": 103814,
+                    "startOffset": 103811,
                     "endColumn": 111,
-                    "endOffset": 103921
+                    "endOffset": 103918
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7554,9 +7554,9 @@
                 "to": {
                     "startLine": 1360,
                     "startColumn": 4,
-                    "startOffset": 103926,
+                    "startOffset": 103923,
                     "endColumn": 139,
-                    "endOffset": 104061
+                    "endOffset": 104058
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7573,9 +7573,9 @@
                 "to": {
                     "startLine": 1361,
                     "startColumn": 4,
-                    "startOffset": 104066,
+                    "startOffset": 104063,
                     "endColumn": 67,
-                    "endOffset": 104129
+                    "endOffset": 104126
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7592,9 +7592,9 @@
                 "to": {
                     "startLine": 1362,
                     "startColumn": 4,
-                    "startOffset": 104134,
+                    "startOffset": 104131,
                     "endColumn": 72,
-                    "endOffset": 104202
+                    "endOffset": 104199
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7611,9 +7611,9 @@
                 "to": {
                     "startLine": 1363,
                     "startColumn": 4,
-                    "startOffset": 104207,
+                    "startOffset": 104204,
                     "endColumn": 73,
-                    "endOffset": 104276
+                    "endOffset": 104273
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7630,9 +7630,9 @@
                 "to": {
                     "startLine": 1364,
                     "startColumn": 4,
-                    "startOffset": 104281,
+                    "startOffset": 104278,
                     "endColumn": 72,
-                    "endOffset": 104349
+                    "endOffset": 104346
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7649,9 +7649,9 @@
                 "to": {
                     "startLine": 1365,
                     "startColumn": 4,
-                    "startOffset": 104354,
+                    "startOffset": 104351,
                     "endColumn": 73,
-                    "endOffset": 104423
+                    "endOffset": 104420
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7668,10 +7668,10 @@
                 "to": {
                     "startLine": 1366,
                     "startColumn": 4,
-                    "startOffset": 104428,
+                    "startOffset": 104425,
                     "endLine": 1367,
                     "endColumn": 12,
-                    "endOffset": 104569
+                    "endOffset": 104566
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7689,10 +7689,10 @@
                 "to": {
                     "startLine": 1368,
                     "startColumn": 4,
-                    "startOffset": 104574,
+                    "startOffset": 104571,
                     "endLine": 1369,
                     "endColumn": 12,
-                    "endOffset": 104713
+                    "endOffset": 104710
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7710,10 +7710,10 @@
                 "to": {
                     "startLine": 1370,
                     "startColumn": 4,
-                    "startOffset": 104718,
+                    "startOffset": 104715,
                     "endLine": 1371,
                     "endColumn": 12,
-                    "endOffset": 104851
+                    "endOffset": 104848
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7731,9 +7731,9 @@
                 "to": {
                     "startLine": 1372,
                     "startColumn": 4,
-                    "startOffset": 104856,
+                    "startOffset": 104853,
                     "endColumn": 65,
-                    "endOffset": 104917
+                    "endOffset": 104914
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7750,9 +7750,9 @@
                 "to": {
                     "startLine": 1373,
                     "startColumn": 4,
-                    "startOffset": 104922,
+                    "startOffset": 104919,
                     "endColumn": 89,
-                    "endOffset": 105007
+                    "endOffset": 105004
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7769,9 +7769,9 @@
                 "to": {
                     "startLine": 1374,
                     "startColumn": 4,
-                    "startOffset": 105012,
+                    "startOffset": 105009,
                     "endColumn": 79,
-                    "endOffset": 105087
+                    "endOffset": 105084
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7788,9 +7788,9 @@
                 "to": {
                     "startLine": 1375,
                     "startColumn": 4,
-                    "startOffset": 105092,
+                    "startOffset": 105089,
                     "endColumn": 91,
-                    "endOffset": 105179
+                    "endOffset": 105176
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7807,9 +7807,9 @@
                 "to": {
                     "startLine": 1376,
                     "startColumn": 4,
-                    "startOffset": 105184,
+                    "startOffset": 105181,
                     "endColumn": 97,
-                    "endOffset": 105277
+                    "endOffset": 105274
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7826,10 +7826,10 @@
                 "to": {
                     "startLine": 1377,
                     "startColumn": 4,
-                    "startOffset": 105282,
+                    "startOffset": 105279,
                     "endLine": 1378,
                     "endColumn": 12,
-                    "endOffset": 105387
+                    "endOffset": 105384
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7847,9 +7847,9 @@
                 "to": {
                     "startLine": 1379,
                     "startColumn": 4,
-                    "startOffset": 105392,
+                    "startOffset": 105389,
                     "endColumn": 77,
-                    "endOffset": 105465
+                    "endOffset": 105462
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7866,9 +7866,9 @@
                 "to": {
                     "startLine": 1380,
                     "startColumn": 4,
-                    "startOffset": 105470,
+                    "startOffset": 105467,
                     "endColumn": 105,
-                    "endOffset": 105571
+                    "endOffset": 105568
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7885,9 +7885,9 @@
                 "to": {
                     "startLine": 1381,
                     "startColumn": 4,
-                    "startOffset": 105576,
+                    "startOffset": 105573,
                     "endColumn": 91,
-                    "endOffset": 105663
+                    "endOffset": 105660
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7904,9 +7904,9 @@
                 "to": {
                     "startLine": 1382,
                     "startColumn": 4,
-                    "startOffset": 105668,
+                    "startOffset": 105665,
                     "endColumn": 103,
-                    "endOffset": 105767
+                    "endOffset": 105764
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7923,9 +7923,9 @@
                 "to": {
                     "startLine": 1383,
                     "startColumn": 4,
-                    "startOffset": 105772,
+                    "startOffset": 105769,
                     "endColumn": 109,
-                    "endOffset": 105877
+                    "endOffset": 105874
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7942,10 +7942,10 @@
                 "to": {
                     "startLine": 1384,
                     "startColumn": 4,
-                    "startOffset": 105882,
+                    "startOffset": 105879,
                     "endLine": 1385,
                     "endColumn": 12,
-                    "endOffset": 105999
+                    "endOffset": 105996
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7963,10 +7963,10 @@
                 "to": {
                     "startLine": 1386,
                     "startColumn": 4,
-                    "startOffset": 106004,
+                    "startOffset": 106001,
                     "endLine": 1389,
                     "endColumn": 12,
-                    "endOffset": 106162
+                    "endOffset": 106159
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -7984,10 +7984,10 @@
                 "to": {
                     "startLine": 1390,
                     "startColumn": 4,
-                    "startOffset": 106167,
+                    "startOffset": 106164,
                     "endLine": 1393,
                     "endColumn": 12,
-                    "endOffset": 106319
+                    "endOffset": 106316
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8005,9 +8005,9 @@
                 "to": {
                     "startLine": 1394,
                     "startColumn": 4,
-                    "startOffset": 106324,
+                    "startOffset": 106321,
                     "endColumn": 79,
-                    "endOffset": 106399
+                    "endOffset": 106396
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8024,9 +8024,9 @@
                 "to": {
                     "startLine": 1395,
                     "startColumn": 4,
-                    "startOffset": 106404,
+                    "startOffset": 106401,
                     "endColumn": 99,
-                    "endOffset": 106499
+                    "endOffset": 106496
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8043,9 +8043,9 @@
                 "to": {
                     "startLine": 1396,
                     "startColumn": 4,
-                    "startOffset": 106504,
+                    "startOffset": 106501,
                     "endColumn": 89,
-                    "endOffset": 106589
+                    "endOffset": 106586
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8062,9 +8062,9 @@
                 "to": {
                     "startLine": 1397,
                     "startColumn": 4,
-                    "startOffset": 106594,
+                    "startOffset": 106591,
                     "endColumn": 109,
-                    "endOffset": 106699
+                    "endOffset": 106696
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8081,9 +8081,9 @@
                 "to": {
                     "startLine": 1398,
                     "startColumn": 4,
-                    "startOffset": 106704,
+                    "startOffset": 106701,
                     "endColumn": 91,
-                    "endOffset": 106791
+                    "endOffset": 106788
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8100,10 +8100,10 @@
                 "to": {
                     "startLine": 1399,
                     "startColumn": 4,
-                    "startOffset": 106796,
+                    "startOffset": 106793,
                     "endLine": 1400,
                     "endColumn": 12,
-                    "endOffset": 106891
+                    "endOffset": 106888
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8121,10 +8121,10 @@
                 "to": {
                     "startLine": 1401,
                     "startColumn": 4,
-                    "startOffset": 106896,
+                    "startOffset": 106893,
                     "endLine": 1402,
                     "endColumn": 12,
-                    "endOffset": 107003
+                    "endOffset": 107000
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8142,10 +8142,10 @@
                 "to": {
                     "startLine": 1403,
                     "startColumn": 4,
-                    "startOffset": 107008,
+                    "startOffset": 107005,
                     "endLine": 1404,
                     "endColumn": 12,
-                    "endOffset": 107117
+                    "endOffset": 107114
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8163,10 +8163,10 @@
                 "to": {
                     "startLine": 1405,
                     "startColumn": 4,
-                    "startOffset": 107122,
+                    "startOffset": 107119,
                     "endLine": 1406,
                     "endColumn": 12,
-                    "endOffset": 107233
+                    "endOffset": 107230
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8184,10 +8184,10 @@
                 "to": {
                     "startLine": 1407,
                     "startColumn": 4,
-                    "startOffset": 107238,
+                    "startOffset": 107235,
                     "endLine": 1408,
                     "endColumn": 12,
-                    "endOffset": 107349
+                    "endOffset": 107346
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8205,9 +8205,9 @@
                 "to": {
                     "startLine": 1409,
                     "startColumn": 4,
-                    "startOffset": 107354,
+                    "startOffset": 107351,
                     "endColumn": 93,
-                    "endOffset": 107443
+                    "endOffset": 107440
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8224,9 +8224,9 @@
                 "to": {
                     "startLine": 1410,
                     "startColumn": 4,
-                    "startOffset": 107448,
+                    "startOffset": 107445,
                     "endColumn": 113,
-                    "endOffset": 107557
+                    "endOffset": 107554
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8243,9 +8243,9 @@
                 "to": {
                     "startLine": 1411,
                     "startColumn": 4,
-                    "startOffset": 107562,
+                    "startOffset": 107559,
                     "endColumn": 111,
-                    "endOffset": 107669
+                    "endOffset": 107666
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8262,10 +8262,10 @@
                 "to": {
                     "startLine": 1412,
                     "startColumn": 4,
-                    "startOffset": 107674,
+                    "startOffset": 107671,
                     "endLine": 1413,
                     "endColumn": 12,
-                    "endOffset": 107771
+                    "endOffset": 107768
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8283,10 +8283,10 @@
                 "to": {
                     "startLine": 1414,
                     "startColumn": 4,
-                    "startOffset": 107776,
+                    "startOffset": 107773,
                     "endLine": 1415,
                     "endColumn": 12,
-                    "endOffset": 107891
+                    "endOffset": 107888
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8304,10 +8304,10 @@
                 "to": {
                     "startLine": 1416,
                     "startColumn": 4,
-                    "startOffset": 107896,
+                    "startOffset": 107893,
                     "endLine": 1417,
                     "endColumn": 12,
-                    "endOffset": 108013
+                    "endOffset": 108010
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8325,9 +8325,9 @@
                 "to": {
                     "startLine": 1418,
                     "startColumn": 4,
-                    "startOffset": 108018,
+                    "startOffset": 108015,
                     "endColumn": 81,
-                    "endOffset": 108095
+                    "endOffset": 108092
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8344,9 +8344,9 @@
                 "to": {
                     "startLine": 1419,
                     "startColumn": 4,
-                    "startOffset": 108100,
+                    "startOffset": 108097,
                     "endColumn": 103,
-                    "endOffset": 108199
+                    "endOffset": 108196
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8363,9 +8363,9 @@
                 "to": {
                     "startLine": 1420,
                     "startColumn": 4,
-                    "startOffset": 108204,
+                    "startOffset": 108201,
                     "endColumn": 119,
-                    "endOffset": 108319
+                    "endOffset": 108316
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8382,9 +8382,9 @@
                 "to": {
                     "startLine": 1421,
                     "startColumn": 4,
-                    "startOffset": 108324,
+                    "startOffset": 108321,
                     "endColumn": 125,
-                    "endOffset": 108445
+                    "endOffset": 108442
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8401,9 +8401,9 @@
                 "to": {
                     "startLine": 1422,
                     "startColumn": 4,
-                    "startOffset": 108450,
+                    "startOffset": 108447,
                     "endColumn": 97,
-                    "endOffset": 108543
+                    "endOffset": 108540
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8420,9 +8420,9 @@
                 "to": {
                     "startLine": 1423,
                     "startColumn": 4,
-                    "startOffset": 108548,
+                    "startOffset": 108545,
                     "endColumn": 93,
-                    "endOffset": 108637
+                    "endOffset": 108634
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8439,9 +8439,9 @@
                 "to": {
                     "startLine": 1424,
                     "startColumn": 4,
-                    "startOffset": 108642,
+                    "startOffset": 108639,
                     "endColumn": 87,
-                    "endOffset": 108725
+                    "endOffset": 108722
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8458,9 +8458,9 @@
                 "to": {
                     "startLine": 1425,
                     "startColumn": 4,
-                    "startOffset": 108730,
+                    "startOffset": 108727,
                     "endColumn": 111,
-                    "endOffset": 108837
+                    "endOffset": 108834
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8477,9 +8477,9 @@
                 "to": {
                     "startLine": 1426,
                     "startColumn": 4,
-                    "startOffset": 108842,
+                    "startOffset": 108839,
                     "endColumn": 115,
-                    "endOffset": 108953
+                    "endOffset": 108950
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8496,9 +8496,9 @@
                 "to": {
                     "startLine": 1427,
                     "startColumn": 4,
-                    "startOffset": 108958,
+                    "startOffset": 108955,
                     "endColumn": 121,
-                    "endOffset": 109075
+                    "endOffset": 109072
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8515,9 +8515,9 @@
                 "to": {
                     "startLine": 1428,
                     "startColumn": 4,
-                    "startOffset": 109080,
+                    "startOffset": 109077,
                     "endColumn": 111,
-                    "endOffset": 109187
+                    "endOffset": 109184
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8534,10 +8534,10 @@
                 "to": {
                     "startLine": 1429,
                     "startColumn": 4,
-                    "startOffset": 109192,
+                    "startOffset": 109189,
                     "endLine": 1431,
                     "endColumn": 12,
-                    "endOffset": 109362
+                    "endOffset": 109359
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8555,9 +8555,9 @@
                 "to": {
                     "startLine": 1432,
                     "startColumn": 4,
-                    "startOffset": 109367,
+                    "startOffset": 109364,
                     "endColumn": 115,
-                    "endOffset": 109478
+                    "endOffset": 109475
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8574,9 +8574,9 @@
                 "to": {
                     "startLine": 1433,
                     "startColumn": 4,
-                    "startOffset": 109483,
+                    "startOffset": 109480,
                     "endColumn": 85,
-                    "endOffset": 109564
+                    "endOffset": 109561
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8593,9 +8593,9 @@
                 "to": {
                     "startLine": 1434,
                     "startColumn": 4,
-                    "startOffset": 109569,
+                    "startOffset": 109566,
                     "endColumn": 91,
-                    "endOffset": 109656
+                    "endOffset": 109653
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8612,10 +8612,10 @@
                 "to": {
                     "startLine": 1435,
                     "startColumn": 4,
-                    "startOffset": 109661,
+                    "startOffset": 109658,
                     "endLine": 1436,
                     "endColumn": 12,
-                    "endOffset": 109768
+                    "endOffset": 109765
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8633,10 +8633,10 @@
                 "to": {
                     "startLine": 1437,
                     "startColumn": 4,
-                    "startOffset": 109773,
+                    "startOffset": 109770,
                     "endLine": 1438,
                     "endColumn": 12,
-                    "endOffset": 109892
+                    "endOffset": 109889
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8654,9 +8654,9 @@
                 "to": {
                     "startLine": 1439,
                     "startColumn": 4,
-                    "startOffset": 109897,
+                    "startOffset": 109894,
                     "endColumn": 66,
-                    "endOffset": 109959
+                    "endOffset": 109956
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8673,10 +8673,10 @@
                 "to": {
                     "startLine": 1440,
                     "startColumn": 4,
-                    "startOffset": 109964,
+                    "startOffset": 109961,
                     "endLine": 1441,
                     "endColumn": 12,
-                    "endOffset": 110085
+                    "endOffset": 110082
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8694,9 +8694,9 @@
                 "to": {
                     "startLine": 1442,
                     "startColumn": 4,
-                    "startOffset": 110090,
+                    "startOffset": 110087,
                     "endColumn": 67,
-                    "endOffset": 110153
+                    "endOffset": 110150
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8713,10 +8713,10 @@
                 "to": {
                     "startLine": 1443,
                     "startColumn": 4,
-                    "startOffset": 110158,
+                    "startOffset": 110155,
                     "endLine": 1444,
                     "endColumn": 12,
-                    "endOffset": 110281
+                    "endOffset": 110278
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8734,10 +8734,10 @@
                 "to": {
                     "startLine": 1445,
                     "startColumn": 4,
-                    "startOffset": 110286,
+                    "startOffset": 110283,
                     "endLine": 1446,
                     "endColumn": 12,
-                    "endOffset": 110425
+                    "endOffset": 110422
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8755,10 +8755,10 @@
                 "to": {
                     "startLine": 1447,
                     "startColumn": 4,
-                    "startOffset": 110430,
+                    "startOffset": 110427,
                     "endLine": 1448,
                     "endColumn": 12,
-                    "endOffset": 110553
+                    "endOffset": 110550
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8776,9 +8776,9 @@
                 "to": {
                     "startLine": 1449,
                     "startColumn": 4,
-                    "startOffset": 110558,
+                    "startOffset": 110555,
                     "endColumn": 68,
-                    "endOffset": 110622
+                    "endOffset": 110619
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8795,9 +8795,9 @@
                 "to": {
                     "startLine": 1450,
                     "startColumn": 4,
-                    "startOffset": 110627,
+                    "startOffset": 110624,
                     "endColumn": 94,
-                    "endOffset": 110717
+                    "endOffset": 110714
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8814,9 +8814,9 @@
                 "to": {
                     "startLine": 1451,
                     "startColumn": 4,
-                    "startOffset": 110722,
+                    "startOffset": 110719,
                     "endColumn": 114,
-                    "endOffset": 110832
+                    "endOffset": 110829
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8833,9 +8833,9 @@
                 "to": {
                     "startLine": 1452,
                     "startColumn": 4,
-                    "startOffset": 110837,
+                    "startOffset": 110834,
                     "endColumn": 112,
-                    "endOffset": 110945
+                    "endOffset": 110942
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8852,9 +8852,9 @@
                 "to": {
                     "startLine": 1453,
                     "startColumn": 4,
-                    "startOffset": 110950,
+                    "startOffset": 110947,
                     "endColumn": 98,
-                    "endOffset": 111044
+                    "endOffset": 111041
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8871,9 +8871,9 @@
                 "to": {
                     "startLine": 1454,
                     "startColumn": 4,
-                    "startOffset": 111049,
+                    "startOffset": 111046,
                     "endColumn": 108,
-                    "endOffset": 111153
+                    "endOffset": 111150
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8890,9 +8890,9 @@
                 "to": {
                     "startLine": 1455,
                     "startColumn": 4,
-                    "startOffset": 111158,
+                    "startOffset": 111155,
                     "endColumn": 110,
-                    "endOffset": 111264
+                    "endOffset": 111261
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8909,9 +8909,9 @@
                 "to": {
                     "startLine": 1456,
                     "startColumn": 4,
-                    "startOffset": 111269,
+                    "startOffset": 111266,
                     "endColumn": 110,
-                    "endOffset": 111375
+                    "endOffset": 111372
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8928,9 +8928,9 @@
                 "to": {
                     "startLine": 1457,
                     "startColumn": 4,
-                    "startOffset": 111380,
+                    "startOffset": 111377,
                     "endColumn": 100,
-                    "endOffset": 111476
+                    "endOffset": 111473
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8947,9 +8947,9 @@
                 "to": {
                     "startLine": 1458,
                     "startColumn": 4,
-                    "startOffset": 111481,
+                    "startOffset": 111478,
                     "endColumn": 104,
-                    "endOffset": 111581
+                    "endOffset": 111578
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8966,10 +8966,10 @@
                 "to": {
                     "startLine": 1459,
                     "startColumn": 4,
-                    "startOffset": 111586,
+                    "startOffset": 111583,
                     "endLine": 1460,
                     "endColumn": 12,
-                    "endOffset": 111693
+                    "endOffset": 111690
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8987,10 +8987,10 @@
                 "to": {
                     "startLine": 1461,
                     "startColumn": 4,
-                    "startOffset": 111698,
+                    "startOffset": 111695,
                     "endLine": 1462,
                     "endColumn": 12,
-                    "endOffset": 111823
+                    "endOffset": 111820
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9008,9 +9008,9 @@
                 "to": {
                     "startLine": 1463,
                     "startColumn": 4,
-                    "startOffset": 111828,
+                    "startOffset": 111825,
                     "endColumn": 90,
-                    "endOffset": 111914
+                    "endOffset": 111911
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9027,9 +9027,9 @@
                 "to": {
                     "startLine": 1464,
                     "startColumn": 4,
-                    "startOffset": 111919,
+                    "startOffset": 111916,
                     "endColumn": 122,
-                    "endOffset": 112037
+                    "endOffset": 112034
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9046,10 +9046,10 @@
                 "to": {
                     "startLine": 1465,
                     "startColumn": 4,
-                    "startOffset": 112042,
+                    "startOffset": 112039,
                     "endLine": 1466,
                     "endColumn": 12,
-                    "endOffset": 112149
+                    "endOffset": 112146
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9067,9 +9067,9 @@
                 "to": {
                     "startLine": 1467,
                     "startColumn": 4,
-                    "startOffset": 112154,
+                    "startOffset": 112151,
                     "endColumn": 85,
-                    "endOffset": 112235
+                    "endOffset": 112232
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9086,9 +9086,9 @@
                 "to": {
                     "startLine": 1468,
                     "startColumn": 4,
-                    "startOffset": 112240,
+                    "startOffset": 112237,
                     "endColumn": 103,
-                    "endOffset": 112339
+                    "endOffset": 112336
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9105,10 +9105,10 @@
                 "to": {
                     "startLine": 1469,
                     "startColumn": 4,
-                    "startOffset": 112344,
+                    "startOffset": 112341,
                     "endLine": 1470,
                     "endColumn": 12,
-                    "endOffset": 112447
+                    "endOffset": 112444
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9126,10 +9126,10 @@
                 "to": {
                     "startLine": 1471,
                     "startColumn": 4,
-                    "startOffset": 112452,
+                    "startOffset": 112449,
                     "endLine": 1472,
                     "endColumn": 12,
-                    "endOffset": 112547
+                    "endOffset": 112544
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9147,10 +9147,10 @@
                 "to": {
                     "startLine": 1473,
                     "startColumn": 4,
-                    "startOffset": 112552,
+                    "startOffset": 112549,
                     "endLine": 1474,
                     "endColumn": 12,
-                    "endOffset": 112665
+                    "endOffset": 112662
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9168,10 +9168,10 @@
                 "to": {
                     "startLine": 1475,
                     "startColumn": 4,
-                    "startOffset": 112670,
+                    "startOffset": 112667,
                     "endLine": 1476,
                     "endColumn": 12,
-                    "endOffset": 112769
+                    "endOffset": 112766
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9189,10 +9189,10 @@
                 "to": {
                     "startLine": 1477,
                     "startColumn": 4,
-                    "startOffset": 112774,
+                    "startOffset": 112771,
                     "endLine": 1478,
                     "endColumn": 12,
-                    "endOffset": 112873
+                    "endOffset": 112870
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9210,10 +9210,10 @@
                 "to": {
                     "startLine": 1479,
                     "startColumn": 4,
-                    "startOffset": 112878,
+                    "startOffset": 112875,
                     "endLine": 1480,
                     "endColumn": 12,
-                    "endOffset": 112999
+                    "endOffset": 112996
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9231,9 +9231,9 @@
                 "to": {
                     "startLine": 1481,
                     "startColumn": 4,
-                    "startOffset": 113004,
+                    "startOffset": 113001,
                     "endColumn": 87,
-                    "endOffset": 113087
+                    "endOffset": 113084
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9250,9 +9250,9 @@
                 "to": {
                     "startLine": 1482,
                     "startColumn": 4,
-                    "startOffset": 113092,
+                    "startOffset": 113089,
                     "endColumn": 89,
-                    "endOffset": 113177
+                    "endOffset": 113174
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9269,9 +9269,9 @@
                 "to": {
                     "startLine": 1483,
                     "startColumn": 4,
-                    "startOffset": 113182,
+                    "startOffset": 113179,
                     "endColumn": 109,
-                    "endOffset": 113287
+                    "endOffset": 113284
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9288,9 +9288,9 @@
                 "to": {
                     "startLine": 1484,
                     "startColumn": 4,
-                    "startOffset": 113292,
+                    "startOffset": 113289,
                     "endColumn": 83,
-                    "endOffset": 113371
+                    "endOffset": 113368
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9307,9 +9307,9 @@
                 "to": {
                     "startLine": 1485,
                     "startColumn": 4,
-                    "startOffset": 113376,
+                    "startOffset": 113373,
                     "endColumn": 83,
-                    "endOffset": 113455
+                    "endOffset": 113452
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9326,9 +9326,9 @@
                 "to": {
                     "startLine": 1486,
                     "startColumn": 4,
-                    "startOffset": 113460,
+                    "startOffset": 113457,
                     "endColumn": 53,
-                    "endOffset": 113509
+                    "endOffset": 113506
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9345,9 +9345,9 @@
                 "to": {
                     "startLine": 1487,
                     "startColumn": 4,
-                    "startOffset": 113514,
+                    "startOffset": 113511,
                     "endColumn": 63,
-                    "endOffset": 113573
+                    "endOffset": 113570
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9364,9 +9364,9 @@
                 "to": {
                     "startLine": 1488,
                     "startColumn": 4,
-                    "startOffset": 113578,
+                    "startOffset": 113575,
                     "endColumn": 105,
-                    "endOffset": 113679
+                    "endOffset": 113676
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9383,9 +9383,9 @@
                 "to": {
                     "startLine": 1489,
                     "startColumn": 4,
-                    "startOffset": 113684,
+                    "startOffset": 113681,
                     "endColumn": 109,
-                    "endOffset": 113789
+                    "endOffset": 113786
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9402,9 +9402,9 @@
                 "to": {
                     "startLine": 1490,
                     "startColumn": 4,
-                    "startOffset": 113794,
+                    "startOffset": 113791,
                     "endColumn": 83,
-                    "endOffset": 113873
+                    "endOffset": 113870
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9421,9 +9421,9 @@
                 "to": {
                     "startLine": 1491,
                     "startColumn": 4,
-                    "startOffset": 113878,
+                    "startOffset": 113875,
                     "endColumn": 119,
-                    "endOffset": 113993
+                    "endOffset": 113990
                 },
                 "from": {
                     "file": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",

@@ -1,4 +1,4 @@
-package org.jmonkeyengine.simple_jme_android;
+package org.cescg.modelviewer;
 
 import com.jme3.app.AndroidHarnessFragment;
 
@@ -9,7 +9,7 @@ public class JmeFragment extends AndroidHarnessFragment {
 
     public JmeFragment() {
         // Set main project class (fully qualified path)
-        appClass = "org.jmonkeyengine.simple_jme_android.gamelogic.Main";
+        appClass = "org.cescg.modelviewer.gamelogic.Main";
 
         // Set the desired EGL configuration
         eglBitsPerPixel = 24;

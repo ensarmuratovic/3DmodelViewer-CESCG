@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.jmonkeyengine.simple_jme_android"
+    package="org.cescg.modelviewer"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="org.jmonkeyengine.simple_jme_android.MainActivity"
+            android:name="org.cescg.modelviewer.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="landscape" >
             <intent-filter>
