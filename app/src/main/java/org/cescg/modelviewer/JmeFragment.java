@@ -1,16 +1,28 @@
 package org.cescg.modelviewer;
 
+import android.content.Context;
+import android.content.Intent;
+import android.nfc.Tag;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
 import com.jme3.app.AndroidHarnessFragment;
+import com.jme3.app.Application;
+
+import org.cescg.modelviewer.gamelogic.Main;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class JmeFragment extends AndroidHarnessFragment {
-
+    private JmeFragment jmeFragment;
+    private static final String TAG = "ENSAR";
     public JmeFragment() {
         // Set main project class (fully qualified path)
         appClass = "org.cescg.modelviewer.gamelogic.Main";
-
+        //for new activity callet from Main
+        jmeFragment=this;
         // Set the desired EGL configuration
         eglBitsPerPixel = 24;
         eglAlphaBits = 0;
@@ -21,6 +33,7 @@ public class JmeFragment extends AndroidHarnessFragment {
         // Set the maximum framerate
         // (default = -1 for unlimited)
         frameRate = -1;
+
 
         // Set the maximum resolution dimension
         // (the smaller side, height or width, is set automatically
@@ -45,5 +58,21 @@ public class JmeFragment extends AndroidHarnessFragment {
         //     splashPicID = R.drawable.splash;
         splashPicID = 0;
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ((Main)getJmeApplication()).simpleInitApp(this); //this makes the AndroidHarness class available in SimpleApplication class
+    }
+
+    public void startActivity(){
+        //Intent intent1 = new Intent(myActivity, com.example.Interferenz.InterferenzActivity.class);
+        //intent1.putExtra("objekt",(byte)1);
+        //myActivity.startActivity(intent1);
+        Intent intent=new Intent(getActivity(),org.cescg.modelviewer.LaunchActivity.class);
+        startActivity(intent);
+        Log.i(TAG, "uspjeloo");
+    }
+
+
 
 }

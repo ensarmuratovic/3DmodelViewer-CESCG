@@ -24,7 +24,6 @@ import android.app.Dialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -34,7 +33,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
@@ -46,18 +44,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
@@ -77,9 +67,7 @@ public class LaunchActivity extends Activity
 
     private static final String BUTTON_TEXT = "Call Drive API";
     private static final String PREF_ACCOUNT_NAME = "accountName";
-    //DriveScopes.DRIVE has access to all files
     private static final String[] SCOPES = { DriveScopes.DRIVE};
-
     private static final String TAG = "ENSAR";
 
     /**
@@ -113,8 +101,6 @@ public class LaunchActivity extends Activity
             }
         });
         activityLayout.addView(mCallApiButton);
-
-
 
         viewModelButton = new Button(this);
         viewModelButton.setText("View Model");
@@ -153,21 +139,19 @@ public class LaunchActivity extends Activity
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
-                Log.v(TAG,"Permission is granted");
+                Log.v(TAG,"Permission to write on external storage granted");
 
             } else {
 
-                Log.v(TAG,"Permission is revoked");
+                Log.v(TAG,"Permission to write on external storage revoked");
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
 
             }
         }
         else { //permission is automatically granted on sdk<23 upon installation
-            Log.v(TAG, "Permission is granted");
+            Log.v(TAG, "Permission to write on external storage granted");
         }
-
     }
-
 
 
 
@@ -373,7 +357,6 @@ public class LaunchActivity extends Activity
      * An asynchronous task that handles the Drive API call.
      * Placing the API calls in their own task ensures the UI stays responsive.
      */
-
     private class MakeRequestTask extends AsyncTask<Void, Void, List<String>> {
         private com.google.api.services.drive.Drive mService = null;
         private Exception mLastError = null;
@@ -385,12 +368,10 @@ public class LaunchActivity extends Activity
                     transport, jsonFactory, credential)
                     .setApplicationName("Drive API Android Quickstart")
                     .build();
-
         }
 
         /**
          * Background task to call Drive API.
-         *
          * @param params no parameters needed for this task.
          */
         @Override
@@ -406,15 +387,15 @@ public class LaunchActivity extends Activity
 
         /**
          * Fetch a list of up to 10 file names and IDs.
-         *
          * @return List of Strings describing files, or an empty list if no files
-         * found.
+         *         found.
          * @throws IOException
          */
         private List<String> getDataFromApi() throws IOException {
 
             List<File> result1 = new ArrayList<File>();
-            Drive.Files.List request = mService.files().list();
+            Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)");
+            //.setQ("mimeType='application/vnd.google-apps.folder' AND name contains 'folderName'")
 
             do {
                 try {
@@ -422,66 +403,50 @@ public class LaunchActivity extends Activity
 
                     result1.addAll(files.getFiles());
                     request.setPageToken(files.getNextPageToken());
-                } catch (IOException e) {
-                    System.out.println("An error occurred: " + e);
+                } catch (UserRecoverableAuthIOException userRecoverableException){
+                    startActivityForResult(userRecoverableException.getIntent(), REQUEST_AUTHORIZATION);
                     request.setPageToken(null);
                 }
             } while (request.getPageToken() != null &&
                     request.getPageToken().length() > 0);
             Log.i(TAG, "******Number of files: " + result1.size());
-
-            // Get a list of up to 10 files.
             List<String> fileInfo = new ArrayList<String>();
-            /*FileList result = mService.files().list()
-                    .setFields("nextPageToken, files(id, name, parents, modifiedTime)")
-                    .setPageSize(10)
-                    .execute();
-
-            List<File> files = result.getFiles();*/
 
 
+            Log.i(TAG,mCredential.getSelectedAccountName());
             if (result1 != null) {
                 for (File file : result1) {
                     //change Example.extension to the full name of file on your Drive(name.extension)
-                    if (file.getName().contains("Example.extension")) {
+                    if (file.getName().contains("town.zip")) {
+                        file.setShared(true);
+
+                        // mService.files().update()
+                        //mService.files().update(file.getId(),file).execute();
 
                         fileInfo.add(String.format("%s (%s)\n", file.getName(), file.getId()));
-
-
-                        file.getModifiedTime();
-
                         DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                        DownloadManager.Request mRqRequest = new DownloadManager.Request(
-                                Uri.parse("https://drive.google.com/uc?export=download&id="+file.getId().toString()));
+                        //DownloadManager.Request mRqRequest = new DownloadManager.Request(
+                              //  Uri.parse("https://drive.google.com/uc?export=download&id="+file.getId().toString()));
+                        DownloadManager.Request mRqRequest = new DownloadManager.Request( Uri.parse(file.getWebContentLink()));
                         mRqRequest.setDescription("This is Test File");
-                        mRqRequest.setDestinationInExternalPublicDir("/download",file.getName());
-//  mRqRequest.setDestinationUri(Uri.parse("give your local path"));
+                        mRqRequest.setDestinationInExternalPublicDir("/download/proba",file.getName());
                         long idDownLoad = mManager.enqueue(mRqRequest);
-
-                        Log.i(TAG, "Title: " + file.getName());
-                        Log.i(TAG, "Description: " + file.getDescription());
+                        Log.i(TAG, "Id: " + file.getId());
+                        Log.i(TAG, "Parent: " + file.getParents().get(0));
+                        Log.i(TAG, "Mime Type: " + file.getMimeType());
+                        Log.i(TAG, "File Extension: " + file.getFileExtension());
+                        Log.i(TAG, "Date created: " + file.getCreatedTime());
                         Log.i(TAG, "Date Modified: " + file.getModifiedTime());
-
-
+                        Log.i(TAG, "Viewed by me: " + file.getViewedByMeTime());
+                        Log.i(TAG, "Web content link: " + file.getWebContentLink());
                     }
                     //l= (ArrayList) file.getParents();
-                   // Log.i(TAG,Integer.toString(l.size()));
+                    // Log.i(TAG,Integer.toString(l.size()));
 
                 }
             }
+
             return fileInfo;
-        }
-
-        private InputStream downloadFile(com.google.api.services.drive.Drive service, com.google.api.services.drive.model.File file) {
-
-            try {
-                // uses alt=media query parameter to request content
-                return service.files().get(file.getId()).executeMediaAsInputStream();
-            } catch (IOException e) {
-                // An error occurred.
-                e.printStackTrace();
-                return null;
-            }
         }
 
 

@@ -12,7 +12,9 @@ public class ViewerActivity extends AppCompatActivity {
         // The "activity_main" layout includes the reference
         // to the fragment that contains the GLSurfaceView
         // that will be used to display the jME content.
+
         setContentView(R.layout.activity_main);
+
 
 
     }
