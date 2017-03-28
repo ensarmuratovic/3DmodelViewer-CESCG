@@ -16,6 +16,11 @@ import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
 
 import com.google.api.services.drive.model.*;
+import com.google.api.services.drive.model.File;
+
+import com.sromku.simple.storage.InternalStorage;
+import com.sromku.simple.storage.SimpleStorage;
+import com.sromku.simple.storage.Storage;
 
 import android.Manifest;
 import android.accounts.AccountManager;
@@ -33,6 +38,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
@@ -44,11 +50,19 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.io.IOException;
+import org.cescg.modelviewer.Classes.Project;
+import org.cescg.modelviewer.Classes.Scene;
+import org.eclipse.xtend.lib.annotations.ToString;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmList;
+import io.realm.RealmResults;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -58,6 +72,8 @@ public class LaunchActivity extends Activity
     private TextView mOutputText;
     private Button mCallApiButton;
     private Button viewModelButton;
+    private Button createInternalButton;
+    private Button createExternalButton;
     ProgressDialog mProgress;
 
     static final int REQUEST_ACCOUNT_PICKER = 1000;
@@ -69,7 +85,7 @@ public class LaunchActivity extends Activity
     private static final String PREF_ACCOUNT_NAME = "accountName";
     private static final String[] SCOPES = { DriveScopes.DRIVE};
     private static final String TAG = "ENSAR";
-
+    private static Realm realm;
     /**
      * Create the main activity.
      * @param savedInstanceState previously saved instance data.
@@ -77,6 +93,17 @@ public class LaunchActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //initialize realm
+        Realm.init(getApplicationContext());
+        //get a realm instance for this thread
+        realm = Realm.getDefaultInstance();
+
+
+        RealmResults<Project> p= realm.where(Project.class).findAll();
+        Log.i("broj projekta:"+ p.size(),TAG );
+        RealmResults<Scene> s =realm.where(Scene.class).findAll();
+        Log.i("broj scena:"+ s.size(),TAG );
+
         LinearLayout activityLayout = new LinearLayout(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -116,6 +143,46 @@ public class LaunchActivity extends Activity
             }
         });
         activityLayout.addView(viewModelButton);
+
+
+        createInternalButton = new Button(this);
+        createInternalButton.setText("create internal dir");
+        createInternalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Storage storage = SimpleStorage.getInternalStorage(getApplicationContext());
+
+
+                java.io.File documentsFolder = new java.io.File(getFilesDir(),"projects");
+                documentsFolder.mkdirs();
+                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G");
+                documentsFolder.mkdirs();
+                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Medieval period M1");
+                documentsFolder.mkdirs();
+                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Ottoman period M2");
+                documentsFolder.mkdirs();
+                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Ottoman period M3");
+                documentsFolder.mkdirs();
+                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Ottoman period M3/config");
+                documentsFolder.mkdirs();
+                Log.i("external", TAG);
+            }
+        });
+        activityLayout.addView(createInternalButton);
+
+        createExternalButton = new Button(this);
+        createExternalButton.setText("delete internal dir");
+        createExternalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                String path = getFilesDir().getAbsolutePath();
+                deleteDirectoryImpl(path+"/projects");
+
+            }
+        });
+        activityLayout.addView(createExternalButton);
 
         mOutputText = new TextView(this);
         mOutputText.setLayoutParams(tlp);
@@ -173,7 +240,25 @@ public class LaunchActivity extends Activity
             new MakeRequestTask(mCredential).execute();
         }
     }
-
+    private boolean deleteDirectoryImpl(String path) {
+        java.io.File directory = new java.io.File(path);
+        // If the directory exists then delete
+        if (directory.exists()) {
+            java.io.File[] files = directory.listFiles();
+            if (files == null) {
+                return true;
+            }
+            // Run on all sub files and folders and delete them
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isDirectory()) {
+                    deleteDirectoryImpl(files[i].getAbsolutePath());
+                } else {
+                    files[i].delete();
+                }
+            }
+        }
+        return directory.delete();
+    }
     /**
      * Attempts to set the account used with the API credentials. If an account
      * name was previously saved it will use that one; otherwise an account
@@ -394,8 +479,8 @@ public class LaunchActivity extends Activity
         private List<String> getDataFromApi() throws IOException {
 
             List<File> result1 = new ArrayList<File>();
-            Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)");
-            //.setQ("mimeType='application/vnd.google-apps.folder' AND name contains 'folderName'")
+            Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
+            .setQ("mimeType='application/vnd.google-apps.folder' AND name contains 'C2E0S1C7G'");
 
             do {
                 try {
@@ -409,16 +494,55 @@ public class LaunchActivity extends Activity
                 }
             } while (request.getPageToken() != null &&
                     request.getPageToken().length() > 0);
-            Log.i(TAG, "******Number of files: " + result1.size());
+           // Log.i(TAG, "******Number of projects: " + result1.size());
             List<String> fileInfo = new ArrayList<String>();
+            java.io.File documentsFolder=new java.io.File(getFilesDir(),"projects/"+result1.get(0).getName());
+            documentsFolder.mkdirs();
+
+           request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
+                    .setQ("mimeType='application/vnd.google-apps.folder' AND '"+ result1.get(0).getId()+"' in parents");
+            FileList fileList=request.execute();
+            List<File> childs=fileList.getFiles();
+           // Log.i(TAG, "******Number of scenes: " + childs.size());
+            Project pr=new Project();
+            pr.setProjectId(result1.get(0).getId());
+            pr.setTitle(result1.get(0).getName());
+            pr.setLocalPath(getFilesDir()+"projects/"+result1.get(0).getName());
+            pr.setWebContentLink(result1.get(0).getWebContentLink());
+            Realm realm = Realm.getDefaultInstance();
+            realm.beginTransaction();
+            for(int i=0;i<childs.size();i++) {
+                documentsFolder = new java.io.File(getFilesDir(), "projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
+                documentsFolder.mkdirs();
+                Scene sc= new Scene();
+                sc.setSceneId(childs.get(i).getId());
+                sc.setTitle(childs.get(i).getName());
+                sc.setLocalPath(getFilesDir()+"projects/"+result1.get(0).getName()+"/"+childs.get(i).getName());
+                sc.setWebContentLink(childs.get(i).getWebContentLink());
+                pr.addScene(sc);
+            }
+
+            realm.copyToRealmOrUpdate(pr);
+            realm.commitTransaction();
+            RealmResults<Project> p= realm.where(Project.class).findAll();
+            Log.i("broj projekta:"+ p.size(),TAG );
+            RealmResults<Scene> s =realm.where(Scene.class).findAll();
+            Log.i("broj scena:"+ s.size(),TAG );
+            Log.i("broj scena iz klase:"+p.get(0).getScenes().size(),TAG );
+
+            Log.e(p.get(0).getLocalPath().toString(),TAG);
+            for(Scene scene:s)
+            {
+                Log.e(scene.getLocalPath(),TAG);
+            }
 
 
-            Log.i(TAG,mCredential.getSelectedAccountName());
+           /* Log.i(TAG,mCredential.getSelectedAccountName());
             if (result1 != null) {
                 for (File file : result1) {
                     //change Example.extension to the full name of file on your Drive(name.extension)
                     if (file.getName().contains("town.zip")) {
-                        file.setShared(true);
+
 
                         // mService.files().update()
                         //mService.files().update(file.getId(),file).execute();
@@ -444,7 +568,7 @@ public class LaunchActivity extends Activity
                     // Log.i(TAG,Integer.toString(l.size()));
 
                 }
-            }
+            }*/
 
             return fileInfo;
         }

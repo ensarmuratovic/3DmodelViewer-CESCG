@@ -67,6 +67,9 @@ import com.simsilica.lemur.event.MouseEventControl;
 import com.jme3.scene.control.AbstractControl;
 import com.simsilica.lemur.style.BaseStyles;
 import com.jme3.export.JmeImporter;
+import com.sromku.simple.storage.SimpleStorage;
+import com.sromku.simple.storage.Storage;
+
 import org.cescg.modelviewer.JmeFragment;
 import org.slf4j.Marker;
 import java.io.ByteArrayInputStream;
@@ -106,7 +109,6 @@ public class Main extends SimpleApplication {
         jmeFragment=jme;
     }
     public void simpleInitApp() {
-
          //assetManager.registerLoader(OBJLoader.class, "obj");
         //assetManager.registerLoader(MTLLoader.class, "mtl");
         setDisplayFps(false);
@@ -129,7 +131,7 @@ public class Main extends SimpleApplication {
 
 
         //assetManager.registerLocator("/storage/emulated/0/download/proba", AndroidLocator.class);
-        // assetManager.registerLocator("/storage/emulated/0/download/proba", FileLocator.class);
+        //assetManager.registerLocator("/storage/emulated/0/download/proba", FileLocator.class);
         mainObject=assetManager.loadModel("Models/blendexp.obj");
 
 

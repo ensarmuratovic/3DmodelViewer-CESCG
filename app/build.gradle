@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'realm-android'
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "org.cescg.modelviewer"
@@ -46,4 +46,6 @@ dependencies {
     //compile "com.simsilica:lemur-proto:1.7.1"
     // Standard utility stuff
     compile 'org.xbuf.jme3_xbuf:jme3_xbuf_loader:213c6a499d'
+    compile 'com.sromku:simple-storage:1.2.0'
+
 }

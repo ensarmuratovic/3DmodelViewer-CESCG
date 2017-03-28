@@ -43,21 +43,21 @@ ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\Andro
 		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:11:22-78
 application
 ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:13:5-39:19
-MERGED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:19:5-25:19
-MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\AndroidManifest.xml:19:5-21:19
-MERGED from [pub.devrel:easypermissions:0.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\pub.devrel\easypermissions\0.2.1\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:design:23.4.0] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-v4:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\.android\build-cache\67c38fd99285436759af7cb5fa0d3037cbe01192\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\User\.android\build-cache\5b453d19d4bd811f8a4d23699fc6ce2c8e66dbb7\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\.android\build-cache\4cf93aa619bdde49f527ab0bdbfc33dc6718efd6\output\AndroidManifest.xml:19:5-21:19
+MERGED from [pub.devrel:easypermissions:0.2.1] C:\Users\User\.android\build-cache\04e96eea9cc988e0f2f1ef0ab985f7196aa5876b\output\AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:design:23.4.0] C:\Users\User\.android\build-cache\fe1566fc1aaad1e6ee5edc3c28e42ff9fb0933f8\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\.android\build-cache\d66c25085c36cf4e9ca0174469e239af24febd39\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\User\.android\build-cache\ffc63d9cb156a2812d56621dd82737f3df98ad14\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\User\.android\build-cache\7887dc08ec0fc63abbf0787e87b32e5db1933c53\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\User\.android\build-cache\c1aff7c90be4c9d83128745b475678c746f51469\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\User\.android\build-cache\e4464a79c9b7e916a47455c8f07490ca67001461\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\User\.android\build-cache\4d242f6d26a15938d246e0cb9a5b1e1c3311e57d\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\User\.android\build-cache\d2e30aa0082e2b98bbe05bb99e0ffcd34f4b0f71\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\User\.android\build-cache\772efb0abd61d277bab26b05069e54e2f7164137\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\User\.android\build-cache\ae7299fe2e6191156722680d40a2f1fe738efd8b\output\AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:16:9-41
 	android:supportsRtl
@@ -102,25 +102,28 @@ ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\Andro
 		ADDED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml:36:27-74
 uses-sdk
 INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-auth-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\10.0.1\AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\AndroidManifest.xml:17:5-42
-MERGED from [pub.devrel:easypermissions:0.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\pub.devrel\easypermissions\0.2.1\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:design:23.4.0] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.4.0] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-v4:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [io.realm:realm-android-library:3.0.0] C:\Users\User\.android\build-cache\51b7a026637d54ec9631688a7c1ff3d02a373783\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\User\.android\build-cache\5b0707623d75021ddfd3884dcdf09f4bd0c9b55e\output\AndroidManifest.xml:7:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-auth-base:10.0.1] C:\Users\User\.android\build-cache\c7e77d2828c8e601feafdfa9386b0ed64ef0453a\output\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\.android\build-cache\67c38fd99285436759af7cb5fa0d3037cbe01192\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\User\.android\build-cache\5b453d19d4bd811f8a4d23699fc6ce2c8e66dbb7\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\.android\build-cache\4cf93aa619bdde49f527ab0bdbfc33dc6718efd6\output\AndroidManifest.xml:17:5-42
+MERGED from [pub.devrel:easypermissions:0.2.1] C:\Users\User\.android\build-cache\04e96eea9cc988e0f2f1ef0ab985f7196aa5876b\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:23.4.0] C:\Users\User\.android\build-cache\fe1566fc1aaad1e6ee5edc3c28e42ff9fb0933f8\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.4.0] C:\Users\User\.android\build-cache\4b9aa3d3256f9d515f6c15fa1ea58a0e96eb4aac\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\.android\build-cache\d66c25085c36cf4e9ca0174469e239af24febd39\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\User\.android\build-cache\ffc63d9cb156a2812d56621dd82737f3df98ad14\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\User\.android\build-cache\7887dc08ec0fc63abbf0787e87b32e5db1933c53\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\User\.android\build-cache\c1aff7c90be4c9d83128745b475678c746f51469\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\User\.android\build-cache\e4464a79c9b7e916a47455c8f07490ca67001461\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\User\.android\build-cache\4d242f6d26a15938d246e0cb9a5b1e1c3311e57d\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\User\.android\build-cache\d2e30aa0082e2b98bbe05bb99e0ffcd34f4b0f71\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\User\.android\build-cache\772efb0abd61d277bab26b05069e54e2f7164137\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\User\.android\build-cache\ae7299fe2e6191156722680d40a2f1fe738efd8b\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.sromku:simple-storage:1.2.0] C:\Users\User\.android\build-cache\ce675e0831c88c292706af626a6d16d4cef95166\output\AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\.android\build-cache\d66c25085c36cf4e9ca0174469e239af24febd39\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml
@@ -128,34 +131,34 @@ MERGED from [com.android.support:support-compat:24.2.1] C:\Users\User\Documents\
 		INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\src\main\AndroidManifest.xml
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:20:9-189
+ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:20:9-189
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:20:129-162
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:20:129-162
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:20:163-187
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:20:163-187
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:20:69-128
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:20:69-128
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:20:19-68
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:20:19-68
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:24:9-184
+ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:24:9-184
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:24:64-87
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:24:64-87
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:24:88-182
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:24:88-182
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\AndroidManifest.xml:24:18-63
+		ADDED from [com.google.android.gms:play-services-auth:10.0.1] C:\Users\User\.android\build-cache\22c91eb180a686954435e6127fc712b857f454da\output\AndroidManifest.xml:24:18-63
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\.android\build-cache\67c38fd99285436759af7cb5fa0d3037cbe01192\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\.android\build-cache\67c38fd99285436759af7cb5fa0d3037cbe01192\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\.android\build-cache\67c38fd99285436759af7cb5fa0d3037cbe01192\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\User\.android\build-cache\67c38fd99285436759af7cb5fa0d3037cbe01192\output\AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\.android\build-cache\4cf93aa619bdde49f527ab0bdbfc33dc6718efd6\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\.android\build-cache\4cf93aa619bdde49f527ab0bdbfc33dc6718efd6\output\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\Documents\GitHub\3DmodelViewer-CESCG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\User\.android\build-cache\4cf93aa619bdde49f527ab0bdbfc33dc6718efd6\output\AndroidManifest.xml:20:20-65
