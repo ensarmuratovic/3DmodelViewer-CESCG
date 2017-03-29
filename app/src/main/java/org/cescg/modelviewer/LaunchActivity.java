@@ -498,38 +498,6 @@ public class LaunchActivity extends Activity
             Log.i("broj scena iz klase:"+p.get(0).getScenes().size(),TAG );
             Log.e(p.get(0).getLocalPath().toString(),TAG);
             realm.close();
-           /* Log.i(TAG,mCredential.getSelectedAccountName());
-            if (result1 != null) {
-                for (File file : result1) {
-                    //change Example.extension to the full name of file on your Drive(name.extension)
-                    if (file.getName().contains("town.zip")) {
-
-
-                        // mService.files().update()
-                        //mService.files().update(file.getId(),file).execute();
-
-                        fileInfo.add(String.format("%s (%s)\n", file.getName(), file.getId()));
-                        DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                        //DownloadManager.Request mRqRequest = new DownloadManager.Request(
-                              //  Uri.parse("https://drive.google.com/uc?export=download&id="+file.getId().toString()));
-                        DownloadManager.Request mRqRequest = new DownloadManager.Request( Uri.parse(file.getWebContentLink()));
-                        mRqRequest.setDescription("This is Test File");
-                        mRqRequest.setDestinationInExternalPublicDir("/download/proba",file.getName());
-                        long idDownLoad = mManager.enqueue(mRqRequest);
-                        Log.i(TAG, "Id: " + file.getId());
-                        Log.i(TAG, "Parent: " + file.getParents().get(0));
-                        Log.i(TAG, "Mime Type: " + file.getMimeType());
-                        Log.i(TAG, "File Extension: " + file.getFileExtension());
-                        Log.i(TAG, "Date created: " + file.getCreatedTime());
-                        Log.i(TAG, "Date Modified: " + file.getModifiedTime());
-                        Log.i(TAG, "Viewed by me: " + file.getViewedByMeTime());
-                        Log.i(TAG, "Web content link: " + file.getWebContentLink());
-                    }
-                    //l= (ArrayList) file.getParents();
-                    // Log.i(TAG,Integer.toString(l.size()));
-
-                }
-            }*/
 
             return fileInfo;
         }
@@ -554,14 +522,6 @@ public class LaunchActivity extends Activity
                     Log.i("file:", file.getName());
                     mRqRequest.setDestinationInExternalPublicDir(scene.getLocalPath(),file.getName());
                     long idDownLoad = mManager.enqueue(mRqRequest);
-                    Log.i(TAG, "Id: " + file.getId());
-                    Log.i(TAG, "Parent: " + file.getParents().get(0));
-                    Log.i(TAG, "Mime Type: " + file.getMimeType());
-                    Log.i(TAG, "File Extension: " + file.getFileExtension());
-                    Log.i(TAG, "Date created: " + file.getCreatedTime());
-                    Log.i(TAG, "Date Modified: " + file.getModifiedTime());
-                    Log.i(TAG, "Viewed by me: " + file.getViewedByMeTime());
-                    Log.i(TAG, "Web content link: " + file.getWebContentLink());
                 }
             }
             catch (Exception e)
@@ -578,6 +538,16 @@ public class LaunchActivity extends Activity
         @Override
         protected void onPostExecute(List<String> output) {
             mProgress.hide();
+            //after model download completes change scene.modelExists to true
+            if(sceneId!=null) {
+                realm = Realm.getDefaultInstance();
+                Scene scene = realm.where(Scene.class).equalTo("sceneId",sceneId).findFirst();
+                realm.beginTransaction();
+                scene.setModelDownloaded(true);
+                realm.copyToRealmOrUpdate(scene);
+                realm.commitTransaction();
+
+            }
             if (output == null || output.size() == 0) {
                 Log.i("No results returned.",TAG);
             } else {

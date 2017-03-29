@@ -22,6 +22,7 @@ public class Scene extends RealmObject {
     private String webContentLink;
     private Date createdDate;
     private Date modifiedTime;
+    private boolean modelDownloaded;
 
     public String getSceneId() {
         return sceneId;
@@ -83,6 +84,14 @@ public class Scene extends RealmObject {
     public void setModifiedTime(Date modifiedTime) {
         this.modifiedTime = modifiedTime;
     }
+    public boolean isModelExists() {
+        return modelDownloaded;
+    }
+
+    public void setModelDownloaded(boolean modelExists) {
+        this.modelDownloaded = modelExists;
+    }
+
     @Override
     public String toString() {
         return "sceneId:"+this.sceneId+ " |title:"+this.title+ " |description:"+this.description+" |localPath:"+this.localPath+" |webContentLink:"+this.webContentLink;

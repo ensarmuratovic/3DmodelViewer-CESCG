@@ -64,6 +64,7 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         realm.beginTransaction();
         //scene.setTitle(scene.getTitle()+"deleted");
         adapterData.get(position).setTitle(adapterData.get(position).getTitle()+"deleted");
+        adapterData.get(position).setModelDownloaded(false);
         //realm.copyToRealmOrUpdate(scene);
         launcAct.deleteModelData(Environment.getExternalStorageDirectory()+adapterData.get(position).getLocalPath());
         realm.commitTransaction();
@@ -89,7 +90,9 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         scDescription.setText(scene.getDescription());
         Button viewButton= (Button) convertView.findViewById(R.id.viewButton);
         viewButton.setTag(scene);
-
+        if(!scene.isModelExists())
+            viewButton.setEnabled(false);
+        else viewButton.setEnabled(true);
         // Attach the click event handler
         viewButton.setOnClickListener(new View.OnClickListener() {
               @Override
@@ -101,6 +104,9 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
 
         Button deleteButon= (Button) convertView.findViewById(R.id.deleteButton);
         deleteButon.setTag(scene);
+        if(!scene.isModelExists())
+            deleteButon.setEnabled(false);
+        else deleteButon.setEnabled(true);
         // Attach the click event handler
         deleteButon.setOnClickListener(new View.OnClickListener() {
             @Override
