@@ -46,12 +46,18 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.cescg.modelviewer.Classes.Project;
 import org.cescg.modelviewer.Classes.Scene;
+import org.cescg.modelviewer.Classes.ScenesAdapter;
 import org.eclipse.xtend.lib.annotations.ToString;
 
 import java.io.*;
@@ -60,6 +66,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmChangeListener;
 import io.realm.RealmConfiguration;
 import io.realm.RealmList;
 import io.realm.RealmResults;
@@ -69,19 +76,16 @@ import pub.devrel.easypermissions.EasyPermissions;
 public class LaunchActivity extends Activity
         implements EasyPermissions.PermissionCallbacks {
     GoogleAccountCredential mCredential;
-    private TextView mOutputText;
     private Button mCallApiButton;
     private Button viewModelButton;
-    private Button createInternalButton;
-    private Button createExternalButton;
+    private Button deleteButton;
     ProgressDialog mProgress;
-
+    ArrayList<Scene> scenes;
+    ScenesAdapter adapter;
     static final int REQUEST_ACCOUNT_PICKER = 1000;
     static final int REQUEST_AUTHORIZATION = 1001;
     static final int REQUEST_GOOGLE_PLAY_SERVICES = 1002;
     static final int REQUEST_PERMISSION_GET_ACCOUNTS = 1003;
-
-    private static final String BUTTON_TEXT = "Call Drive API";
     private static final String PREF_ACCOUNT_NAME = "accountName";
     private static final String[] SCOPES = { DriveScopes.DRIVE};
     private static final String TAG = "ENSAR";
@@ -93,131 +97,95 @@ public class LaunchActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //initialize realm
-        Realm.init(getApplicationContext());
-        //get a realm instance for this thread
-        realm = Realm.getDefaultInstance();
+
+            //initialize realm
+            Realm.init(getApplicationContext());
+            //get a realm instance for this thread
+            realm = Realm.getDefaultInstance();
+
+            setContentView(R.layout.activity_launch);
+            mProgress = new ProgressDialog(this);
+            mProgress.setMessage("Calling Drive API ...");
+            RealmResults<Project> p = realm.where(Project.class).findAll();
+            Log.i("broj projekta init:" + p.size(), TAG);
+            RealmResults<Scene> s = realm.where(Scene.class).findAll();
+            Log.i("broj scena init:" + s.size(), TAG);
+        try {
+            //scenes = new ArrayList<Scene>();
+           // scenes.addAll(s);
+            adapter = new ScenesAdapter(s);
+            adapter.setBaseActivity(this);
+            ListView listView = (ListView) findViewById(R.id.sceneList);
+            listView.setAdapter(adapter);
+
+          /*  RealmChangeListener sceneListener= new RealmChangeListener() {
+                @Override
+                public void onChange(Object element) {
+                    adapter.notifyDataSetChanged();
+                }
+            };
+            s.addChangeListener(sceneListener);*/
 
 
-        RealmResults<Project> p= realm.where(Project.class).findAll();
-        Log.i("broj projekta:"+ p.size(),TAG );
-        RealmResults<Scene> s =realm.where(Scene.class).findAll();
-        Log.i("broj scena:"+ s.size(),TAG );
-
-        LinearLayout activityLayout = new LinearLayout(this);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        activityLayout.setLayoutParams(lp);
-        activityLayout.setOrientation(LinearLayout.VERTICAL);
-        activityLayout.setPadding(16, 16, 16, 16);
-
-        ViewGroup.LayoutParams tlp = new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-
-        mCallApiButton = new Button(this);
-        mCallApiButton.setText(BUTTON_TEXT);
-        mCallApiButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mCallApiButton.setEnabled(false);
-                mOutputText.setText("");
-                getResultsFromApi();
-                mCallApiButton.setEnabled(true);
-            }
-        });
-        activityLayout.addView(mCallApiButton);
-
-        viewModelButton = new Button(this);
-        viewModelButton.setText("View Model");
-        viewModelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewModelButton.setEnabled(false);
-                mOutputText.setText("");
-                viewModelButton.setEnabled(true);
-
-                Intent intent=new Intent(LaunchActivity.this,ViewerActivity.class);
-                startActivity(intent);
-            }
-        });
-        activityLayout.addView(viewModelButton);
-
-
-        createInternalButton = new Button(this);
-        createInternalButton.setText("create internal dir");
-        createInternalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Storage storage = SimpleStorage.getInternalStorage(getApplicationContext());
-
-
-                java.io.File documentsFolder = new java.io.File(getFilesDir(),"projects");
-                documentsFolder.mkdirs();
-                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G");
-                documentsFolder.mkdirs();
-                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Medieval period M1");
-                documentsFolder.mkdirs();
-                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Ottoman period M2");
-                documentsFolder.mkdirs();
-                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Ottoman period M3");
-                documentsFolder.mkdirs();
-                documentsFolder=new java.io.File(getFilesDir(),"projects/White Bastion C2E0S1C7G/Ottoman period M3/config");
-                documentsFolder.mkdirs();
-                Log.i("external", TAG);
-            }
-        });
-        activityLayout.addView(createInternalButton);
-
-        createExternalButton = new Button(this);
-        createExternalButton.setText("delete internal dir");
-        createExternalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                String path = getFilesDir().getAbsolutePath();
-                deleteDirectoryImpl(path+"/projects");
-
-            }
-        });
-        activityLayout.addView(createExternalButton);
-
-        mOutputText = new TextView(this);
-        mOutputText.setLayoutParams(tlp);
-        mOutputText.setPadding(16, 16, 16, 16);
-        mOutputText.setVerticalScrollBarEnabled(true);
-        mOutputText.setMovementMethod(new ScrollingMovementMethod());
-        mOutputText.setText(
-                "Click the \'" + BUTTON_TEXT +"\' button to test the API.");
-        activityLayout.addView(mOutputText);
-
-        mProgress = new ProgressDialog(this);
-        mProgress.setMessage("Calling Drive API ...");
-
-        setContentView(activityLayout);
-
-        // Initialize credentials and service object.
-        mCredential = GoogleAccountCredential.usingOAuth2(
-                getApplicationContext(), Arrays.asList(SCOPES))
-                .setBackOff(new ExponentialBackOff());
-
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED) {
-                Log.v(TAG,"Permission to write on external storage granted");
-
-            } else {
-
-                Log.v(TAG,"Permission to write on external storage revoked");
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-
-            }
         }
-        else { //permission is automatically granted on sdk<23 upon installation
-            Log.v(TAG, "Permission to write on external storage granted");
+        catch (Exception e)
+        {
+            Log.e("error adapter",TAG,e);
         }
+
+            mCallApiButton = (Button) findViewById(R.id.callApi);
+
+            mCallApiButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        getResultsFromApi();
+                    }
+
+            });
+
+
+
+            viewModelButton = (Button) findViewById(R.id.viewModel);
+            viewModelButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(LaunchActivity.this, ViewerActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            deleteButton = (Button) findViewById(R.id.deleteFolders);
+            deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String path = getFilesDir().toString();
+                    deleteDirectoryImpl(path + "/projects");
+                }
+            });
+
+
+            // Initialize credentials and service object.
+            mCredential = GoogleAccountCredential.usingOAuth2(
+                    getApplicationContext(), Arrays.asList(SCOPES))
+                    .setBackOff(new ExponentialBackOff());
+
+            if (Build.VERSION.SDK_INT >= 23) {
+                if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        == PackageManager.PERMISSION_GRANTED) {
+                    Log.v(TAG, "Permission to write on external storage granted");
+
+                } else {
+
+                    Log.v(TAG, "Permission to write on external storage revoked");
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+
+                }
+            } else { //permission is automatically granted on sdk<23 upon installation
+                Log.v(TAG, "Permission to write on external storage granted");
+            }
+
+
     }
 
 
@@ -229,13 +197,13 @@ public class LaunchActivity extends Activity
      * of the preconditions are not satisfied, the app will prompt the user as
      * appropriate.
      */
-    private void getResultsFromApi() {
+    public void getResultsFromApi() {
         if (! isGooglePlayServicesAvailable()) {
             acquireGooglePlayServices();
         } else if (mCredential.getSelectedAccountName() == null) {
             chooseAccount();
         } else if (! isDeviceOnline()) {
-            mOutputText.setText("No network connection available.");
+            Log.i("No network connection!",TAG);
         } else {
             new MakeRequestTask(mCredential).execute();
         }
@@ -259,6 +227,7 @@ public class LaunchActivity extends Activity
         }
         return directory.delete();
     }
+
     /**
      * Attempts to set the account used with the API credentials. If an account
      * name was previously saved it will use that one; otherwise an account
@@ -311,9 +280,7 @@ public class LaunchActivity extends Activity
         switch(requestCode) {
             case REQUEST_GOOGLE_PLAY_SERVICES:
                 if (resultCode != RESULT_OK) {
-                    mOutputText.setText(
-                            "This app requires Google Play Services. Please install " +
-                                    "Google Play Services on your device and relaunch this app.");
+                    Log.i("App requires GP Serv",TAG);
                 } else {
                     getResultsFromApi();
                 }
@@ -496,10 +463,10 @@ public class LaunchActivity extends Activity
                     request.getPageToken().length() > 0);
            // Log.i(TAG, "******Number of projects: " + result1.size());
             List<String> fileInfo = new ArrayList<String>();
-            java.io.File documentsFolder=new java.io.File(getFilesDir(),"projects/"+result1.get(0).getName());
+            java.io.File documentsFolder=new java.io.File(getFilesDir(),"/projects/"+result1.get(0).getName());
             documentsFolder.mkdirs();
 
-           request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
+           request = mService.files().list().setFields("nextPageToken, files(id, name, description, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
                     .setQ("mimeType='application/vnd.google-apps.folder' AND '"+ result1.get(0).getId()+"' in parents");
             FileList fileList=request.execute();
             List<File> childs=fileList.getFiles();
@@ -507,36 +474,31 @@ public class LaunchActivity extends Activity
             Project pr=new Project();
             pr.setProjectId(result1.get(0).getId());
             pr.setTitle(result1.get(0).getName());
-            pr.setLocalPath(getFilesDir()+"projects/"+result1.get(0).getName());
+            pr.setLocalPath(getFilesDir()+"/projects/"+result1.get(0).getName());
             pr.setWebContentLink(result1.get(0).getWebContentLink());
             Realm realm = Realm.getDefaultInstance();
             realm.beginTransaction();
             for(int i=0;i<childs.size();i++) {
-                documentsFolder = new java.io.File(getFilesDir(), "projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
+                documentsFolder = new java.io.File(getFilesDir(), "/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
                 documentsFolder.mkdirs();
                 Scene sc= new Scene();
                 sc.setSceneId(childs.get(i).getId());
                 sc.setTitle(childs.get(i).getName());
-                sc.setLocalPath(getFilesDir()+"projects/"+result1.get(0).getName()+"/"+childs.get(i).getName());
+                sc.setDescription(childs.get(i).getDescription());
+                sc.setLocalPath(documentsFolder.getAbsolutePath());
                 sc.setWebContentLink(childs.get(i).getWebContentLink());
                 pr.addScene(sc);
             }
-
             realm.copyToRealmOrUpdate(pr);
             realm.commitTransaction();
+
             RealmResults<Project> p= realm.where(Project.class).findAll();
             Log.i("broj projekta:"+ p.size(),TAG );
             RealmResults<Scene> s =realm.where(Scene.class).findAll();
             Log.i("broj scena:"+ s.size(),TAG );
             Log.i("broj scena iz klase:"+p.get(0).getScenes().size(),TAG );
-
             Log.e(p.get(0).getLocalPath().toString(),TAG);
-            for(Scene scene:s)
-            {
-                Log.e(scene.getLocalPath(),TAG);
-            }
-
-
+            realm.close();
            /* Log.i(TAG,mCredential.getSelectedAccountName());
             if (result1 != null) {
                 for (File file : result1) {
@@ -576,7 +538,6 @@ public class LaunchActivity extends Activity
 
         @Override
         protected void onPreExecute() {
-            mOutputText.setText("");
             mProgress.show();
         }
 
@@ -584,10 +545,10 @@ public class LaunchActivity extends Activity
         protected void onPostExecute(List<String> output) {
             mProgress.hide();
             if (output == null || output.size() == 0) {
-                mOutputText.setText("No results returned.");
+                Log.i("No results returned.",TAG);
             } else {
                 output.add(0, "Data retrieved using the Drive API:");
-                mOutputText.setText(TextUtils.join("\n", output));
+
             }
         }
 
@@ -604,11 +565,11 @@ public class LaunchActivity extends Activity
                             ((UserRecoverableAuthIOException) mLastError).getIntent(),
                             LaunchActivity.REQUEST_AUTHORIZATION);
                 } else {
-                    mOutputText.setText("The following error occurred:\n"
-                            + mLastError.getMessage());
+                   // mOutputText.setText("The following error occurred:\n"
+                          //  + mLastError.getMessage());
                 }
             } else {
-                mOutputText.setText("Request cancelled.");
+                //mOutputText.setText("Request cancelled.");
             }
         }
     }

@@ -85,7 +85,7 @@ public class Scene extends RealmObject {
     }
     @Override
     public String toString() {
-        return "projectId:"+this.sceneId+ " |title:"+this.title+ " |description:"+this.description+" |localPath:"+this.localPath+" |webContentLink:"+this.webContentLink;
+        return "sceneId:"+this.sceneId+ " |title:"+this.title+ " |description:"+this.description+" |localPath:"+this.localPath+" |webContentLink:"+this.webContentLink;
         //+" |createdDate:" +this.createdDate+"| modifiedDate"+this.modifiedTime;
     }
 }

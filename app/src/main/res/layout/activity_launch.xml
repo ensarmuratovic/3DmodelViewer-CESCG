@@ -10,4 +10,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.cescg.modelviewer.LaunchActivity">
 
+    <ListView
+        android:id="@+id/sceneList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp" />
+
+    <Button
+        android:id="@+id/viewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="13dp"
+        android:text="View Model" />
+
+    <Button
+        android:id="@+id/callApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/viewModel"
+        android:layout_marginStart="43dp"
+        android:layout_toEndOf="@+id/viewModel"
+        android:text="callApi" />
+
+    <Button
+        android:id="@+id/deleteFolders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/viewModel"
+        android:layout_below="@+id/viewModel"
+        android:layout_marginTop="18dp"
+        android:text="Delete Project" />
 </RelativeLayout>

@@ -122,6 +122,7 @@ MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\User\.android\
 MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\User\.android\build-cache\772efb0abd61d277bab26b05069e54e2f7164137\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\User\.android\build-cache\ae7299fe2e6191156722680d40a2f1fe738efd8b\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.sromku:simple-storage:1.2.0] C:\Users\User\.android\build-cache\ce675e0831c88c292706af626a6d16d4cef95166\output\AndroidManifest.xml:8:5-10:41
+MERGED from [io.realm:android-adapters:2.0.0] C:\Users\User\.android\build-cache\6d6bca351b8c6b2885b6288cfd8c9aebd20b674f\output\AndroidManifest.xml:6:5-8:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\User\.android\build-cache\d66c25085c36cf4e9ca0174469e239af24febd39\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

@@ -16,13 +16,12 @@ import org.cescg.modelviewer.gamelogic.Main;
  * A placeholder fragment containing a simple view.
  */
 public class JmeFragment extends AndroidHarnessFragment {
-    private JmeFragment jmeFragment;
     private static final String TAG = "ENSAR";
     public JmeFragment() {
         // Set main project class (fully qualified path)
         appClass = "org.cescg.modelviewer.gamelogic.Main";
         //for new activity callet from Main
-        jmeFragment=this;
+
         // Set the desired EGL configuration
         eglBitsPerPixel = 24;
         eglAlphaBits = 0;

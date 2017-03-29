@@ -8,6 +8,10 @@
         "source": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\src\\main\\res\\layout\\activity_launch.xml"
     },
     {
+        "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\layout\\scene_item.xml",
+        "source": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\src\\main\\res\\layout\\scene_item.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\d66c25085c36cf4e9ca0174469e239af24febd39\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
@@ -28,12 +32,12 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\d66c25085c36cf4e9ca0174469e239af24febd39\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\User\\.android\\build-cache\\d66c25085c36cf4e9ca0174469e239af24febd39\\output\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\d66c25085c36cf4e9ca0174469e239af24febd39\\output\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\d66c25085c36cf4e9ca0174469e239af24febd39\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "C:\\Users\\User\\Documents\\GitHub\\3DmodelViewer-CESCG\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
