@@ -2,6 +2,7 @@ package org.cescg.modelviewer.Classes;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -59,10 +60,12 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         //adapterData.remove(position);
         Realm realm =Realm.getDefaultInstance();
         ///Scene scene= realm.where(Scene.class).equalTo("sceneId",sceneId).findFirst();
+        launcAct.deleteModelData(adapterData.get(position).getLocalPath());
         realm.beginTransaction();
         //scene.setTitle(scene.getTitle()+"deleted");
         adapterData.get(position).setTitle(adapterData.get(position).getTitle()+"deleted");
         //realm.copyToRealmOrUpdate(scene);
+        launcAct.deleteModelData(Environment.getExternalStorageDirectory()+adapterData.get(position).getLocalPath());
         realm.commitTransaction();
         realm.close();
         notifyDataSetChanged();
@@ -71,7 +74,7 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
-        Scene scene=getItem(position);
+        final Scene scene=getItem(position);
 
         // Check if an existing view is being reused, otherwise inflate the view
         if(convertView==null)
@@ -97,9 +100,9 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         });
 
         Button deleteButon= (Button) convertView.findViewById(R.id.deleteButton);
-        viewButton.setTag(scene);
+        deleteButon.setTag(scene);
         // Attach the click event handler
-        viewButton.setOnClickListener(new View.OnClickListener() {
+        deleteButon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                deleteScene(position);
@@ -111,11 +114,10 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launcAct.getResultsFromApi();
+                Scene scene= (Scene) v.getTag();
+                launcAct.getResultsFromApi(scene.getSceneId());
             }
         });
-
         return convertView;
-
     }
 }

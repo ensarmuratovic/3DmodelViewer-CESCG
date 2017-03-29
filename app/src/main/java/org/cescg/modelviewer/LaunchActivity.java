@@ -138,11 +138,11 @@ public class LaunchActivity extends Activity
             mCallApiButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        getResultsFromApi();
+                        getResultsFromApi(null);
                     }
 
             });
-
+     ;
 
 
             viewModelButton = (Button) findViewById(R.id.viewModel);
@@ -159,11 +159,10 @@ public class LaunchActivity extends Activity
             deleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String path = getFilesDir().toString();
-                    deleteDirectoryImpl(path + "/projects");
+                    String path = Environment.getExternalStorageDirectory().toString();
+                    deleteModelData(path + "/projects");
                 }
             });
-
 
             // Initialize credentials and service object.
             mCredential = GoogleAccountCredential.usingOAuth2(
@@ -197,35 +196,34 @@ public class LaunchActivity extends Activity
      * of the preconditions are not satisfied, the app will prompt the user as
      * appropriate.
      */
-    public void getResultsFromApi() {
+    public void getResultsFromApi(String sceneId) {
         if (! isGooglePlayServicesAvailable()) {
             acquireGooglePlayServices();
         } else if (mCredential.getSelectedAccountName() == null) {
             chooseAccount();
         } else if (! isDeviceOnline()) {
             Log.i("No network connection!",TAG);
-        } else {
-            new MakeRequestTask(mCredential).execute();
+        } else{
+            new MakeRequestTask(mCredential,sceneId).execute();
         }
     }
-    private boolean deleteDirectoryImpl(String path) {
+    public void deleteModelData(String path) {
         java.io.File directory = new java.io.File(path);
         // If the directory exists then delete
         if (directory.exists()) {
             java.io.File[] files = directory.listFiles();
             if (files == null) {
-                return true;
+                return;
             }
             // Run on all sub files and folders and delete them
             for (int i = 0; i < files.length; i++) {
                 if (files[i].isDirectory()) {
-                    deleteDirectoryImpl(files[i].getAbsolutePath());
+                    deleteModelData(files[i].getAbsolutePath());
                 } else {
                     files[i].delete();
                 }
             }
         }
-        return directory.delete();
     }
 
     /**
@@ -246,7 +244,7 @@ public class LaunchActivity extends Activity
                     .getString(PREF_ACCOUNT_NAME, null);
             if (accountName != null) {
                 mCredential.setSelectedAccountName(accountName);
-                getResultsFromApi();
+                getResultsFromApi(null);
             } else {
                 // Start a dialog from which the user can choose an account
                 startActivityForResult(
@@ -282,7 +280,7 @@ public class LaunchActivity extends Activity
                 if (resultCode != RESULT_OK) {
                     Log.i("App requires GP Serv",TAG);
                 } else {
-                    getResultsFromApi();
+                    getResultsFromApi(null);
                 }
                 break;
             case REQUEST_ACCOUNT_PICKER:
@@ -297,13 +295,13 @@ public class LaunchActivity extends Activity
                         editor.putString(PREF_ACCOUNT_NAME, accountName);
                         editor.apply();
                         mCredential.setSelectedAccountName(accountName);
-                        getResultsFromApi();
+                        getResultsFromApi(null);
                     }
                 }
                 break;
             case REQUEST_AUTHORIZATION:
                 if (resultCode == RESULT_OK) {
-                    getResultsFromApi();
+                    getResultsFromApi(null);
                 }
                 break;
         }
@@ -412,10 +410,11 @@ public class LaunchActivity extends Activity
     private class MakeRequestTask extends AsyncTask<Void, Void, List<String>> {
         private com.google.api.services.drive.Drive mService = null;
         private Exception mLastError = null;
-
-        MakeRequestTask(GoogleAccountCredential credential) {
+        private String sceneId;
+        MakeRequestTask(GoogleAccountCredential credential, String sceneId) {
             HttpTransport transport = AndroidHttp.newCompatibleTransport();
             JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
+            this.sceneId=sceneId;
             mService = new com.google.api.services.drive.Drive.Builder(
                     transport, jsonFactory, credential)
                     .setApplicationName("Drive API Android Quickstart")
@@ -429,7 +428,11 @@ public class LaunchActivity extends Activity
         @Override
         protected List<String> doInBackground(Void... params) {
             try {
-                return getDataFromApi();
+                //init download of scene data; Model data is not downloaded
+                if(sceneId==null)
+                    return getInitDataFromApi();
+                else
+                    return downloadSceneDataFromApi(sceneId);
             } catch (Exception e) {
                 mLastError = e;
                 cancel(true);
@@ -437,13 +440,8 @@ public class LaunchActivity extends Activity
             }
         }
 
-        /**
-         * Fetch a list of up to 10 file names and IDs.
-         * @return List of Strings describing files, or an empty list if no files
-         *         found.
-         * @throws IOException
-         */
-        private List<String> getDataFromApi() throws IOException {
+
+        private List<String> getInitDataFromApi() throws IOException {
 
             List<File> result1 = new ArrayList<File>();
             Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
@@ -463,7 +461,7 @@ public class LaunchActivity extends Activity
                     request.getPageToken().length() > 0);
            // Log.i(TAG, "******Number of projects: " + result1.size());
             List<String> fileInfo = new ArrayList<String>();
-            java.io.File documentsFolder=new java.io.File(getFilesDir(),"/projects/"+result1.get(0).getName());
+            java.io.File documentsFolder=new java.io.File(Environment.getExternalStorageDirectory(),"/projects/"+result1.get(0).getName());
             documentsFolder.mkdirs();
 
            request = mService.files().list().setFields("nextPageToken, files(id, name, description, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
@@ -474,20 +472,21 @@ public class LaunchActivity extends Activity
             Project pr=new Project();
             pr.setProjectId(result1.get(0).getId());
             pr.setTitle(result1.get(0).getName());
-            pr.setLocalPath(getFilesDir()+"/projects/"+result1.get(0).getName());
+            pr.setLocalPath(Environment.getExternalStorageDirectory()+"/projects/"+result1.get(0).getName());
             pr.setWebContentLink(result1.get(0).getWebContentLink());
-            Realm realm = Realm.getDefaultInstance();
+            realm = Realm.getDefaultInstance();
             realm.beginTransaction();
             for(int i=0;i<childs.size();i++) {
-                documentsFolder = new java.io.File(getFilesDir(), "/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
+                documentsFolder = new java.io.File(Environment.getExternalStorageDirectory()+ "/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
                 documentsFolder.mkdirs();
                 Scene sc= new Scene();
                 sc.setSceneId(childs.get(i).getId());
                 sc.setTitle(childs.get(i).getName());
                 sc.setDescription(childs.get(i).getDescription());
-                sc.setLocalPath(documentsFolder.getAbsolutePath());
+                sc.setLocalPath("/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
                 sc.setWebContentLink(childs.get(i).getWebContentLink());
                 pr.addScene(sc);
+                Log.i(sc.getLocalPath(),TAG);
             }
             realm.copyToRealmOrUpdate(pr);
             realm.commitTransaction();
@@ -535,7 +534,42 @@ public class LaunchActivity extends Activity
             return fileInfo;
         }
 
-
+        private List<String> downloadSceneDataFromApi(String sceneId) throws IOException {
+            List<String> fileInfo = new ArrayList<String>();
+            List<File> result1 = new ArrayList<File>();
+            Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
+                    .setPageSize(200)
+                    .setQ("'"+sceneId+"' in parents");
+            FileList fileList=request.execute();
+            List<File> modelData=fileList.getFiles();
+            Log.i("Broj fileova"+modelData.size(),TAG);
+            Log.i("sceneidd: "+sceneId,TAG);
+            realm=Realm.getDefaultInstance();
+            try {
+                Scene scene = realm.where(Scene.class).equalTo("sceneId", sceneId).findFirst();
+                for (File file : modelData) {
+                    DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                    DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(file.getWebContentLink()));
+                    mRqRequest.setDescription("Downloading: " + file.getName());
+                    Log.i("file:", file.getName());
+                    mRqRequest.setDestinationInExternalPublicDir(scene.getLocalPath(),file.getName());
+                    long idDownLoad = mManager.enqueue(mRqRequest);
+                    Log.i(TAG, "Id: " + file.getId());
+                    Log.i(TAG, "Parent: " + file.getParents().get(0));
+                    Log.i(TAG, "Mime Type: " + file.getMimeType());
+                    Log.i(TAG, "File Extension: " + file.getFileExtension());
+                    Log.i(TAG, "Date created: " + file.getCreatedTime());
+                    Log.i(TAG, "Date Modified: " + file.getModifiedTime());
+                    Log.i(TAG, "Viewed by me: " + file.getViewedByMeTime());
+                    Log.i(TAG, "Web content link: " + file.getWebContentLink());
+                }
+            }
+            catch (Exception e)
+            {
+                Log.e("error download",TAG,e);
+            }
+            return fileInfo;
+        }
         @Override
         protected void onPreExecute() {
             mProgress.show();
@@ -551,7 +585,6 @@ public class LaunchActivity extends Activity
 
             }
         }
-
         @Override
         protected void onCancelled() {
             mProgress.hide();
