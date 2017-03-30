@@ -98,6 +98,7 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
               @Override
               public void onClick(View v) {
                     Scene scene= (Scene) v.getTag();
+                    launcAct.viewSceneIntent(scene.getLocalPath());
                     Log.i(scene.getLocalPath(),TAG);
               }
         });

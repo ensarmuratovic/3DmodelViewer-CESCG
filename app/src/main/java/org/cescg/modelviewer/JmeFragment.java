@@ -17,6 +17,7 @@ import org.cescg.modelviewer.gamelogic.Main;
  */
 public class JmeFragment extends AndroidHarnessFragment {
     private static final String TAG = "ENSAR";
+    private String sceneLocalPath;
     public JmeFragment() {
         // Set main project class (fully qualified path)
         appClass = "org.cescg.modelviewer.gamelogic.Main";
@@ -48,7 +49,7 @@ public class JmeFragment extends AndroidHarnessFragment {
         // Set application exit settings
         finishOnAppStop = true;
         handleExitHook = true;
-        exitDialogTitle = "Do you want to exit?";
+        exitDialogTitle = "Do you want to scene selection?";
         exitDialogMessage = "Use your home key to bring this app into the background or exit to terminate it.";
 
         // Set splash screen resource id, if used
@@ -60,13 +61,22 @@ public class JmeFragment extends AndroidHarnessFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Main)getJmeApplication()).simpleInitApp(this); //this makes the AndroidHarness class available in SimpleApplication class
+        try {
+            sceneLocalPath=((ViewerActivity) getActivity()).getSceneLocalPath();
+            ((Main) getJmeApplication()).simpleInitApp(this); //this makes the AndroidHarness class available in SimpleApplication class
+        }
+        catch (Exception e)
+        {
+            Log.e("jmefragment greska",TAG,e);
+        }
+    }
+    public String getSceneLocalPath() {
+        return sceneLocalPath;
     }
 
+
     public void startActivity(){
-        //Intent intent1 = new Intent(myActivity, com.example.Interferenz.InterferenzActivity.class);
-        //intent1.putExtra("objekt",(byte)1);
-        //myActivity.startActivity(intent1);
+
         Intent intent=new Intent(getActivity(),org.cescg.modelviewer.LaunchActivity.class);
         startActivity(intent);
         Log.i(TAG, "uspjeloo");

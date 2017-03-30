@@ -225,6 +225,13 @@ public class LaunchActivity extends Activity
             }
         }
     }
+    public void viewSceneIntent(String sceneLocalPath)
+    {
+
+        Intent intent = new Intent(LaunchActivity.this, ViewerActivity.class);
+        intent.putExtra("sceneLocalPath",sceneLocalPath);
+        startActivity(intent);
+    }
 
     /**
      * Attempts to set the account used with the API credentials. If an account
@@ -513,13 +520,17 @@ public class LaunchActivity extends Activity
             Log.i("Broj fileova"+modelData.size(),TAG);
             Log.i("sceneidd: "+sceneId,TAG);
             realm=Realm.getDefaultInstance();
+            DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+
             try {
                 Scene scene = realm.where(Scene.class).equalTo("sceneId", sceneId).findFirst();
                 for (File file : modelData) {
-                    DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                   //Log.i("liiiink:"+file.getWebContentLink(),TAG);
                     DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(file.getWebContentLink()));
+
                     mRqRequest.setDescription("Downloading: " + file.getName());
-                    Log.i("file:", file.getName());
+                   //Log.i("file:", file.getName());
+
                     mRqRequest.setDestinationInExternalPublicDir(scene.getLocalPath(),file.getName());
                     long idDownLoad = mManager.enqueue(mRqRequest);
                 }

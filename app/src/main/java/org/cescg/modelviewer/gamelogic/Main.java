@@ -1,5 +1,6 @@
 package org.cescg.modelviewer.gamelogic;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -109,51 +110,32 @@ public class Main extends SimpleApplication {
         jmeFragment=jme;
     }
     public void simpleInitApp() {
-         //assetManager.registerLoader(OBJLoader.class, "obj");
-        //assetManager.registerLoader(MTLLoader.class, "mtl");
-        setDisplayFps(false);
-        setDisplayStatView(false);
+         assetManager.registerLoader(OBJLoader.class, "obj");
+         assetManager.registerLoader(MTLLoader.class, "mtl");
+        //setDisplayFps(false);
+       // setDisplayStatView(false);
+        try {
 
+            /*DirectionalLight sun = new DirectionalLight();
+            sun.setDirection(new Vector3f(0.69077975f,-0.6277887f,-0.35875428f).normalizeLocal());
+            sun.setColor(ColorRGBA.White.clone().multLocal(2));
+            rootNode.addLight(sun);*/
+            //adding ambient light
+            // AmbientLight al = new AmbientLight();
+            // al.setColor(ColorRGBA.White.mult(0.9f));
+            // al.setEnabled(true);
+            // rootNode.addLight(al);
+            rootNode.attachChild(SkyFactory.createSky(assetManager, "Textures/sky.jpg", true));
+            //assetManager.registerLocator("/storage/emulated/0/download/proba", AndroidLocator.class);
+            //assetManager.registerLocator("/storage/emulated/0/download/proba", FileLocator.class);
+            assetManager.registerLocator("/storage/emulated/0/"+jmeFragment.getSceneLocalPath(), FileLocator.class);
+             mainObject=assetManager.loadModel("blendexp10k.obj");
 
-        /*DirectionalLight sun = new DirectionalLight();
-        sun.setDirection(new Vector3f(0.69077975f,-0.6277887f,-0.35875428f).normalizeLocal());
-        sun.setColor(ColorRGBA.White.clone().multLocal(2));
-        rootNode.addLight(sun);*/
-
-
-        //adding ambient light
-        /*AmbientLight al = new AmbientLight();
-        al.setColor(ColorRGBA.White.mult(0.9f));
-        al.setEnabled(true);
-        rootNode.addLight(al);*/
-
-        rootNode.attachChild(SkyFactory.createSky(assetManager,"Textures/sky.jpg", true));
-
-
-        //assetManager.registerLocator("/storage/emulated/0/download/proba", AndroidLocator.class);
-        //assetManager.registerLocator("/storage/emulated/0/download/proba", FileLocator.class);
-        mainObject=assetManager.loadModel("Models/blendexp.obj");
-
-
-        //Calendar pocelo=Calendar.getInstance();
-       // Log.i(TAG,"Pocelo:"+pocelo.getTime().toString());
-
-         //mainObject=assetManager.loadModel("blendexp10k.obj");
-
-        //Calendar zavrseno=Calendar.getInstance();
-        //Log.i(TAG,"Zavrseno:"+zavrseno.getTime().toString());
-
-       // int satr=zavrseno.get(zavrseno.HOUR)-pocelo.get(pocelo.HOUR);
-        //int minr=zavrseno.get(zavrseno.MINUTE)-pocelo.get(pocelo.MINUTE);
-        //int secr=zavrseno.get(zavrseno.SECOND)-pocelo.get(pocelo.SECOND);
-       // long secr = (zavrseno.getTimeInMillis()-pocelo.getTimeInMillis())/1000;
-        //Log.e(TAG,"Razlika.:"+secr);
-
-        point=new PointLight();
-        point.setColor(ColorRGBA.White.mult(2f));
-        //point.setPosition(new Vector3f(mainObject.getLocalTranslation().getX(),mainObject.getLocalTranslation().getY()+2f,mainObject.getLocalTranslation().getZ()));
-        point.setPosition(cam.getLocation());
-        rootNode.addLight(point);
+            point = new PointLight();
+            point.setColor(ColorRGBA.White.mult(2f));
+            //point.setPosition(new Vector3f(mainObject.getLocalTranslation().getX(),mainObject.getLocalTranslation().getY()+2f,mainObject.getLocalTranslation().getZ()));
+            point.setPosition(cam.getLocation());
+            rootNode.addLight(point);
         /* BinaryExporter ex = BinaryExporter.getInstance();
 
         File f = new File("/storage/emulated/0/download/model.j3o");
@@ -172,45 +154,45 @@ public class Main extends SimpleApplication {
 
         }*/
 
-        rootNode.attachChild(mainObject);
+
+            //EXAMPLE WITH SIMPLE BOX
+            Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
+            mat.setColor("Color", ColorRGBA.Blue);
+            Box box = new Box(1, 1, 1);
+            //  mainObject = new Geometry("box", box);
+            // mainObject.setMaterial(mat);
+            Texture texture = assetManager.loadTexture("Textures/Monkey.png");
+            mat.setTexture("ColorMap", texture);
+            //rootNode.attachChild(mainObject);
+           // mainObject = new Geometry("box", box);
+           // mainObject.setMaterial(mat);
+
+            rootNode.attachChild(mainObject);
+            cam.lookAt(new Vector3f( mainObject.getLocalTranslation()),new Vector3f(0,1,0));
+            marker = new Geometry("box", box);
+            marker.setMaterial(mat);
+            marker.scale(0.2f);
+            // marker.scale(((BoundingBox) mainObject.getWorldBound()).getXExtent()/5);
+            marker.move(mainObject.getLocalTranslation().getX(), mainObject.getLocalTranslation().getY() + 3f, mainObject.getLocalTranslation().getZ());
+            rootNode.attachChild(marker);
+
+            initializeCameras();
+            initializeGui();
+
+            Log.i("cetvrto:" + jmeFragment.getSceneLocalPath(), TAG);
 
 
-//        Log.e(TAG, Integer.toString(rootNode.getChild(rootNode.getChildIndex(mainObject)).getVertexCount()));
-        //EXAMPLE WITH SIMPLE BOX
-        Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
-        mat.setColor("Color", ColorRGBA.Blue);
-        Box box = new Box(1, 1, 1);
-        //  mainObject = new Geometry("box", box);
-         // mainObject.setMaterial(mat);
-        Texture texture = assetManager.loadTexture("Textures/Monkey.png");
-        mat.setTexture("ColorMap", texture);
-        rootNode.attachChild(mainObject);
+            //listener of click on object
+            AppStateManager appStateManager = new AppStateManager(this);
+            appStateManager.attach(new MouseAppState(this));
+            MouseEventControl.addListenersToSpatial(marker, new DefaultMouseListener() {
+                @Override
+                protected void click(MouseButtonEvent event, Spatial target, Spatial capture) {
+                    Log.i(TAG, "clicked box.");
+                    jmeFragment.startActivity();
 
-
-        marker = new Geometry("box", box);
-        marker.setMaterial(mat);
-        marker.scale(0.2f);
-       // marker.scale(((BoundingBox) mainObject.getWorldBound()).getXExtent()/5);
-        marker.move(mainObject.getLocalTranslation().getX(),mainObject.getLocalTranslation().getY()+3f,mainObject.getLocalTranslation().getZ());
-        rootNode.attachChild(marker);
-
-        initializeCameras();
-        initializeGui();
-
-
-
-        //listener of click on object
-        AppStateManager appStateManager=new AppStateManager(this);
-        appStateManager.attach(new MouseAppState(this));
-        MouseEventControl.addListenersToSpatial(marker, new DefaultMouseListener() {
-            @Override
-            protected void click(MouseButtonEvent event, Spatial target, Spatial capture ) {
-                Log.i(TAG,"clicked box.");
-                jmeFragment.startActivity();
-
-            }
-        });
-
+                }
+            });
 
         /*forward.addMouseListener(new DefaultMouseListener() {
 
@@ -222,14 +204,17 @@ public class Main extends SimpleApplication {
             }
         });*/
 
-
+        }
+        catch (Exception e) {
+            Log.e("JME greska",TAG,e);
+        }
 
     }
     //tpf=time per frame
     @Override
    public void simpleUpdate(float tpf) {
         // make the player rotate:
-        marker.rotate(0,-tpf,0);
+         marker.rotate(0,-tpf,0);
         point.setPosition(cam.getLocation());
      if(forwardButton.isPressed()==true) {
             if(chaseCam.isEnabled()) {
