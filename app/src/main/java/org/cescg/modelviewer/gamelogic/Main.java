@@ -101,7 +101,7 @@ public class Main extends SimpleApplication {
             marker=assetManager.loadModel("marker.obj");
             Gson gson=new Gson();
             BufferedReader br = new BufferedReader(new FileReader(Environment.getExternalStorageDirectory()+jmeFragment.getSceneLocalPath()+"/marker.json"));
-            Marker m=gson.fromJson(br,Marker.class);
+            final Marker m=gson.fromJson(br,Marker.class);
             Log.i("X::::"+m.getX(),TAG);
             Log.i("Y::::"+m.getY(),TAG);
             Log.i("Z::::"+m.getZ(),TAG);
@@ -121,7 +121,7 @@ public class Main extends SimpleApplication {
                 @Override
                 protected void click(MouseButtonEvent event, Spatial target, Spatial capture) {
                     Log.i(TAG, "clicked box.");
-                    jmeFragment.startActivity();
+                    jmeFragment.startActivity(m.getLink());
 
                 }
             });

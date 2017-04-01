@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Environment;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import com.jme3.app.AndroidHarnessFragment;
 import com.jme3.app.Application;
 
+import org.cescg.modelviewer.Classes.Scene;
 import org.cescg.modelviewer.gamelogic.Main;
 
 /**
@@ -81,10 +83,12 @@ public class JmeFragment extends AndroidHarnessFragment {
     }
 
 
-    public void startActivity(){
+    public void startActivity(String link){
 
-        Intent intent=new Intent(getActivity(),org.cescg.modelviewer.LaunchActivity.class);
-        startActivity(intent);
-        Log.i(TAG, "uspjeloo");
+       // Intent intent=new Intent(getActivity(),org.cescg.modelviewer.LaunchActivity.class);
+       // startActivity(intent);
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(link));
+        startActivity(i);
     }
 }
