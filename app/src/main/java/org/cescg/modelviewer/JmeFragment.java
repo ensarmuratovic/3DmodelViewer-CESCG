@@ -1,11 +1,17 @@
 package org.cescg.modelviewer;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.jme3.app.AndroidHarnessFragment;
 import com.jme3.app.Application;
@@ -34,7 +40,6 @@ public class JmeFragment extends AndroidHarnessFragment {
         // (default = -1 for unlimited)
         frameRate = -1;
 
-
         // Set the maximum resolution dimension
         // (the smaller side, height or width, is set automatically
         // to maintain the original device screen aspect ratio)
@@ -55,8 +60,9 @@ public class JmeFragment extends AndroidHarnessFragment {
         // Set splash screen resource id, if used
         // (default = 0, no splash screen)
         // For example, if the image file name is "splash"...
-        //     splashPicID = R.drawable.splash;
-        splashPicID = 0;
+          splashPicID =R.drawable.loading ;
+
+
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,7 +87,4 @@ public class JmeFragment extends AndroidHarnessFragment {
         startActivity(intent);
         Log.i(TAG, "uspjeloo");
     }
-
-
-
 }

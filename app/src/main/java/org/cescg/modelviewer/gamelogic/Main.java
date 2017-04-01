@@ -8,6 +8,8 @@ import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.asset.plugins.AndroidLocator;
@@ -30,22 +32,12 @@ import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.light.PointLight;
 import com.jme3.material.Material;
-import com.jme3.material.MaterialList;
+
 import com.jme3.math.ColorRGBA;
-import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;
-import com.jme3.post.FilterPostProcessor;
-import com.jme3.renderer.queue.RenderQueue;
-import com.jme3.scene.CameraNode;
-import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
-import com.jme3.scene.control.CameraControl;
 import com.jme3.scene.plugins.MTLLoader;
-import com.jme3.scene.plugins.fbx.FbxLoader;
-
-
-import com.jme3.scene.plugins.ogre.OgreMeshKey;
 import com.jme3.scene.shape.Box;
 import com.jme3.texture.Image;
 import com.jme3.texture.Texture;
@@ -59,33 +51,18 @@ import com.simsilica.lemur.GuiGlobals;
 
 import com.simsilica.lemur.component.IconComponent;
 import com.simsilica.lemur.component.QuadBackgroundComponent;
-import com.simsilica.lemur.core.GuiComponent;
-import com.simsilica.lemur.event.BaseAppState;
-import com.simsilica.lemur.event.BasePickState;
 import com.simsilica.lemur.event.DefaultMouseListener;
 import com.simsilica.lemur.event.MouseAppState;
 import com.simsilica.lemur.event.MouseEventControl;
-import com.jme3.scene.control.AbstractControl;
-import com.simsilica.lemur.style.BaseStyles;
-import com.jme3.export.JmeImporter;
-import com.sromku.simple.storage.SimpleStorage;
-import com.sromku.simple.storage.Storage;
 
+import org.cescg.modelviewer.Classes.Marker;
 import org.cescg.modelviewer.JmeFragment;
-import org.slf4j.Marker;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Calendar;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.jme3.app.R.layout.main;
 
 
 public class Main extends SimpleApplication {
@@ -98,11 +75,10 @@ public class Main extends SimpleApplication {
     Button switchCameraButton;
 
     Spatial mainObject;
-    Geometry marker;
+    Spatial marker;
     Vector3f initFocus;
     PointLight point;
     private JmeFragment jmeFragment;
-    private static final Logger logger = Logger.getLogger(Main.class.getName());
     private static final String TAG = "ENSAR";
 
     public void simpleInitApp(JmeFragment jme)
@@ -114,74 +90,30 @@ public class Main extends SimpleApplication {
          assetManager.registerLoader(MTLLoader.class, "mtl");
         //setDisplayFps(false);
        // setDisplayStatView(false);
-        try {
+        point = new PointLight();
+        point.setColor(ColorRGBA.White.mult(1.5f));
+        point.setPosition(cam.getLocation());
+        rootNode.addLight(point);
 
-            /*DirectionalLight sun = new DirectionalLight();
-            sun.setDirection(new Vector3f(0.69077975f,-0.6277887f,-0.35875428f).normalizeLocal());
-            sun.setColor(ColorRGBA.White.clone().multLocal(2));
-            rootNode.addLight(sun);*/
-            //adding ambient light
-            // AmbientLight al = new AmbientLight();
-            // al.setColor(ColorRGBA.White.mult(0.9f));
-            // al.setEnabled(true);
-            // rootNode.addLight(al);
-            rootNode.attachChild(SkyFactory.createSky(assetManager, "Textures/sky.jpg", true));
-            //assetManager.registerLocator("/storage/emulated/0/download/proba", AndroidLocator.class);
-            //assetManager.registerLocator("/storage/emulated/0/download/proba", FileLocator.class);
+        try {
             assetManager.registerLocator("/storage/emulated/0/"+jmeFragment.getSceneLocalPath(), FileLocator.class);
-             mainObject=assetManager.loadModel("blendexp10k.obj");
-
-            point = new PointLight();
-            point.setColor(ColorRGBA.White.mult(2f));
-            //point.setPosition(new Vector3f(mainObject.getLocalTranslation().getX(),mainObject.getLocalTranslation().getY()+2f,mainObject.getLocalTranslation().getZ()));
-            point.setPosition(cam.getLocation());
-            rootNode.addLight(point);
-        /* BinaryExporter ex = BinaryExporter.getInstance();
-
-        File f = new File("/storage/emulated/0/download/model.j3o");
-
-        try {
-
-            ex.save(mainObject , f);
-
-            System.out.println("File was successfully converted to j3o.");
-
-
-
-        } catch (IOException e) {
-
-            e.printStackTrace();
-
-        }*/
-
-
-            //EXAMPLE WITH SIMPLE BOX
-            Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
-            mat.setColor("Color", ColorRGBA.Blue);
-            Box box = new Box(1, 1, 1);
-            //  mainObject = new Geometry("box", box);
-            // mainObject.setMaterial(mat);
-            Texture texture = assetManager.loadTexture("Textures/Monkey.png");
-            mat.setTexture("ColorMap", texture);
-            //rootNode.attachChild(mainObject);
-           // mainObject = new Geometry("box", box);
-           // mainObject.setMaterial(mat);
-
+            mainObject=assetManager.loadModel("blendexp10k.obj");
+            marker=assetManager.loadModel("marker.obj");
+            Gson gson=new Gson();
+            BufferedReader br = new BufferedReader(new FileReader(Environment.getExternalStorageDirectory()+jmeFragment.getSceneLocalPath()+"/marker.json"));
+            Marker m=gson.fromJson(br,Marker.class);
+            Log.i("X::::"+m.getX(),TAG);
+            Log.i("Y::::"+m.getY(),TAG);
+            Log.i("Z::::"+m.getZ(),TAG);
+            Log.i("Url::::"+m.getLink(),TAG);
+            marker.move(m.getX(),m.getZ(),m.getY()*-1f);
             rootNode.attachChild(mainObject);
-            cam.lookAt(new Vector3f( mainObject.getLocalTranslation()),new Vector3f(0,1,0));
-            marker = new Geometry("box", box);
-            marker.setMaterial(mat);
-            marker.scale(0.2f);
-            // marker.scale(((BoundingBox) mainObject.getWorldBound()).getXExtent()/5);
-            marker.move(mainObject.getLocalTranslation().getX(), mainObject.getLocalTranslation().getY() + 3f, mainObject.getLocalTranslation().getZ());
             rootNode.attachChild(marker);
-
             initializeCameras();
             initializeGui();
 
+
             Log.i("cetvrto:" + jmeFragment.getSceneLocalPath(), TAG);
-
-
             //listener of click on object
             AppStateManager appStateManager = new AppStateManager(this);
             appStateManager.attach(new MouseAppState(this));
@@ -193,86 +125,63 @@ public class Main extends SimpleApplication {
 
                 }
             });
-
-        /*forward.addMouseListener(new DefaultMouseListener() {
-
-
-            @Override
-            public void mouseEntered(MouseMotionEvent event, Spatial target, Spatial capture) {
-                super.mouseEntered(event, target, capture);
-                chaseCam.setMaxDistance(chaseCam.getDistanceToTarget()-1f);
-            }
-        });*/
-
         }
         catch (Exception e) {
             Log.e("JME greska",TAG,e);
         }
-
     }
     //tpf=time per frame
     @Override
    public void simpleUpdate(float tpf) {
-        // make the player rotate:
-         marker.rotate(0,-tpf,0);
+
         point.setPosition(cam.getLocation());
      if(forwardButton.isPressed()==true) {
             if(chaseCam.isEnabled()) {
-                 chaseCam.setDefaultDistance(chaseCam.getDistanceToTarget() - tpf * 7);
+                 chaseCam.setDefaultDistance(chaseCam.getDistanceToTarget() - tpf * 3);
                 return;
             }
-         cam.setLocation(new Vector3f(cam.getLocation().getX()-tpf*7,cam.getLocation().getY(),cam.getLocation().getZ()));
+         cam.setLocation(new Vector3f(cam.getLocation().getX()-tpf*3,cam.getLocation().getY(),cam.getLocation().getZ()));
         }
 
         if(backwardButton.isPressed()==true ) {
             if(chaseCam.isEnabled()) {
-                chaseCam.setDefaultDistance(chaseCam.getDistanceToTarget() + tpf * 7);
+                chaseCam.setDefaultDistance(chaseCam.getDistanceToTarget() + tpf * 3);
                 return;
             }
-
-            cam.setLocation(new Vector3f(cam.getLocation().getX()+tpf*7,cam.getLocation().getY(),cam.getLocation().getZ()));
+            cam.setLocation(new Vector3f(cam.getLocation().getX()+tpf*3,cam.getLocation().getY(),cam.getLocation().getZ()));
         }
         if(rightButton.isPressed()==true) {
             if(chaseCam.isEnabled()) {
-                //cam.setLocation(new Vector3f(cam.getLocation().getX()+tpf*7,cam.getLocation().getY(),cam.getLocation().getZ()));
-                //mainObject.setLocalTranslation(mainObject.getLocalTranslation().getX(),mainObject.getLocalTranslation().getY()+tpf*7,mainObject.getLocalTranslation().getZ());
-                mainObject.rotate(0,tpf,0);
+                rootNode.rotate(0,tpf,0);
             }
-
-
-           // marker.setLocalTranslation(marker.getLocalTranslation().getX(),marker.getLocalTranslation().getY(),marker.getLocalTranslation().getZ()+7*tpf);
-            cam.setLocation(new Vector3f(cam.getLocation().getX() , cam.getLocation().getY(), cam.getLocation().getZ()+5*tpf));
-
-
+            cam.setLocation(new Vector3f(cam.getLocation().getX() , cam.getLocation().getY(), cam.getLocation().getZ()+3*tpf));
         }
         if(leftButton.isPressed()==true) {
             if(chaseCam.isEnabled()) {
-                //mainObject.setLocalTranslation(mainObject.getLocalTranslation().getX(),mainObject.getLocalTranslation().getY()-tpf-7,mainObject.getLocalTranslation().getZ());
-                mainObject.rotate(0,-tpf,0);
+                rootNode.rotate(0,-tpf,0);
             }
-           // marker.setLocalTranslation(marker.getLocalTranslation().getX(),marker.getLocalTranslation().getY(),marker.getLocalTranslation().getZ()-7*tpf);
-            cam.setLocation(new Vector3f(cam.getLocation().getX(), cam.getLocation().getY(), cam.getLocation().getZ() -5*tpf));
+            cam.setLocation(new Vector3f(cam.getLocation().getX(), cam.getLocation().getY(), cam.getLocation().getZ() -3*tpf));
         }
-
     }
 
     public void initializeCameras()
     {
-         flyCam.setEnabled(false);
+        flyCam.setEnabled(false);
+        cam.setFrustumPerspective(45f, (float) cam.getWidth() / cam.getHeight(), 0.01f, 1000f);
         cam.setParallelProjection(false);
-        //cam.lookAt(new Vector3f( mainObject.getLocalTranslation()),new Vector3f(0,1,0));
-
-      //Enable a chase cam for model, and set object for center of rotation
-        chaseCam = new ChaseCamera(cam, mainObject, inputManager);
+        //cam.lookAt(new Vector3f( marker.getLocalTranslation()),new Vector3f(0,1,0));
+       //Enable a chase cam for model, and set object for center of rotation
+        chaseCam = new ChaseCamera(cam, marker, inputManager);
         chaseCam.setTrailingEnabled(true);
         chaseCam.setSmoothMotion(true);
         chaseCam.setMaxDistance(30f);
         chaseCam.setMinDistance(0.1f);
-        chaseCam.setDefaultDistance(15f);
+        chaseCam.setDefaultDistance(0.5f);
         chaseCam.setInvertVerticalAxis(true);
         chaseCam.setChasingSensitivity(5);
         chaseCam.setZoomSensitivity(3);
-        initFocus=chaseCam.getLookAtOffset();
+        chaseCam.setEnabled(true);
+
 
 
     }
@@ -324,8 +233,8 @@ public class Main extends SimpleApplication {
         leftIco.setIconScale(2f);
         leftButton.setIcon(leftIco);
 
-        switchCameraButton = switchCameraWindow.addChild(new Button("Enable camera move"));
-        switchCameraButton.setFontSize(30f);
+        switchCameraButton = switchCameraWindow.addChild(new Button("Aerial view"));
+        switchCameraButton.setFontSize(40f);
         QuadBackgroundComponent bg = new QuadBackgroundComponent(ColorRGBA.White);
         switchCameraWindow.setBackground(bg);
         switchCameraButton.setHighlightColor(ColorRGBA.Red);
@@ -334,22 +243,49 @@ public class Main extends SimpleApplication {
         switchCameraButton.addClickCommands(new Command<Button>() {
             @Override
             public void execute( Button source ) {
-                if(switchCameraButton.getText().equals("Enable model rotation"))
-                    switchCameraButton.setText("Enable camera move");
-                else
-                    switchCameraButton.setText("Enable model rotation");
-                if(chaseCam.isEnabled()) {
-                    flyCam.setEnabled(true);
-                    chaseCam.setEnabled(false);
-                    return;
+                if(switchCameraButton.getText().equals("Aerial view")) {
+                    switchCameraButton.setText("Go to story");
+                    chaseCam.setSpatial(mainObject);
+                    chaseCam.setDefaultDistance(10f);
                 }
-                flyCam.setEnabled(false);
-                chaseCam.setEnabled(true);
-                chaseCam.setLookAtOffset(initFocus);
-
-
+                else {
+                    switchCameraButton.setText("Aerial view");
+                    chaseCam.setSpatial(marker);
+                    chaseCam.setDefaultDistance(0.5f);
+                }
             }
         });
     }
 
 }
+
+  /* BinaryExporter ex = BinaryExporter.getInstance();
+
+        File f = new File("/storage/emulated/0/download/model.j3o");
+
+        try {
+
+            ex.save(mainObject , f);
+
+            System.out.println("File was successfully converted to j3o.");
+
+
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }*/
+  /* marker = new Geometry("box", box);
+            marker.setMaterial(mat);
+            marker.scale(0.2f);
+            // marker.scale(((BoundingBox) mainObject.getWorldBound()).getXExtent()/5);
+            marker.move(mainObject.getLocalTranslation().getX(), mainObject.getLocalTranslation().getY() + 3f, mainObject.getLocalTranslation().getZ());
+            //marker.move(1.25427f,0.04374f,1.15799f);*/
+
+
+  /* Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
+            mat.setColor("Color", ColorRGBA.Blue);
+            Box box = new Box(1, 1, 1);
+            Texture texture = assetManager.loadTexture("Textures/Monkey.png");
+            mat.setTexture("ColorMap", texture);*/

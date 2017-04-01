@@ -645,7 +645,8 @@ int drawable common_google_signin_btn_text_light_normal 0x7f020066
 int drawable common_google_signin_btn_text_light_pressed 0x7f020067
 int drawable design_fab_background 0x7f020068
 int drawable design_snackbar_background 0x7f020069
-int drawable notification_template_icon_bg 0x7f02006a
+int drawable loading 0x7f02006a
+int drawable notification_template_icon_bg 0x7f02006b
 int id action0 0x7f0c0082
 int id action_bar 0x7f0c0064
 int id action_bar_activity_content 0x7f0c0000
