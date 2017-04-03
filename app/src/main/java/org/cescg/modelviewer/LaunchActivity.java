@@ -28,8 +28,10 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
@@ -90,6 +92,10 @@ public class LaunchActivity extends Activity
     private static final String[] SCOPES = { DriveScopes.DRIVE};
     private static final String TAG = "ENSAR";
     private static Realm realm;
+    private String selectedScene;
+
+    private BroadcastReceiver receiver;
+    IntentFilter filter ;
     /**
      * Create the main activity.
      * @param savedInstanceState previously saved instance data.
@@ -132,13 +138,25 @@ public class LaunchActivity extends Activity
         {
             Log.e("error adapter",TAG,e);
         }
+        receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                // long reference = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
+                Log.i("downloaaad gotovo",TAG);
+                if(getSelectedScene()!=null)
+                adapter.DownloadScene(selectedScene);
+            }
+        };
+        filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+        registerReceiver(receiver,filter);
 
             mCallApiButton = (Button) findViewById(R.id.callApi);
 
             mCallApiButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        getResultsFromApi(null);
+                        setSelectedScene(null);
+                        getResultsFromApi();
                     }
 
             });
@@ -187,7 +205,13 @@ public class LaunchActivity extends Activity
 
     }
 
+    public String getSelectedScene() {
+        return selectedScene;
+    }
 
+    public void setSelectedScene(String selectedScene) {
+        this.selectedScene = selectedScene;
+    }
 
     /**
      * Attempt to call the API, after verifying that all the preconditions are
@@ -196,7 +220,8 @@ public class LaunchActivity extends Activity
      * of the preconditions are not satisfied, the app will prompt the user as
      * appropriate.
      */
-    public void getResultsFromApi(String sceneId) {
+    public void getResultsFromApi() {
+
         if (! isGooglePlayServicesAvailable()) {
             acquireGooglePlayServices();
         } else if (mCredential.getSelectedAccountName() == null) {
@@ -204,7 +229,8 @@ public class LaunchActivity extends Activity
         } else if (! isDeviceOnline()) {
             Log.i("No network connection!",TAG);
         } else{
-            new MakeRequestTask(mCredential,sceneId).execute();
+           // Log.i("taaag--"+sceneId,TAG);
+            new MakeRequestTask(mCredential).execute();
         }
     }
     public void deleteModelData(String path) {
@@ -219,8 +245,10 @@ public class LaunchActivity extends Activity
             for (int i = 0; i < files.length; i++) {
                 if (files[i].isDirectory()) {
                     deleteModelData(files[i].getAbsolutePath());
-                } else {
+                    //delete everything except thumbnail
+                } else if(!(files[i].getName().equals("thumbnail.jpg"))) {
                     files[i].delete();
+
                 }
             }
         }
@@ -251,7 +279,7 @@ public class LaunchActivity extends Activity
                     .getString(PREF_ACCOUNT_NAME, null);
             if (accountName != null) {
                 mCredential.setSelectedAccountName(accountName);
-                getResultsFromApi(null);
+                getResultsFromApi();
             } else {
                 // Start a dialog from which the user can choose an account
                 startActivityForResult(
@@ -287,7 +315,7 @@ public class LaunchActivity extends Activity
                 if (resultCode != RESULT_OK) {
                     Log.i("App requires GP Serv",TAG);
                 } else {
-                    getResultsFromApi(null);
+                    getResultsFromApi();
                 }
                 break;
             case REQUEST_ACCOUNT_PICKER:
@@ -302,13 +330,13 @@ public class LaunchActivity extends Activity
                         editor.putString(PREF_ACCOUNT_NAME, accountName);
                         editor.apply();
                         mCredential.setSelectedAccountName(accountName);
-                        getResultsFromApi(null);
+                        getResultsFromApi();
                     }
                 }
                 break;
             case REQUEST_AUTHORIZATION:
                 if (resultCode == RESULT_OK) {
-                    getResultsFromApi(null);
+                    getResultsFromApi();
                 }
                 break;
         }
@@ -414,18 +442,20 @@ public class LaunchActivity extends Activity
      * An asynchronous task that handles the Drive API call.
      * Placing the API calls in their own task ensures the UI stays responsive.
      */
+
+
     private class MakeRequestTask extends AsyncTask<Void, Void, List<String>> {
         private com.google.api.services.drive.Drive mService = null;
         private Exception mLastError = null;
-        private String sceneId;
-        MakeRequestTask(GoogleAccountCredential credential, String sceneId) {
+
+        MakeRequestTask(GoogleAccountCredential credential) {
             HttpTransport transport = AndroidHttp.newCompatibleTransport();
             JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
-            this.sceneId=sceneId;
             mService = new com.google.api.services.drive.Drive.Builder(
                     transport, jsonFactory, credential)
                     .setApplicationName("Drive API Android Quickstart")
                     .build();
+
         }
 
         /**
@@ -436,10 +466,10 @@ public class LaunchActivity extends Activity
         protected List<String> doInBackground(Void... params) {
             try {
                 //init download of scene data; Model data is not downloaded
-                if(sceneId==null)
+                if(getSelectedScene()==null)
                     return getInitDataFromApi();
                 else
-                    return downloadSceneDataFromApi(sceneId);
+                    return downloadSceneDataFromApi(getSelectedScene());
             } catch (Exception e) {
                 mLastError = e;
                 cancel(true);
@@ -451,6 +481,8 @@ public class LaunchActivity extends Activity
         private List<String> getInitDataFromApi() throws IOException {
 
             List<File> result1 = new ArrayList<File>();
+            DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            //downloading main project folder
             Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
             .setQ("mimeType='application/vnd.google-apps.folder' AND name contains 'C2E0S1C7G'");
 
@@ -471,6 +503,7 @@ public class LaunchActivity extends Activity
             java.io.File documentsFolder=new java.io.File(Environment.getExternalStorageDirectory(),"/projects/"+result1.get(0).getName());
             documentsFolder.mkdirs();
 
+            //download child folders and saving to realm
            request = mService.files().list().setFields("nextPageToken, files(id, name, description, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
                     .setQ("mimeType='application/vnd.google-apps.folder' AND '"+ result1.get(0).getId()+"' in parents");
             FileList fileList=request.execute();
@@ -492,6 +525,23 @@ public class LaunchActivity extends Activity
                 sc.setDescription(childs.get(i).getDescription());
                 sc.setLocalPath("/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
                 sc.setWebContentLink(childs.get(i).getWebContentLink());
+                java.io.File temp=new java.io.File(Environment.getExternalStorageDirectory()+ "/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName()+"/thumbnail.jpg");
+                if(temp.exists()) {
+                    temp.delete();
+                }
+                    request = mService.files().list().setFields("nextPageToken, files(id, name, description, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
+                            .setQ("name contains 'thumbnail' AND '" + childs.get(i).getId() + "' in parents");
+                    fileList = request.execute();
+                    File thumbnail = fileList.getFiles().get(0);
+                    Log.i("thumbnail link" + thumbnail.getWebContentLink(), TAG);
+                    DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(thumbnail.getWebContentLink()));
+                    mRqRequest.setDescription("Downloading: " + thumbnail.getName());
+                    //Log.i("file:", file.getName());
+                    mRqRequest.setDestinationInExternalPublicDir(sc.getLocalPath(), thumbnail.getName());
+                    mManager.enqueue(mRqRequest);
+                    sc.setThumbnail(sc.getLocalPath() + "/" + thumbnail.getName());
+
+                Log.i("nnn:"+sc.getThumbnail(),TAG);
                 pr.addScene(sc);
                 Log.i(sc.getLocalPath(),TAG);
             }
@@ -522,17 +572,20 @@ public class LaunchActivity extends Activity
             realm=Realm.getDefaultInstance();
             DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 
+
             try {
                 Scene scene = realm.where(Scene.class).equalTo("sceneId", sceneId).findFirst();
+                deleteModelData(Environment.getExternalStorageDirectory()+scene.getLocalPath());
                 for (File file : modelData) {
+                    if(file.getName().equals("thumbnail.jpg"))
+                        continue;
                    //Log.i("liiiink:"+file.getWebContentLink(),TAG);
                     DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(file.getWebContentLink()));
-
                     mRqRequest.setDescription("Downloading: " + file.getName());
                    //Log.i("file:", file.getName());
-
                     mRqRequest.setDestinationInExternalPublicDir(scene.getLocalPath(),file.getName());
                     long idDownLoad = mManager.enqueue(mRqRequest);
+
                 }
             }
             catch (Exception e)
@@ -541,23 +594,25 @@ public class LaunchActivity extends Activity
             }
             return fileInfo;
         }
+
         @Override
         protected void onPreExecute() {
-            mProgress.show();
+            if(getSelectedScene()==null) {
+                mProgress.setMessage("Downloading project");
+                mProgress.show();
+            }
+            else {
+                mProgress.setMessage("Downloading scene");
+                mProgress.show();
+            }
+
         }
 
         @Override
         protected void onPostExecute(List<String> output) {
             mProgress.hide();
             //after model download completes change scene.modelExists to true
-            if(sceneId!=null) {
-                realm = Realm.getDefaultInstance();
-                Scene scene = realm.where(Scene.class).equalTo("sceneId",sceneId).findFirst();
-                realm.beginTransaction();
-                scene.setModelDownloaded(true);
-                realm.copyToRealmOrUpdate(scene);
-                realm.commitTransaction();
-
+            if(getSelectedScene()!=null) {
             }
             if (output == null || output.size() == 0) {
                 Log.i("No results returned.",TAG);
@@ -586,5 +641,11 @@ public class LaunchActivity extends Activity
                 //mOutputText.setText("Request cancelled.");
             }
         }
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }

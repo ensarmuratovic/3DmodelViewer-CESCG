@@ -1,55 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="15dp"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:layout_marginTop="5dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
     android:layout_alignParentBottom="true">
 
     <TextView
         android:id="@+id/scTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="SceneTitle" />
-
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/viewButton"
-        android:layout_alignTop="@+id/viewButton"
-        android:layout_gravity="right"
-        android:layout_toStartOf="@+id/viewButton"
-        android:text="Delete Data"
-        android:textSize="14sp" />
-
-    <Button
-        android:id="@+id/viewButton"
-        android:layout_width="108dp"
-        android:layout_height="40dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="38dp"
-        android:text="View"
-        android:layout_below="@+id/scTitle"
-        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/scDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SceneDescription"
-        android:layout_above="@+id/downloadButton"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp" />
+        android:layout_below="@+id/scTitle"
+        android:layout_marginTop="13dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="SceneDescription" />
+
+    <ImageView
+        android:id="@+id/sceneThumbnail"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/scDescription"
+        android:layout_marginTop="11dp" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/sceneThumbnail"
+        android:layout_toStartOf="@+id/viewButton"
+        android:text="Delete Data" />
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/sceneThumbnail"
+        android:layout_below="@+id/sceneThumbnail"
+        android:text="View" />
 
     <Button
         android:id="@+id/downloadButton"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/deleteButton"
+        android:layout_below="@+id/sceneThumbnail"
         android:layout_toStartOf="@+id/deleteButton"
         android:text="Download Data" />
 

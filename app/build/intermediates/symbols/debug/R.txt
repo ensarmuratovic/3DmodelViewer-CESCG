@@ -689,7 +689,7 @@ int id customPanel 0x7f0c0058
 int id dark 0x7f0c003f
 int id decor_content_parent 0x7f0c0062
 int id default_activity_button 0x7f0c0049
-int id deleteButton 0x7f0c0090
+int id deleteButton 0x7f0c0092
 int id deleteFolders 0x7f0c0077
 int id design_bottom_sheet 0x7f0c007a
 int id design_menu_item_action_area 0x7f0c0081
@@ -697,7 +697,7 @@ int id design_menu_item_action_area_stub 0x7f0c0080
 int id design_menu_item_text 0x7f0c007f
 int id design_navigation_view 0x7f0c007e
 int id disableHome 0x7f0c000e
-int id downloadButton 0x7f0c0093
+int id downloadButton 0x7f0c0094
 int id edit_query 0x7f0c0066
 int id end 0x7f0c0027
 int id end_padder 0x7f0c008e
@@ -740,9 +740,10 @@ int id progress_circular 0x7f0c0006
 int id progress_horizontal 0x7f0c0007
 int id radio 0x7f0c005d
 int id right 0x7f0c002a
-int id scDescription 0x7f0c0092
+int id scDescription 0x7f0c0090
 int id scTitle 0x7f0c008f
 int id sceneList 0x7f0c0074
+int id sceneThumbnail 0x7f0c0091
 int id screen 0x7f0c001c
 int id scroll 0x7f0c0018
 int id scrollIndicatorDown 0x7f0c0057
@@ -789,7 +790,7 @@ int id topPanel 0x7f0c0050
 int id touch_outside 0x7f0c0079
 int id up 0x7f0c0009
 int id useLogo 0x7f0c0014
-int id viewButton 0x7f0c0091
+int id viewButton 0x7f0c0093
 int id viewModel 0x7f0c0075
 int id view_offset_helper 0x7f0c000a
 int id wide 0x7f0c003d

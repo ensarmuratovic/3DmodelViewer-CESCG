@@ -102,10 +102,6 @@ public class Main extends SimpleApplication {
             Gson gson=new Gson();
             BufferedReader br = new BufferedReader(new FileReader(Environment.getExternalStorageDirectory()+jmeFragment.getSceneLocalPath()+"/marker.json"));
             final Marker m=gson.fromJson(br,Marker.class);
-            Log.i("X::::"+m.getX(),TAG);
-            Log.i("Y::::"+m.getY(),TAG);
-            Log.i("Z::::"+m.getZ(),TAG);
-            Log.i("Url::::"+m.getLink(),TAG);
             marker.move(m.getX(),m.getZ(),m.getY()*-1f);
             rootNode.attachChild(mainObject);
             rootNode.attachChild(marker);

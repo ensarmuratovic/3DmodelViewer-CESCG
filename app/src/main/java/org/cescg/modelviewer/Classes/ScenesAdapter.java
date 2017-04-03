@@ -2,6 +2,8 @@ package org.cescg.modelviewer.Classes;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
@@ -69,7 +72,19 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         launcAct.deleteModelData(Environment.getExternalStorageDirectory()+adapterData.get(position).getLocalPath());
         realm.commitTransaction();
         realm.close();
-        notifyDataSetChanged();
+        //notifyDataSetChanged();
+    }
+    public void DownloadScene(String sceneId)
+    {
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        //adapterData.get(position).setModelDownloaded(true);
+        //adapterData.
+        Scene scene =realm.where(Scene.class).equalTo("sceneId",sceneId).findFirst();
+        scene.setModelDownloaded(true);
+        realm.commitTransaction();
+        realm.close();
+        //notifyDataSetChanged();
     }
 
     @Override
@@ -88,11 +103,15 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         // Populate the data into the template view using the data object
         scTitle.setText(scene.getTitle());
         scDescription.setText(scene.getDescription());
+
+        Bitmap myBitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory()+scene.getThumbnail());
+        ImageView imageView= (ImageView) convertView.findViewById(R.id.sceneThumbnail);
+        imageView.setImageBitmap(myBitmap);
         Button viewButton= (Button) convertView.findViewById(R.id.viewButton);
         viewButton.setTag(scene);
-        if(!scene.isModelExists())
-            viewButton.setEnabled(false);
-        else viewButton.setEnabled(true);
+        if(!scene.isModelDownloaded())
+            viewButton.setVisibility(View.GONE);
+        else viewButton.setVisibility(View.VISIBLE);
         // Attach the click event handler
         viewButton.setOnClickListener(new View.OnClickListener() {
               @Override
@@ -105,9 +124,9 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
 
         Button deleteButon= (Button) convertView.findViewById(R.id.deleteButton);
         deleteButon.setTag(scene);
-        if(!scene.isModelExists())
-            deleteButon.setEnabled(false);
-        else deleteButon.setEnabled(true);
+        if(!scene.isModelDownloaded())
+            deleteButon.setVisibility(View.GONE);
+        else deleteButon.setVisibility(View.VISIBLE);
         // Attach the click event handler
         deleteButon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,14 +134,17 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
                deleteScene(position);
             }
         });
-        Button downloadButton= (Button) convertView.findViewById(R.id.downloadButton);
+        final Button downloadButton= (Button) convertView.findViewById(R.id.downloadButton);
         downloadButton.setTag(scene);
+       // Log.i("taaag"+scene.getSceneId(),TAG);
         // Attach the click event handler
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Scene scene= (Scene) v.getTag();
-                launcAct.getResultsFromApi(scene.getSceneId());
+                Log.i("taaag1--"+scene.getSceneId(),TAG);
+                launcAct.setSelectedScene(scene.getSceneId());
+                launcAct.getResultsFromApi();
             }
         });
         return convertView;
