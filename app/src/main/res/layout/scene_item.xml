@@ -3,40 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="15dp"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:layout_marginTop="5dp"
     android:orientation="vertical"
+
+    android:paddingTop="10dp"
     android:paddingBottom="10dp"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp">
-    android:layout_alignParentBottom="true">
+    android:paddingRight="15dp"
+    android:layout_toEndOf="@+id/projectTitle">
 
+    <TextView
+        android:id="@+id/titleHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Title: "
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/scTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="SceneTitle" />
 
+        android:text="SceneTitle"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/titleHead" />
+
+    <TextView
+        android:id="@+id/DescriptionHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titleHead"
+        android:text="Description: "
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/scDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/scTitle"
-        android:layout_marginTop="13dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="SceneDescription" />
+
+        android:text="SceneDescription"
+        android:layout_below="@+id/titleHead"
+        android:layout_toEndOf="@+id/DescriptionHead" />
 
     <ImageView
         android:id="@+id/sceneThumbnail"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/scDescription"
@@ -44,26 +63,38 @@
 
     <Button
         android:id="@+id/deleteButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@+id/sceneThumbnail"
-        android:layout_toStartOf="@+id/viewButton"
-        android:text="Delete Data" />
+
+        android:layout_toRightOf="@+id/downloadButton"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:elevation="0dp"
+        android:text="Delete"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/viewButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_alignRight="@+id/sceneThumbnail"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/sceneThumbnail"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="View" />
 
     <Button
         android:id="@+id/downloadButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@+id/sceneThumbnail"
-        android:layout_toStartOf="@+id/deleteButton"
-        android:text="Download Data" />
+        android:layout_alignParentLeft="true"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Download" />
+
+
+
 
 </RelativeLayout>

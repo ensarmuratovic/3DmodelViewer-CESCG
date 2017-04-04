@@ -1,7 +1,9 @@
 package org.cescg.modelviewer.Classes;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
@@ -16,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.cescg.modelviewer.LaunchActivity;
 import org.cescg.modelviewer.R;
@@ -131,20 +134,62 @@ public class ScenesAdapter extends RealmBaseAdapter<Scene> implements ListAdapte
         deleteButon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               deleteScene(position);
+
+                new AlertDialog.Builder(launcAct)
+                        .setTitle("Delete model")
+                        .setMessage("Are you sure you want to delete this model from device?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                deleteScene(position);
+                                Toast.makeText(launcAct.getApplicationContext(), "Model deleted",
+                                        Toast.LENGTH_LONG).show();
+                                dialog.cancel();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
         final Button downloadButton= (Button) convertView.findViewById(R.id.downloadButton);
         downloadButton.setTag(scene);
        // Log.i("taaag"+scene.getSceneId(),TAG);
         // Attach the click event handler
+        if(scene.isModelDownloaded())
+            downloadButton.setText("Redownload");
+        else
+            downloadButton.setText("Download");
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Scene scene= (Scene) v.getTag();
-                Log.i("taaag1--"+scene.getSceneId(),TAG);
-                launcAct.setSelectedScene(scene.getSceneId());
-                launcAct.getResultsFromApi();
+                //final Scene scene= (Scene) v.getTag();
+                if(launcAct.getSelectedSceneId()!=null) {
+                    Toast.makeText(launcAct.getApplicationContext(), "Another download is in progress. Wait until download of " + launcAct.getSelectedSceneTitle() + " completes!",
+                            Toast.LENGTH_LONG).show();
+                    return;
+                }
+                new AlertDialog.Builder(launcAct)
+                        .setTitle("Download model")
+                        .setMessage("Are you sure you want to download this model from server?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                launcAct.setSelectedSceneId(scene.getSceneId());
+                                launcAct.setSelectedSceneTitle(scene.getTitle());
+                                launcAct.getResultsFromApi();
+                                dialog.cancel();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
         return convertView;

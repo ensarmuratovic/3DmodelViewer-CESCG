@@ -41,8 +41,10 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.media.MediaMetadataCompat;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -92,10 +94,12 @@ public class LaunchActivity extends Activity
     private static final String[] SCOPES = { DriveScopes.DRIVE};
     private static final String TAG = "ENSAR";
     private static Realm realm;
-    private String selectedScene;
-
+    private String selectedSceneId;
+    private String selectedSceneTitle;
+    private Project selectedProject;
     private BroadcastReceiver receiver;
     IntentFilter filter ;
+    private int queueSize;
     /**
      * Create the main activity.
      * @param savedInstanceState previously saved instance data.
@@ -111,10 +115,10 @@ public class LaunchActivity extends Activity
 
             setContentView(R.layout.activity_launch);
             mProgress = new ProgressDialog(this);
-            mProgress.setMessage("Calling Drive API ...");
+            mProgress.setCancelable(false);
             RealmResults<Project> p = realm.where(Project.class).findAll();
             Log.i("broj projekta init:" + p.size(), TAG);
-            RealmResults<Scene> s = realm.where(Scene.class).findAll();
+            RealmResults<Scene> s = realm.where(Scene.class).findAll().sort("title");
             Log.i("broj scena init:" + s.size(), TAG);
         try {
             //scenes = new ArrayList<Scene>();
@@ -141,78 +145,94 @@ public class LaunchActivity extends Activity
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                // long reference = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
-                Log.i("downloaaad gotovo",TAG);
-                if(getSelectedScene()!=null)
-                adapter.DownloadScene(selectedScene);
+                queueSize--;
+                if(queueSize==0 && selectedSceneId!=null) {
+                    Toast.makeText(getApplicationContext(), "Model "+selectedSceneTitle+" is downloaded!",
+                            Toast.LENGTH_LONG).show();
+                    adapter.DownloadScene(selectedSceneId);
+                    setSelectedSceneId(null);
+                    setSelectedSceneTitle(null);
+                    unregisterReceiver(receiver);
+                }
+                else if(queueSize==0 && selectedSceneId==null)
+                {
+                    Toast.makeText(getApplicationContext(), "Project updated",
+                            Toast.LENGTH_LONG).show();
+                    unregisterReceiver(receiver);
+                    mProgress.cancel();
+                    ListView l= (ListView)findViewById(R.id.sceneList);
+                    findViewById(R.id.projectTitle).setVisibility(View.VISIBLE);
+                    mCallApiButton.setVisibility(View.VISIBLE);
+                    findViewById(R.id.projectHead).setVisibility(View.VISIBLE);
+                    TextView project=(TextView) findViewById(R.id.projectTitle);
+                    project.setText(selectedProject.getTitle());
+                    adapter.notifyDataSetChanged();
+                }
+
             }
         };
         filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+
         registerReceiver(receiver,filter);
 
-            mCallApiButton = (Button) findViewById(R.id.callApi);
 
-            mCallApiButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                        setSelectedScene(null);
-                        getResultsFromApi();
-                    }
+        mCallApiButton = (Button) findViewById(R.id.callApi);
 
-            });
-     ;
-
-
-            viewModelButton = (Button) findViewById(R.id.viewModel);
-            viewModelButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent intent = new Intent(LaunchActivity.this, ViewerActivity.class);
-                    startActivity(intent);
+        mCallApiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    setSelectedSceneId(null);
+                    setSelectedSceneTitle(null);
+                    getResultsFromApi();
                 }
-            });
 
-            deleteButton = (Button) findViewById(R.id.deleteFolders);
-            deleteButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String path = Environment.getExternalStorageDirectory().toString();
-                    deleteModelData(path + "/projects");
-                }
-            });
+        });
 
-            // Initialize credentials and service object.
-            mCredential = GoogleAccountCredential.usingOAuth2(
-                    getApplicationContext(), Arrays.asList(SCOPES))
-                    .setBackOff(new ExponentialBackOff());
+        // Initialize credentials and service object.
+        mCredential = GoogleAccountCredential.usingOAuth2(
+                getApplicationContext(), Arrays.asList(SCOPES))
+                .setBackOff(new ExponentialBackOff());
 
-            if (Build.VERSION.SDK_INT >= 23) {
-                if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        == PackageManager.PERMISSION_GRANTED) {
-                    Log.v(TAG, "Permission to write on external storage granted");
-
-                } else {
-
-                    Log.v(TAG, "Permission to write on external storage revoked");
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-
-                }
-            } else { //permission is automatically granted on sdk<23 upon installation
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
                 Log.v(TAG, "Permission to write on external storage granted");
+
+            } else {
+
+                Log.v(TAG, "Permission to write on external storage revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+
             }
-
+        } else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG, "Permission to write on external storage granted");
+        }
+        TextView project=(TextView) findViewById(R.id.projectTitle);
+        if(p.size()!=0)
+            project.setText(p.get(0).getTitle());
+        else
+        {
+            project.setVisibility(View.GONE);
+            mCallApiButton.setVisibility(View.GONE);
+            findViewById(R.id.projectHead).setVisibility(View.GONE);
+        }
 
     }
 
-    public String getSelectedScene() {
-        return selectedScene;
+    public String getSelectedSceneId() {
+        return selectedSceneId;
     }
 
-    public void setSelectedScene(String selectedScene) {
-        this.selectedScene = selectedScene;
+    public void setSelectedSceneId(String selectedScene) {
+        this.selectedSceneId = selectedScene;
+    }
+    public String getSelectedSceneTitle() {
+        return selectedSceneTitle;
     }
 
+    public void setSelectedSceneTitle(String selectedSceneTitle) {
+        this.selectedSceneTitle = selectedSceneTitle;
+    }
     /**
      * Attempt to call the API, after verifying that all the preconditions are
      * satisfied. The preconditions are: Google Play Services installed, an
@@ -279,7 +299,7 @@ public class LaunchActivity extends Activity
                     .getString(PREF_ACCOUNT_NAME, null);
             if (accountName != null) {
                 mCredential.setSelectedAccountName(accountName);
-                getResultsFromApi();
+
             } else {
                 // Start a dialog from which the user can choose an account
                 startActivityForResult(
@@ -312,11 +332,8 @@ public class LaunchActivity extends Activity
         super.onActivityResult(requestCode, resultCode, data);
         switch(requestCode) {
             case REQUEST_GOOGLE_PLAY_SERVICES:
-                if (resultCode != RESULT_OK) {
+                if (resultCode != RESULT_OK)
                     Log.i("App requires GP Serv",TAG);
-                } else {
-                    getResultsFromApi();
-                }
                 break;
             case REQUEST_ACCOUNT_PICKER:
                 if (resultCode == RESULT_OK && data != null &&
@@ -340,6 +357,7 @@ public class LaunchActivity extends Activity
                 }
                 break;
         }
+
     }
 
     /**
@@ -369,6 +387,10 @@ public class LaunchActivity extends Activity
     @Override
     public void onPermissionsGranted(int requestCode, List<String> list) {
         // Do nothing.
+        if (mCredential.getSelectedAccountName() == null) {
+            chooseAccount();
+        }
+
     }
 
     /**
@@ -466,10 +488,10 @@ public class LaunchActivity extends Activity
         protected List<String> doInBackground(Void... params) {
             try {
                 //init download of scene data; Model data is not downloaded
-                if(getSelectedScene()==null)
+                if(getSelectedSceneId()==null)
                     return getInitDataFromApi();
                 else
-                    return downloadSceneDataFromApi(getSelectedScene());
+                    return downloadSceneDataFromApi(getSelectedSceneId());
             } catch (Exception e) {
                 mLastError = e;
                 cancel(true);
@@ -509,6 +531,8 @@ public class LaunchActivity extends Activity
             FileList fileList=request.execute();
             List<File> childs=fileList.getFiles();
            // Log.i(TAG, "******Number of scenes: " + childs.size());
+
+
             Project pr=new Project();
             pr.setProjectId(result1.get(0).getId());
             pr.setTitle(result1.get(0).getName());
@@ -519,35 +543,58 @@ public class LaunchActivity extends Activity
             for(int i=0;i<childs.size();i++) {
                 documentsFolder = new java.io.File(Environment.getExternalStorageDirectory()+ "/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
                 documentsFolder.mkdirs();
-                Scene sc= new Scene();
+                /*Scene sc= realm.where(Scene.class).equalTo("sceneId", childs.get(i).getId()).findFirst();
+                if(!sc.isValid())
+                    sc=new Scene();*/
+                Scene sc=new Scene();
+               /*try {
+                    sc = realm.where(Scene.class).equalTo("sceneId", childs.get(i).getId()).findFirst();
+                }
+                catch (Exception e) {
+                    sc=new Scene();
+                    Log.i("alooo" , TAG);
+                }*/
+
                 sc.setSceneId(childs.get(i).getId());
                 sc.setTitle(childs.get(i).getName());
                 sc.setDescription(childs.get(i).getDescription());
                 sc.setLocalPath("/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName());
                 sc.setWebContentLink(childs.get(i).getWebContentLink());
+
+                boolean isDownloaded;
+                try {
+                    isDownloaded = realm.where(Scene.class).equalTo("sceneId", childs.get(i).getId()).findFirst().isModelDownloaded();
+                }
+                catch (Exception e)
+                {
+                    isDownloaded=false;
+                }
+                sc.setModelDownloaded(isDownloaded);
                 java.io.File temp=new java.io.File(Environment.getExternalStorageDirectory()+ "/projects/" + result1.get(0).getName()+"/"+childs.get(i).getName()+"/thumbnail.jpg");
                 if(temp.exists()) {
                     temp.delete();
                 }
-                    request = mService.files().list().setFields("nextPageToken, files(id, name, description, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
-                            .setQ("name contains 'thumbnail' AND '" + childs.get(i).getId() + "' in parents");
-                    fileList = request.execute();
-                    File thumbnail = fileList.getFiles().get(0);
-                    Log.i("thumbnail link" + thumbnail.getWebContentLink(), TAG);
-                    DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(thumbnail.getWebContentLink()));
-                    mRqRequest.setDescription("Downloading: " + thumbnail.getName());
-                    //Log.i("file:", file.getName());
-                    mRqRequest.setDestinationInExternalPublicDir(sc.getLocalPath(), thumbnail.getName());
-                    mManager.enqueue(mRqRequest);
-                    sc.setThumbnail(sc.getLocalPath() + "/" + thumbnail.getName());
+                request = mService.files().list().setFields("nextPageToken, files(id, name, description, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
+                        .setQ("name contains 'thumbnail' AND '" + childs.get(i).getId() + "' in parents");
+                fileList = request.execute();
+                File thumbnail = fileList.getFiles().get(0);
+                Log.i("thumbnail link" + thumbnail.getWebContentLink(), TAG);
+                DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(thumbnail.getWebContentLink()));
+                mRqRequest.setDescription("Downloading: " + thumbnail.getName());
+                //Log.i("file:", file.getName());
+                mRqRequest.setDestinationInExternalPublicDir(sc.getLocalPath(), thumbnail.getName());
+                mManager.enqueue(mRqRequest);
+                queueSize++;
+                sc.setThumbnail(sc.getLocalPath() + "/" + thumbnail.getName());
 
-                Log.i("nnn:"+sc.getThumbnail(),TAG);
                 pr.addScene(sc);
+                Log.i("nnn:"+sc.isModelDownloaded(),TAG);
+
                 Log.i(sc.getLocalPath(),TAG);
             }
             realm.copyToRealmOrUpdate(pr);
             realm.commitTransaction();
-
+            selectedProject=pr;
             RealmResults<Project> p= realm.where(Project.class).findAll();
             Log.i("broj projekta:"+ p.size(),TAG );
             RealmResults<Scene> s =realm.where(Scene.class).findAll();
@@ -560,6 +607,7 @@ public class LaunchActivity extends Activity
         }
 
         private List<String> downloadSceneDataFromApi(String sceneId) throws IOException {
+
             List<String> fileInfo = new ArrayList<String>();
             List<File> result1 = new ArrayList<File>();
             Drive.Files.List request = mService.files().list().setFields("nextPageToken, files(id, name, parents, mimeType, createdTime,modifiedTime,viewedByMeTime,webContentLink,fileExtension)")
@@ -571,8 +619,6 @@ public class LaunchActivity extends Activity
             Log.i("sceneidd: "+sceneId,TAG);
             realm=Realm.getDefaultInstance();
             DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-
-
             try {
                 Scene scene = realm.where(Scene.class).equalTo("sceneId", sceneId).findFirst();
                 deleteModelData(Environment.getExternalStorageDirectory()+scene.getLocalPath());
@@ -581,13 +627,16 @@ public class LaunchActivity extends Activity
                         continue;
                    //Log.i("liiiink:"+file.getWebContentLink(),TAG);
                     DownloadManager.Request mRqRequest = new DownloadManager.Request(Uri.parse(file.getWebContentLink()));
+
                     mRqRequest.setDescription("Downloading: " + file.getName());
                    //Log.i("file:", file.getName());
                     mRqRequest.setDestinationInExternalPublicDir(scene.getLocalPath(),file.getName());
                     long idDownLoad = mManager.enqueue(mRqRequest);
-
+                    queueSize++;
                 }
+
             }
+
             catch (Exception e)
             {
                 Log.e("error download",TAG,e);
@@ -597,12 +646,15 @@ public class LaunchActivity extends Activity
 
         @Override
         protected void onPreExecute() {
-            if(getSelectedScene()==null) {
-                mProgress.setMessage("Downloading project");
+            registerReceiver(receiver,filter);
+            if(getSelectedSceneId()==null) {
+                mProgress.setTitle("Fetching project");
+                mProgress.setMessage("Please wait...");
                 mProgress.show();
             }
             else {
-                mProgress.setMessage("Downloading scene");
+                mProgress.setTitle("Downloading scene");
+                mProgress.setMessage("You will be notified when it is done.");
                 mProgress.show();
             }
 
@@ -610,9 +662,22 @@ public class LaunchActivity extends Activity
 
         @Override
         protected void onPostExecute(List<String> output) {
-            mProgress.hide();
+           // mProgress.hide();
+
+
             //after model download completes change scene.modelExists to true
-            if(getSelectedScene()!=null) {
+            if(getSelectedSceneId()!=null) {
+                Runnable progressRunnable = new Runnable() {
+
+                    @Override
+                    public void run() {
+                        mProgress.cancel();
+                    }
+                };
+
+                Handler pdCanceller = new Handler();
+                pdCanceller.postDelayed(progressRunnable, 2000);
+
             }
             if (output == null || output.size() == 0) {
                 Log.i("No results returned.",TAG);
@@ -648,4 +713,5 @@ public class LaunchActivity extends Activity
     protected void onPause() {
         super.onPause();
     }
+
 }

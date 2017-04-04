@@ -59,7 +59,9 @@ import org.cescg.modelviewer.Classes.Marker;
 import org.cescg.modelviewer.JmeFragment;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -97,7 +99,11 @@ public class Main extends SimpleApplication {
 
         try {
             assetManager.registerLocator("/storage/emulated/0/"+jmeFragment.getSceneLocalPath(), FileLocator.class);
-            mainObject=assetManager.loadModel("blendexp10k.obj");
+            File binary= new File(Environment.getExternalStorageDirectory()+jmeFragment.getSceneLocalPath()+"/blendexp10k.j3o");
+            if(binary.exists())
+                mainObject=assetManager.loadModel("blendexp10k.j3o");
+            else
+                mainObject=assetManager.loadModel("blendexp10k.obj");
             marker=assetManager.loadModel("marker.obj");
             Gson gson=new Gson();
             BufferedReader br = new BufferedReader(new FileReader(Environment.getExternalStorageDirectory()+jmeFragment.getSceneLocalPath()+"/marker.json"));
@@ -107,8 +113,6 @@ public class Main extends SimpleApplication {
             rootNode.attachChild(marker);
             initializeCameras();
             initializeGui();
-
-
             Log.i("cetvrto:" + jmeFragment.getSceneLocalPath(), TAG);
             //listener of click on object
             AppStateManager appStateManager = new AppStateManager(this);
@@ -116,11 +120,20 @@ public class Main extends SimpleApplication {
             MouseEventControl.addListenersToSpatial(marker, new DefaultMouseListener() {
                 @Override
                 protected void click(MouseButtonEvent event, Spatial target, Spatial capture) {
-                    Log.i(TAG, "clicked box.");
                     jmeFragment.startActivity(m.getLink());
 
                 }
             });
+            if(!binary.exists()) {
+                BinaryExporter ex = BinaryExporter.getInstance();
+                try {
+                    ex.save(mainObject, binary);
+                    System.out.println("File was successfully converted to j3o.");
+                } catch (IOException e) {
+                    e.printStackTrace();
+
+                }
+            }
         }
         catch (Exception e) {
             Log.e("JME greska",TAG,e);

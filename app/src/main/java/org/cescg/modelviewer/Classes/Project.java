@@ -80,6 +80,7 @@ public class Project extends RealmObject {
     }
     public void addScene(Scene scene)
     {
+
         this.scenes.add(scene);
     }
 
